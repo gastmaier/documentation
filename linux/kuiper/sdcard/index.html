@@ -7,11 +7,12 @@
 
     <title>SD Card flashing &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/style.min.css?v=434060ed" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.min.css?v=95305861" />
     <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script defer="" src="../../../_static/app.umd.js?v=c93eadd1"></script>
+    <link rel="icon" href="../../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Project list" href="../project-list.html" />
@@ -78,6 +79,7 @@
     <root>
   <a href="../../../index.html" class="current">System Level</a>
   <a href="../../../../hdl/index.html">HDL</a>
+  <a href="../../../../testbenches/index.html">HDL Testbenches</a>
   <a href="../../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
   <a href="../../../../libiio/index.html">libiio</a>
   <a href="../../../../no-OS/index.html">no-OS</a>
@@ -146,6 +148,7 @@ Content on this topic
   <root>
   <a href="../../../index.html" class="current">System Level</a>
   <a href="../../../../hdl/index.html">HDL</a>
+  <a href="../../../../testbenches/index.html">HDL Testbenches</a>
   <a href="../../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
   <a href="../../../../libiio/index.html">libiio</a>
   <a href="../../../../no-OS/index.html">no-OS</a>
@@ -158,7 +161,7 @@ Content on this topic
 </div>
 <div class="toc-tree">
   <html>
-  <body><p class="caption" role="heading"><span class="caption-text">Linux Software</span></p>
+  <body><p class="caption" role="heading"><span class="caption-text">Kuiper &amp; Linux Kernel</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1" id="toctree-collapse-1" checked=""/><div class="collapse"><a class="reference internal" href="../index.html">Kuiper Linux</a><label for="toctree-collapse-1"><div class="icon"></div></label></div><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../release-notes.html">Release notes</a></li>
@@ -167,18 +170,57 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../update.html">Updating</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../drivers/index.html">Linux drivers</a></li>
-<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2" id="toctree-collapse-2"/><div class="collapse"><a class="reference internal" href="../../kernel/index.html">Linux Kernel and devicetrees</a><label for="toctree-collapse-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2" id="toctree-collapse-2"/><div class="collapse"><a class="reference internal" href="../../drivers/index.html">Linux drivers</a><label for="toctree-collapse-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-1" id="toctree-collapse-2-1"/><div class="collapse"><a class="reference internal" href="../../drivers/iio-transceiver/index.html">IIO Transceivers</a><label for="toctree-collapse-2-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-1-1" id="toctree-collapse-2-1-1"/><div class="collapse"><a class="reference internal" href="../../drivers/iio-transceiver/adrv9009/index.html">ADRV9009, ADRV9008-1, ADRV9008-2</a><label for="toctree-collapse-2-1-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/iio-transceiver/adrv9009/customization.html">Customization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-2" id="toctree-collapse-2-2"/><div class="collapse"><a class="reference internal" href="../../drivers/iio/index.html">Linux Industrial I/O Subsystem</a><label for="toctree-collapse-2-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../drivers/iio/iio-trig-sysfs.html">iio-trig-sysfs driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../drivers/iio/iio-trig-bfin-timer.html">iio-trig-bfin-timer driver</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3" id="toctree-collapse-3"/><div class="collapse"><a class="reference internal" href="../../kernel/index.html">Kernel and devicetrees</a><label for="toctree-collapse-3"><div class="icon"></div></label></div><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../kernel/petalinux.html">Building with Petalinux</a></li>
 </ul>
 </li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Software</span></p>
+<ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-4" id="toctree-collapse-4"/><div class="collapse"><a class="reference internal" href="../../../software/iio-oscilloscope/index.html">IIO Oscilloscope</a><label for="toctree-collapse-4"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-4-1" id="toctree-collapse-4-1"/><div class="collapse"><a class="reference internal" href="../../../software/iio-oscilloscope/adrv9009/index.html">ADRV9009</a><label for="toctree-collapse-4-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../software/iio-oscilloscope/adrv9009/plugin.html">Standard Plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../software/iio-oscilloscope/adrv9009/advanced-plugin.html">Advanced plugin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-5" id="toctree-collapse-5"/><div class="collapse"><a class="reference internal" href="../../../software/libiio/index.html">Libiio</a><label for="toctree-collapse-5"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/libiio/internals.html">About libiio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/libiio/cli.html">Command line utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/libiio/tips-tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-6" id="toctree-collapse-6"/><div class="collapse"><a class="reference internal" href="../../../software/matlab/index.html">MATLAB &amp; Simulink Toolboxes</a><label for="toctree-collapse-6"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/matlab/hsx-toolbox/index.html">High Speed Converter Toolbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/matlab/transceiver-toolbox/index.html">Transceiver Toolbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/matlab/bsp-extend.html">Extending Device Interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/pyadi-iio/index.html">PyADI-IIO</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">Evaluation Boards</span></p>
 <ul>
-<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3" id="toctree-collapse-3"/><div class="collapse"><a class="reference internal" href="../../../eval/user-guide/index.html">User guides</a><label for="toctree-collapse-3"><div class="icon"></div></label></div><ul>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3-1" id="toctree-collapse-3-1"/><div class="collapse"><a class="reference internal" href="../../../eval/user-guide/adrv9009/index.html">ADRV9009 &amp; ADRV9008</a><label for="toctree-collapse-3-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7" id="toctree-collapse-7"/><div class="collapse"><a class="reference internal" href="../../../eval/user-guide/index.html">User guides</a><label for="toctree-collapse-7"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../eval/user-guide/eval-adxl355-pmdz/index.html">EVAL-ADXL355-PMDZ User Guide</a></li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7-1" id="toctree-collapse-7-1"/><div class="collapse"><a class="reference internal" href="../../../eval/user-guide/adrv9009/index.html">ADRV9009 &amp; ADRV9008</a><label for="toctree-collapse-7-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../eval/user-guide/adrv9009/prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3-1-1" id="toctree-collapse-3-1-1"/><div class="collapse"><a class="reference internal" href="../../../eval/user-guide/adrv9009/quickstart/index.html">Quickstart</a><label for="toctree-collapse-3-1-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7-1-1" id="toctree-collapse-7-1-1"/><div class="collapse"><a class="reference internal" href="../../../eval/user-guide/adrv9009/quickstart/index.html">Quickstart</a><label for="toctree-collapse-7-1-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../eval/user-guide/adrv9009/quickstart/zynqmp.html">ZCU102</a></li>
 </ul>
 </li>
@@ -190,7 +232,26 @@ Content on this topic
 </ul>
 <p class="caption" role="heading"><span class="caption-text">University Program</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../university/index.html">Engineering University Program</a></li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-8" id="toctree-collapse-8"/><div class="collapse"><a class="reference internal" href="../../../university/index.html">Engineering University Program</a><label for="toctree-collapse-8"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-8-1" id="toctree-collapse-8-1"/><div class="collapse"><a class="reference internal" href="../../../university/active_learning/index.html">Active Learning: Student-oriented Lab Exercises</a><label for="toctree-collapse-8-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../university/active_learning/wien_bridge_oscillator/index.html">Activity: The Wien Bridge Oscillator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../university/active_learning/efficiency_power_loss/index.html">Activity: Efficiency, Power Loss, and Thermal Management</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Learning</span></p>
+<ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-9" id="toctree-collapse-9"/><div class="collapse"><a class="reference internal" href="../../../learning/index.html">Learning! Tutorials, Workshops, Etc</a><label for="toctree-collapse-9"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../learning/tutorial_prec_adc/index.html">Precision ADC Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../learning/converter_connectivity_tutorial/index.html">Converter Connectivity Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../learning/sw_infrastructure/index.html">Key ADI’s Software Infrastructure for designing with ADCs, DACs, and Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../learning/tools_for_ls/index.html">Tools for Low Speed Mixed Signal System Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../learning/tools_for_prec_wb/index.html">Tools for Precision Wideband Mixed Signal System Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../learning/tools_for_hs/index.html">Tools for High-Speed Mixed Signal System Design</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contributing and Guidelines</span></p>
 <ul>
@@ -211,70 +272,90 @@ Content on this topic
           <div class="body" role="main">
             
   <section id="sd-card-flashing">
-<span id="kuiper-sdcard"></span><h1>SD Card flashing<a class="headerlink" href="#sd-card-flashing" title="Link to this heading">¶</a></h1>
+<span id="kuiper-sdcard"></span><h1>SD Card flashing<a class="headerlink" href="#sd-card-flashing" title="Link to this heading">#</a></h1>
 <p>Follow the tutorial below based on your host system:
 <a class="reference internal" href="#kuiper-sdcard-linux"><span class="std std-ref">Linux</span></a>
 or
 <a class="reference internal" href="#kuiper-sdcard-windows"><span class="std std-ref">Windows</span></a>.</p>
 <section id="from-linux-hosts">
-<span id="kuiper-sdcard-linux"></span><h2>From Linux hosts<a class="headerlink" href="#from-linux-hosts" title="Link to this heading">¶</a></h2>
+<span id="kuiper-sdcard-linux"></span><h2>From Linux hosts<a class="headerlink" href="#from-linux-hosts" title="Link to this heading">#</a></h2>
 <p>This section explains how you should go about formatting and flashing the SD
 card with the software required to use many of platforms Analog Devices
 supports.
 There are several steps that need to be completed before your SD Card will be
 ready to use.</p>
 <section id="download-the-file">
-<h3>Download the file<a class="headerlink" href="#download-the-file" title="Link to this heading">¶</a></h3>
+<h3>Download the file<a class="headerlink" href="#download-the-file" title="Link to this heading">#</a></h3>
 <p>Download the relevant SD card image file from the <a class="reference internal" href="../index.html#kuiper"><span class="std std-ref">Kuiper Linux</span></a> page. Please
 get the latest if you can. This can be done with wget as well:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">time</span><span class="w"> </span>wget<span class="w"> </span><span class="se">\</span>
-https://swdownloads.analog.com/cse/kuiper/image_2021-07-28-ADI-Kuiper-full.zip
-<span class="c1"># --2021-12-15 17:12:33--</span>
-<span class="c1"># http://swdownloads.analog.com/cse/image_2021-07-28-ADI-Kuiper-full.zip Resolving</span>
-<span class="c1"># swdownloads.analog.com (swdownloads.analog.com)... 81.196.26.153, 81.196.26.177</span>
-<span class="c1"># Connecting to swdownloads.analog.com</span>
-<span class="c1"># (swdownloads.analog.com)|81.196.26.153|:80... connected. HTTP request sent,</span>
-<span class="c1"># awaiting response... 200 OK Length: 15931539 (14.8 GB)</span>
-<span class="c1"># [application/octet-stream] Saving to: &#39;image_2021-07-28-ADI-Kuiper-full.zip&#39;</span>
-<span class="c1">#</span>
-<span class="c1"># 100%[=======================================================================&gt;]</span>
-<span class="c1"># 15931539 1.94M/s in 6m 52s</span>
-<span class="c1">#</span>
-<span class="c1"># 2021-12-15 17:19:26 (1.83 MB/s) - &#39;image_2021-07-28-ADI-Kuiper-full.zip&#39; saved</span>
-<span class="c1"># [15931539/15931539]</span>
-<span class="c1">#</span>
-<span class="c1"># real 6m53.573s user 0m0.740s sys 0m32.342s</span>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<p>Yeah, it takes an hour (or more if your connection is slow).
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">time</span><span class="w"> </span>wget<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>https://swdownloads.analog.com/cse/kuiper/image_2021-07-28-ADI-Kuiper-full.zip
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>--2021-12-15 17:12:33--
+http://swdownloads.analog.com/cse/image_2021-07-28-ADI-Kuiper-full.zip Resolving
+swdownloads.analog.com (swdownloads.analog.com)... 81.196.26.153, 81.196.26.177
+Connecting to swdownloads.analog.com
+(swdownloads.analog.com)|81.196.26.153|:80... connected. HTTP request sent,
+awaiting response... 200 OK Length: 15931539 (14.8 GB)
+[application/octet-stream] Saving to: &#39;image_2021-07-28-ADI-Kuiper-full.zip&#39;
+
+100%[=======================================================================&gt;]
+15931539 1.94M/s in 6m 52s
+
+2021-12-15 17:19:26 (1.83 MB/s) - &#39;image_2021-07-28-ADI-Kuiper-full.zip&#39; saved
+[15931539/15931539]
+
+real 6m53.573s user 0m0.740s sys 0m32.342s
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div><p>Yeah, it takes an hour (or more if your connection is slow).
 At least you can drive down to your favourite coffee store, and indulge yourself.</p>
 </section>
 <section id="verify-the-download">
-<h3>Verify the download<a class="headerlink" href="#verify-the-download" title="Link to this heading">¶</a></h3>
+<h3>Verify the download<a class="headerlink" href="#verify-the-download" title="Link to this heading">#</a></h3>
 <ol class="arabic">
 <li><p>Check the md5, to make sure you have the right file.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>md5sum<span class="w"> </span>image_2021-07-28-ADI-Kuiper-full.zip
-<span class="c1"># 279097240dec7156ff5e15b7ce0b8a25 image_2021-07-28-ADI-Kuiper-full.zip</span>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-</li>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>md5sum<span class="w"> </span>image_2021-07-28-ADI-Kuiper-full.zip
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>279097240dec7156ff5e15b7ce0b8a25 image_2021-07-28-ADI-Kuiper-full.zip
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div></li>
 <li><p>A <code class="docutils literal notranslate"><span class="pre">zip</span></code> file is a compressed file, you need to uncompress it, and check the
 md5sum on resulted file:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">time</span><span class="w"> </span>unzip<span class="w"> </span>image_2021-07-28-ADI-Kuiper-full.zip<span class="w"> </span>real
-<span class="c1"># 1m17.40s user 74.44s sys 2.11s</span>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-</li>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">time</span><span class="w"> </span>unzip<span class="w"> </span>image_2021-07-28-ADI-Kuiper-full.zip<span class="w"> </span>real
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>1m17.40s user 74.44s sys 2.11s
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div></li>
 <li><p>Again, check the results:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>md5sum<span class="w"> </span><span class="m">2021</span>-07-28-ADI-Kuiper-full.img
-<span class="c1"># b160453396e482234094a92134769ec6 2021-07-28-ADI-Kuiper-full.img</span>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-</li>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>md5sum<span class="w"> </span><span class="m">2021</span>-07-28-ADI-Kuiper-full.img
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>b160453396e482234094a92134769ec6 2021-07-28-ADI-Kuiper-full.img
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div></li>
 </ol>
 </section>
 <section id="writing-sd-card-gui">
-<h3>Writing SD Card GUI<a class="headerlink" href="#writing-sd-card-gui" title="Link to this heading">¶</a></h3>
+<h3>Writing SD Card GUI<a class="headerlink" href="#writing-sd-card-gui" title="Link to this heading">#</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This will overwrite your entire SD card completely.
@@ -296,7 +377,7 @@ here.</p>
 follow the topics after <a class="reference internal" href="../index.html#kuiper-imaging-sdcard"><span class="std std-ref">Imaging your SD Card</span></a>.</p>
 </section>
 <section id="writing-sd-card-command-line">
-<h3>Writing SD Card Command Line<a class="headerlink" href="#writing-sd-card-command-line" title="Link to this heading">¶</a></h3>
+<h3>Writing SD Card Command Line<a class="headerlink" href="#writing-sd-card-command-line" title="Link to this heading">#</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This will overwrite your entire SD card completely.
@@ -314,16 +395,21 @@ it.</p>
 </li>
 <li><p>Write the file (input file or <code class="docutils literal notranslate"><span class="pre">if</span></code>) to the storage device (output file or
 <code class="docutils literal notranslate"><span class="pre">of</span></code>).</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">time</span><span class="w"> </span>sudo<span class="w"> </span>dd<span class="w"> </span><span class="se">\</span>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">time</span><span class="w"> </span>sudo<span class="w"> </span>dd<span class="w"> </span><span class="se">\</span>
 <span class="w">     </span><span class="k">if</span><span class="o">=</span><span class="m">2021</span>-07-28-ADI-Kuiper-full.img<span class="w"> </span><span class="se">\</span>
 <span class="w">     </span><span class="nv">of</span><span class="o">=</span>/dev/mmcblk0<span class="w"> </span><span class="se">\</span>
 <span class="w">     </span><span class="nv">bs</span><span class="o">=</span><span class="m">4194304</span>
-<span class="c1"># [sudo] password for user:</span>
-<span class="c1"># 0+60640 records in 0+60640 records out 7948206080 bytes (7.9 GB) copied, 571.766 s, 13.9 MB/s</span>
-<span class="c1"># real 7m54.11s user 0.29s sys 8.94s</span>
 </pre></div>
 </div>
-<p>Now, you have that slice of pizza that you got too… :)</p>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>[sudo] password for user:
+0+60640 records in 0+60640 records out 7948206080 bytes (7.9 GB) copied, 571.766 s, 13.9 MB/s
+real 7m54.11s user 0.29s sys 8.94s
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div><p>Now, you have that slice of pizza that you got too… :)</p>
 </li>
 </ol>
 <p>This section explains how you should go about formatting and flashing the SD
@@ -332,15 +418,18 @@ supports. There are several steps that need to be completed before your SD Card
 will be ready to use.</p>
 <ol class="arabic">
 <li><p>Ensure the output buffers are flushed:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sync
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-</li>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>sync
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div></li>
 <li><p>Unplug the SD card from your PC.</p></li>
 </ol>
 </section>
 <section id="verify">
-<h3>Verify<a class="headerlink" href="#verify" title="Link to this heading">¶</a></h3>
+<h3>Verify<a class="headerlink" href="#verify" title="Link to this heading">#</a></h3>
 <p>Since it’s possible that the write process of a disk image can have some issues
 (if the target had a sector marked as bad, dd will not notice, and write on top
 of it), the safest thing to do is to run a
@@ -354,35 +443,55 @@ above, and the steps below.</p>
 </div>
 <ol class="arabic">
 <li><p>Unmount the file systems (fsck will not work on a mounted file system)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">umount</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">mmcblk0p1</span>
-<span class="n">sudo</span> <span class="n">umount</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">mmcblk0p2</span>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<p>If it fails with a
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>umount<span class="w"> </span>/dev/mmcblk0p1
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>umount<span class="w"> </span>/dev/mmcblk0p2
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div><p>If it fails with a
 <code class="docutils literal notranslate"><span class="pre">umount:</span> <span class="pre">/dev/mmcblk0p2:</span> <span class="pre">not</span> <span class="pre">mounted</span></code> error, that’s OK.
 If it fails with a
 <code class="docutils literal notranslate"><span class="pre">umount:</span> <span class="pre">/dev/mmcblk0p2:</span> <span class="pre">not</span> <span class="pre">found</span></code> error, that means you have no disk
 inserted, or did a typo in the path.</p>
 </li>
 <li><p>Perform the file system consistency check:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>fsck<span class="w"> </span>-y<span class="w"> </span>/dev/mmcblk0p1
-<span class="c1"># fsck from util-linux 2.20.1</span>
-<span class="c1"># dosfsck 3.0.13, 30 Jun 2012, FAT32, LFN</span>
-<span class="c1"># /dev/mmcblk0p1: 158 files, 76420/130812 clusters</span>
-sudo<span class="w"> </span>fsck<span class="w"> </span>-y<span class="w"> </span>/dev/mmcblk0p2
-<span class="c1"># fsck from util-linux 2.20.1</span>
-<span class="c1"># e2fsck 1.42.5 (29-Jul-2012)</span>
-<span class="c1"># /dev/mmcblk0p2: clean, 157918/452480 files, 717760/1808128 blocks</span>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-</li>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>fsck<span class="w"> </span>-y<span class="w"> </span>/dev/mmcblk0p1
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>fsck from util-linux 2.20.1
+dosfsck 3.0.13, 30 Jun 2012, FAT32, LFN
+/dev/mmcblk0p1: 158 files, 76420/130812 clusters
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>fsck<span class="w"> </span>-y<span class="w"> </span>/dev/mmcblk0p2
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>fsck from util-linux 2.20.1
+e2fsck 1.42.5 (29-Jul-2012)
+/dev/mmcblk0p2: clean, 157918/452480 files, 717760/1808128 blocks
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div></li>
 </ol>
 <p>At this point the SD card is still not bootable,
 follow the topics after <a class="reference internal" href="../index.html#kuiper-imaging-sdcard"><span class="std std-ref">Imaging your SD Card</span></a>.</p>
 </section>
 </section>
 <section id="from-windows-hosts">
-<span id="kuiper-sdcard-windows"></span><h2>From Windows hosts<a class="headerlink" href="#from-windows-hosts" title="Link to this heading">¶</a></h2>
+<span id="kuiper-sdcard-windows"></span><h2>From Windows hosts<a class="headerlink" href="#from-windows-hosts" title="Link to this heading">#</a></h2>
 <p>This section explains how you should go about formatting and flashing the SD
 card with the software required to use many of platforms Analog Devices
 supports.
@@ -397,7 +506,7 @@ ready to use.</p>
 <li><p>Flash the SD Card</p></li>
 </ol>
 <section id="download-the-sd-card-file">
-<h3>Download the SD Card File<a class="headerlink" href="#download-the-sd-card-file" title="Link to this heading">¶</a></h3>
+<h3>Download the SD Card File<a class="headerlink" href="#download-the-sd-card-file" title="Link to this heading">#</a></h3>
 <p>Download the software image file you want to write onto your SD Card. Typically
 this is going to be the standard <a class="reference internal" href="../index.html#kuiper"><span class="std std-ref">Kuiper Linux</span></a>, but in some
 instances specialized pre-compiled images are created for projects that are not
@@ -408,7 +517,7 @@ file location.</p></li>
 </ul>
 </section>
 <section id="extract-the-software-image-file">
-<h3>Extract the Software Image File<a class="headerlink" href="#extract-the-software-image-file" title="Link to this heading">¶</a></h3>
+<h3>Extract the Software Image File<a class="headerlink" href="#extract-the-software-image-file" title="Link to this heading">#</a></h3>
 <p>This step will decompress the large software image file you downloaded. Ensure
 you have a decompression utility installed on your computer, capable of
 extracting
@@ -423,13 +532,13 @@ or
 </a>
 </section>
 <section id="connect-the-sd-card-to-the-computer">
-<h3>Connect the SD Card to the Computer<a class="headerlink" href="#connect-the-sd-card-to-the-computer" title="Link to this heading">¶</a></h3>
+<h3>Connect the SD Card to the Computer<a class="headerlink" href="#connect-the-sd-card-to-the-computer" title="Link to this heading">#</a></h3>
 <p>Connect the SD Card to either an internal or external SD Card reader which is
 connected to your computer. Most newer computers have an SD Card reader, but
 there are plenty of USB connectable SD Card reader devices available.</p>
 </section>
 <section id="verify-the-download-optional">
-<h3>Verify the Download (Optional)<a class="headerlink" href="#verify-the-download-optional" title="Link to this heading">¶</a></h3>
+<h3>Verify the Download (Optional)<a class="headerlink" href="#verify-the-download-optional" title="Link to this heading">#</a></h3>
 <p>This step is used to validate that the image you downloaded. Ensuring that it is
 the version is correct and that the software wasn’t corrupted during download.</p>
 <p>Ensure you have the following application installed on your computer:
@@ -443,11 +552,11 @@ the version is correct and that the software wasn’t corrupted during download.
 </a>
 </section>
 <section id="format-the-sd-card-optional">
-<h3>Format the SD Card (Optional)<a class="headerlink" href="#format-the-sd-card-optional" title="Link to this heading">¶</a></h3>
+<h3>Format the SD Card (Optional)<a class="headerlink" href="#format-the-sd-card-optional" title="Link to this heading">#</a></h3>
 <p>This step should be used if the SD Card format is unknown or needs to be
 reconfigured.</p>
 <section id="using-sd-card-formatter">
-<h4>Using SD Card Formatter<a class="headerlink" href="#using-sd-card-formatter" title="Link to this heading">¶</a></h4>
+<h4>Using SD Card Formatter<a class="headerlink" href="#using-sd-card-formatter" title="Link to this heading">#</a></h4>
 <p>Ensure you have the following application installed on your computer:
 <a class="reference external" href="https://www.sdcardformatter.com/">SD Card Formatter</a>.</p>
 <p>Open the SD Card Formatter application on your computer, and set the following
@@ -470,7 +579,7 @@ several minutes)</p>
 </ol>
 </section>
 <section id="using-diskpart-via-windows-command-prompt">
-<h4>Using DISKPART via Windows command prompt<a class="headerlink" href="#using-diskpart-via-windows-command-prompt" title="Link to this heading">¶</a></h4>
+<h4>Using DISKPART via Windows command prompt<a class="headerlink" href="#using-diskpart-via-windows-command-prompt" title="Link to this heading">#</a></h4>
 <p>Windows command prompt has <strong>DISKPART</strong> that is also capable of reformatting SD
 cards and other drives.</p>
 <ol class="arabic simple">
@@ -489,7 +598,7 @@ for Windows.</p></li>
 </section>
 </section>
 <section id="flash-the-sd-card">
-<h3>Flash the SD Card<a class="headerlink" href="#flash-the-sd-card" title="Link to this heading">¶</a></h3>
+<h3>Flash the SD Card<a class="headerlink" href="#flash-the-sd-card" title="Link to this heading">#</a></h3>
 <p>This step will physically write the software image file onto the SD Card so it
 will be ready for use.</p>
 <p>There are several Windows applications that can flash SD Cards, we will describe
@@ -507,7 +616,7 @@ Your PC will not function properly after this, and your IT department should
 not blame ADI.</p>
 </div>
 <section id="win32diskimager">
-<h4>Win32DiskImager<a class="headerlink" href="#win32diskimager" title="Link to this heading">¶</a></h4>
+<h4>Win32DiskImager<a class="headerlink" href="#win32diskimager" title="Link to this heading">#</a></h4>
 <ol class="arabic">
 <li><p>Open up the Win32DiskImager application on your PC</p>
 <a class="reference internal image-reference" href="../../../_images/sd_card_flash_gui.png"><img alt="../../../_images/sd_card_flash_gui.png" src="../../../_images/sd_card_flash_gui.png" style="width: 400px;" />
@@ -547,7 +656,7 @@ from the reader.</p></li>
 </ol>
 </section>
 <section id="etcher">
-<h4>Etcher<a class="headerlink" href="#etcher" title="Link to this heading">¶</a></h4>
+<h4>Etcher<a class="headerlink" href="#etcher" title="Link to this heading">#</a></h4>
 <ol class="arabic">
 <li><p>Open Balena Etcher and select the .img file you want to write to the SD
 card.</p>

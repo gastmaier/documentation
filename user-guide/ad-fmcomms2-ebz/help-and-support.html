@@ -7,11 +7,12 @@
 
     <title>Help and Support for ADI FMC Cards &amp; RF SoMs &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/style.min.css?v=434060ed" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.min.css?v=95305861" />
     <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script defer="" src="../../_static/app.umd.js?v=c93eadd1"></script>
+    <link rel="icon" href="../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
    
@@ -76,6 +77,7 @@
     <root>
   <a href="../../index.html" class="current">System Level</a>
   <a href="../../../hdl/index.html">HDL</a>
+  <a href="../../../testbenches/index.html">HDL Testbenches</a>
   <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
   <a href="../../../libiio/index.html">libiio</a>
   <a href="../../../no-OS/index.html">no-OS</a>
@@ -128,6 +130,7 @@ Content on this topic
   <root>
   <a href="../../index.html" class="current">System Level</a>
   <a href="../../../hdl/index.html">HDL</a>
+  <a href="../../../testbenches/index.html">HDL Testbenches</a>
   <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
   <a href="../../../libiio/index.html">libiio</a>
   <a href="../../../no-OS/index.html">no-OS</a>
@@ -140,7 +143,7 @@ Content on this topic
 </div>
 <div class="toc-tree">
   <html>
-  <body><p class="caption" role="heading"><span class="caption-text">Linux Software</span></p>
+  <body><p class="caption" role="heading"><span class="caption-text">Kuiper &amp; Linux Kernel</span></p>
 <ul>
 <li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1" id="toctree-collapse-1"/><div class="collapse"><a class="reference internal" href="../../linux/kuiper/index.html">Kuiper Linux</a><label for="toctree-collapse-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../linux/kuiper/release-notes.html">Release notes</a></li>
@@ -149,18 +152,57 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../linux/kuiper/update.html">Updating</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../linux/drivers/index.html">Linux drivers</a></li>
-<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2" id="toctree-collapse-2"/><div class="collapse"><a class="reference internal" href="../../linux/kernel/index.html">Linux Kernel and devicetrees</a><label for="toctree-collapse-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2" id="toctree-collapse-2"/><div class="collapse"><a class="reference internal" href="../../linux/drivers/index.html">Linux drivers</a><label for="toctree-collapse-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-1" id="toctree-collapse-2-1"/><div class="collapse"><a class="reference internal" href="../../linux/drivers/iio-transceiver/index.html">IIO Transceivers</a><label for="toctree-collapse-2-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-1-1" id="toctree-collapse-2-1-1"/><div class="collapse"><a class="reference internal" href="../../linux/drivers/iio-transceiver/adrv9009/index.html">ADRV9009, ADRV9008-1, ADRV9008-2</a><label for="toctree-collapse-2-1-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../linux/drivers/iio-transceiver/adrv9009/customization.html">Customization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-2" id="toctree-collapse-2-2"/><div class="collapse"><a class="reference internal" href="../../linux/drivers/iio/index.html">Linux Industrial I/O Subsystem</a><label for="toctree-collapse-2-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../linux/drivers/iio/iio-trig-sysfs.html">iio-trig-sysfs driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../linux/drivers/iio/iio-trig-bfin-timer.html">iio-trig-bfin-timer driver</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3" id="toctree-collapse-3"/><div class="collapse"><a class="reference internal" href="../../linux/kernel/index.html">Kernel and devicetrees</a><label for="toctree-collapse-3"><div class="icon"></div></label></div><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../linux/kernel/petalinux.html">Building with Petalinux</a></li>
 </ul>
 </li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Software</span></p>
+<ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-4" id="toctree-collapse-4"/><div class="collapse"><a class="reference internal" href="../../software/iio-oscilloscope/index.html">IIO Oscilloscope</a><label for="toctree-collapse-4"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-4-1" id="toctree-collapse-4-1"/><div class="collapse"><a class="reference internal" href="../../software/iio-oscilloscope/adrv9009/index.html">ADRV9009</a><label for="toctree-collapse-4-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../software/iio-oscilloscope/adrv9009/plugin.html">Standard Plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/iio-oscilloscope/adrv9009/advanced-plugin.html">Advanced plugin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-5" id="toctree-collapse-5"/><div class="collapse"><a class="reference internal" href="../../software/libiio/index.html">Libiio</a><label for="toctree-collapse-5"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../software/libiio/internals.html">About libiio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/libiio/cli.html">Command line utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/libiio/tips-tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-6" id="toctree-collapse-6"/><div class="collapse"><a class="reference internal" href="../../software/matlab/index.html">MATLAB &amp; Simulink Toolboxes</a><label for="toctree-collapse-6"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../software/matlab/hsx-toolbox/index.html">High Speed Converter Toolbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/matlab/transceiver-toolbox/index.html">Transceiver Toolbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/matlab/bsp-extend.html">Extending Device Interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../software/pyadi-iio/index.html">PyADI-IIO</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">Evaluation Boards</span></p>
 <ul>
-<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3" id="toctree-collapse-3"/><div class="collapse"><a class="reference internal" href="../../eval/user-guide/index.html">User guides</a><label for="toctree-collapse-3"><div class="icon"></div></label></div><ul>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3-1" id="toctree-collapse-3-1"/><div class="collapse"><a class="reference internal" href="../../eval/user-guide/adrv9009/index.html">ADRV9009 &amp; ADRV9008</a><label for="toctree-collapse-3-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7" id="toctree-collapse-7"/><div class="collapse"><a class="reference internal" href="../../eval/user-guide/index.html">User guides</a><label for="toctree-collapse-7"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../eval/user-guide/eval-adxl355-pmdz/index.html">EVAL-ADXL355-PMDZ User Guide</a></li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7-1" id="toctree-collapse-7-1"/><div class="collapse"><a class="reference internal" href="../../eval/user-guide/adrv9009/index.html">ADRV9009 &amp; ADRV9008</a><label for="toctree-collapse-7-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../eval/user-guide/adrv9009/prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3-1-1" id="toctree-collapse-3-1-1"/><div class="collapse"><a class="reference internal" href="../../eval/user-guide/adrv9009/quickstart/index.html">Quickstart</a><label for="toctree-collapse-3-1-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7-1-1" id="toctree-collapse-7-1-1"/><div class="collapse"><a class="reference internal" href="../../eval/user-guide/adrv9009/quickstart/index.html">Quickstart</a><label for="toctree-collapse-7-1-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../eval/user-guide/adrv9009/quickstart/zynqmp.html">ZCU102</a></li>
 </ul>
 </li>
@@ -172,7 +214,26 @@ Content on this topic
 </ul>
 <p class="caption" role="heading"><span class="caption-text">University Program</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../university/index.html">Engineering University Program</a></li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-8" id="toctree-collapse-8"/><div class="collapse"><a class="reference internal" href="../../university/index.html">Engineering University Program</a><label for="toctree-collapse-8"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-8-1" id="toctree-collapse-8-1"/><div class="collapse"><a class="reference internal" href="../../university/active_learning/index.html">Active Learning: Student-oriented Lab Exercises</a><label for="toctree-collapse-8-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../university/active_learning/wien_bridge_oscillator/index.html">Activity: The Wien Bridge Oscillator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../university/active_learning/efficiency_power_loss/index.html">Activity: Efficiency, Power Loss, and Thermal Management</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Learning</span></p>
+<ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-9" id="toctree-collapse-9"/><div class="collapse"><a class="reference internal" href="../../learning/index.html">Learning! Tutorials, Workshops, Etc</a><label for="toctree-collapse-9"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../learning/tutorial_prec_adc/index.html">Precision ADC Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../learning/converter_connectivity_tutorial/index.html">Converter Connectivity Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../learning/sw_infrastructure/index.html">Key ADI’s Software Infrastructure for designing with ADCs, DACs, and Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../learning/tools_for_ls/index.html">Tools for Low Speed Mixed Signal System Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../learning/tools_for_prec_wb/index.html">Tools for Precision Wideband Mixed Signal System Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../learning/tools_for_hs/index.html">Tools for High-Speed Mixed Signal System Design</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contributing and Guidelines</span></p>
 <ul>
@@ -193,7 +254,7 @@ Content on this topic
           <div class="body" role="main">
             
   <section id="help-and-support-for-adi-fmc-cards-rf-soms">
-<span id="ad-fmcomms2-ebz-help-and-support"></span><h1>Help and Support for ADI FMC Cards &amp; RF SoMs<a class="headerlink" href="#help-and-support-for-adi-fmc-cards-rf-soms" title="Link to this heading">¶</a></h1>
+<span id="ad-fmcomms2-ebz-help-and-support"></span><h1>Help and Support for ADI FMC Cards &amp; RF SoMs<a class="headerlink" href="#help-and-support-for-adi-fmc-cards-rf-soms" title="Link to this heading">#</a></h1>
 <p>If you have any questions regarding the:</p>
 <ul class="simple">
 <li><p>ADI FMC Boards : AD-FMCOMMS2-EBZ, AD-FMCOMMS3-EBZ, AD-FMCOMMS4-EBZ,
@@ -234,7 +295,7 @@ chair and the keyboard (you). If you are posting in the right place, and the
 question is unanswered for a few working days, please bump the thread (we are
 human, and sometimes miss things).</p>
 <section id="hdl-hardware-questions">
-<h2>HDL / Hardware Questions<a class="headerlink" href="#hdl-hardware-questions" title="Link to this heading">¶</a></h2>
+<h2>HDL / Hardware Questions<a class="headerlink" href="#hdl-hardware-questions" title="Link to this heading">#</a></h2>
 <p>For questions regarding the AD-FMCOMMS2-EBZ, AD-FMCOMMS3-EBZ or AD-FMCOMMS4-EBZ
 hardware or the HDL reference design please state them in the
 <a class="icon ez reference external" href="https://ez.analog.com/fpga">FPGA Reference Designs</a> sub-community.
@@ -245,7 +306,7 @@ If you have questions about the tools, please go ask the tools vendors:</p>
 </ul>
 </section>
 <section id="linux-driver-or-application-questions">
-<h2>Linux Driver or Application Questions<a class="headerlink" href="#linux-driver-or-application-questions" title="Link to this heading">¶</a></h2>
+<h2>Linux Driver or Application Questions<a class="headerlink" href="#linux-driver-or-application-questions" title="Link to this heading">#</a></h2>
 <p>For questions regarding the the ADI Linux distribution (which is based
 <a class="reference external" href="https://www.linaro.org/">Linaro</a> with <a class="reference external" href="https://www.xfce.org/">Xfce</a> desktop),
 the Linux drivers, or the device trees for the AD9361 or
@@ -257,27 +318,27 @@ that  tool/utility/application support method (some use email, some use web).
 If you think you have found a bug specific to ARM, please report this upstream.</p>
 </section>
 <section id="no-os-questions">
-<h2>No-OS Questions<a class="headerlink" href="#no-os-questions" title="Link to this heading">¶</a></h2>
+<h2>No-OS Questions<a class="headerlink" href="#no-os-questions" title="Link to this heading">#</a></h2>
 <p>For questions regarding the no-OS drivers for AD9361 or AD9364, please use the
 <a class="icon ez reference external" href="https://ez.analog.com/linux-software-drivers">Linux Software Drivers</a>
 sub-community.</p>
 </section>
 <section id="general-ad9361-questions">
-<h2>General AD9361 Questions<a class="headerlink" href="#general-ad9361-questions" title="Link to this heading">¶</a></h2>
+<h2>General AD9361 Questions<a class="headerlink" href="#general-ad9361-questions" title="Link to this heading">#</a></h2>
 <p>Questions about the AD9361 or AD9364, please use the
 <a class="icon ez reference external" href="https://ez.analog.com/wide-band-rf-transceivers/design-support">AD9361</a> sub-community.</p>
 <p>Detailed documentation on the AD9361 device can be found at:
 <a class="icon adi reference external" href="https://www.analog.com/en/rfif-components/rfif-transceivers/products/AD9361-Integrated-RF-Agile-Transceiver-Design-Res/fca.html">AD9361 Design support package</a></p>
 </section>
 <section id="ad9361-4-fir-filter-wizard">
-<h2>AD9361/4 FIR Filter Wizard<a class="headerlink" href="#ad9361-4-fir-filter-wizard" title="Link to this heading">¶</a></h2>
+<h2>AD9361/4 FIR Filter Wizard<a class="headerlink" href="#ad9361-4-fir-filter-wizard" title="Link to this heading">#</a></h2>
 <p>Questions about the
 <a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz/software/filters">AD936x FIR Filter Wizard</a>
 can be asked on
 <a class="icon ez reference external" href="https://ez.analog.com/linux-software-drivers">Linux Software Drivers</a> sub-community.</p>
 </section>
 <section id="matlab-simulink-simrf-questions">
-<h2>MATLAB/Simulink/SimRF Questions<a class="headerlink" href="#matlab-simulink-simrf-questions" title="Link to this heading">¶</a></h2>
+<h2>MATLAB/Simulink/SimRF Questions<a class="headerlink" href="#matlab-simulink-simrf-questions" title="Link to this heading">#</a></h2>
 <p>Questions about the MathWorks provided AD9361 simRF model, or the FMCOMMS2/3/4/5
 Hardware support package can be asked either:</p>
 <ul class="simple">
@@ -291,7 +352,7 @@ or Board Support Package can be asked:</p>
 </ul>
 </section>
 <section id="gnu-radio">
-<h2>GNU Radio<a class="headerlink" href="#gnu-radio" title="Link to this heading">¶</a></h2>
+<h2>GNU Radio<a class="headerlink" href="#gnu-radio" title="Link to this heading">#</a></h2>
 <p>Questions about using the FMCOMMSx boards and GNU Radio either on a host or on
 the ARM target, can be asked on <a class="icon ez reference external" href="https://ez.analog.com/sw-interface-tools">Software Interface Tools</a>
 sub-community.
@@ -299,7 +360,7 @@ Generic questions about GNU Radio should be asked on their
 <a class="reference external" href="https://wiki.gnuradio.org/index.php/MailingLists">mailing list</a>.</p>
 </section>
 <section id="bugs-feature-requests">
-<h2>Bugs / Feature Requests<a class="headerlink" href="#bugs-feature-requests" title="Link to this heading">¶</a></h2>
+<h2>Bugs / Feature Requests<a class="headerlink" href="#bugs-feature-requests" title="Link to this heading">#</a></h2>
 <p>If you think you have a bug to report, the best place to to this is the <a class="icon ez reference external" href="https://ez.analog.com/">EngineerZone</a>.
 This way we can discuss if the bug is a bug, or a feature request, or just missing
 documentation.</p>
@@ -313,7 +374,7 @@ feel free to:</p>
 <p>Either is OK with us.</p>
 </section>
 <section id="more-info">
-<h2>More info<a class="headerlink" href="#more-info" title="Link to this heading">¶</a></h2>
+<h2>More info<a class="headerlink" href="#more-info" title="Link to this heading">#</a></h2>
 <p>For more information also check:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.vita.com/fmc">VITA’s FMC info</a></p></li>

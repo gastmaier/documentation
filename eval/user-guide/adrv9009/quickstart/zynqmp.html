@@ -5,17 +5,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ADRV9009-W/PCBZ Zynq UltraScale+ MPSoC ZCU102 Quick Start Guide &#8212; System Level Documentation  documentation</title>
+    <title>ZCU102 Quickstart &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/style.min.css?v=434060ed" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/style.min.css?v=95305861" />
     <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script defer="" src="../../../../_static/app.umd.js?v=c93eadd1"></script>
+    <link rel="icon" href="../../../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="ADRV9009 Basic IQ Datafiles" href="../basic-iq-datafiles.html" />
-    <link rel="prev" title="ADRV9009 quickstart guides" href="index.html" />
+    <link rel="next" title="Basic IQ Datafiles" href="../basic-iq-datafiles.html" />
+    <link rel="prev" title="Quickstart" href="index.html" />
    
   
   <meta name="global_root" content="../../../../../">
@@ -78,6 +79,7 @@
     <root>
   <a href="../../../../index.html" class="current">System Level</a>
   <a href="../../../../../hdl/index.html">HDL</a>
+  <a href="../../../../../testbenches/index.html">HDL Testbenches</a>
   <a href="../../../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
   <a href="../../../../../libiio/index.html">libiio</a>
   <a href="../../../../../no-OS/index.html">no-OS</a>
@@ -96,7 +98,7 @@
         </div>
         <nav>
           <ul>
-<li><a class="reference internal" href="#">ADRV9009-W/PCBZ Zynq UltraScale+ MPSoC ZCU102 Quick Start Guide</a><ul>
+<li><a class="reference internal" href="#">ZCU102 Quickstart</a><ul>
 <li><a class="reference internal" href="#required-software">Required Software</a></li>
 <li><a class="reference internal" href="#required-hardware">Required Hardware</a></li>
 <li><a class="reference internal" href="#testing">Testing</a><ul>
@@ -128,6 +130,7 @@ Content on this topic
   <root>
   <a href="../../../../index.html" class="current">System Level</a>
   <a href="../../../../../hdl/index.html">HDL</a>
+  <a href="../../../../../testbenches/index.html">HDL Testbenches</a>
   <a href="../../../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
   <a href="../../../../../libiio/index.html">libiio</a>
   <a href="../../../../../no-OS/index.html">no-OS</a>
@@ -140,7 +143,7 @@ Content on this topic
 </div>
 <div class="toc-tree">
   <html>
-  <body><p class="caption" role="heading"><span class="caption-text">Linux Software</span></p>
+  <body><p class="caption" role="heading"><span class="caption-text">Kuiper &amp; Linux Kernel</span></p>
 <ul>
 <li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1" id="toctree-collapse-1"/><div class="collapse"><a class="reference internal" href="../../../../linux/kuiper/index.html">Kuiper Linux</a><label for="toctree-collapse-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../linux/kuiper/release-notes.html">Release notes</a></li>
@@ -149,18 +152,57 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../../../linux/kuiper/update.html">Updating</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../linux/drivers/index.html">Linux drivers</a></li>
-<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2" id="toctree-collapse-2"/><div class="collapse"><a class="reference internal" href="../../../../linux/kernel/index.html">Linux Kernel and devicetrees</a><label for="toctree-collapse-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2" id="toctree-collapse-2"/><div class="collapse"><a class="reference internal" href="../../../../linux/drivers/index.html">Linux drivers</a><label for="toctree-collapse-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-1" id="toctree-collapse-2-1"/><div class="collapse"><a class="reference internal" href="../../../../linux/drivers/iio-transceiver/index.html">IIO Transceivers</a><label for="toctree-collapse-2-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-1-1" id="toctree-collapse-2-1-1"/><div class="collapse"><a class="reference internal" href="../../../../linux/drivers/iio-transceiver/adrv9009/index.html">ADRV9009, ADRV9008-1, ADRV9008-2</a><label for="toctree-collapse-2-1-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../linux/drivers/iio-transceiver/adrv9009/customization.html">Customization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-2" id="toctree-collapse-2-2"/><div class="collapse"><a class="reference internal" href="../../../../linux/drivers/iio/index.html">Linux Industrial I/O Subsystem</a><label for="toctree-collapse-2-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../linux/drivers/iio/iio-trig-sysfs.html">iio-trig-sysfs driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../linux/drivers/iio/iio-trig-bfin-timer.html">iio-trig-bfin-timer driver</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3" id="toctree-collapse-3"/><div class="collapse"><a class="reference internal" href="../../../../linux/kernel/index.html">Kernel and devicetrees</a><label for="toctree-collapse-3"><div class="icon"></div></label></div><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../linux/kernel/petalinux.html">Building with Petalinux</a></li>
 </ul>
 </li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Software</span></p>
+<ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-4" id="toctree-collapse-4"/><div class="collapse"><a class="reference internal" href="../../../../software/iio-oscilloscope/index.html">IIO Oscilloscope</a><label for="toctree-collapse-4"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-4-1" id="toctree-collapse-4-1"/><div class="collapse"><a class="reference internal" href="../../../../software/iio-oscilloscope/adrv9009/index.html">ADRV9009</a><label for="toctree-collapse-4-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../software/iio-oscilloscope/adrv9009/plugin.html">Standard Plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../software/iio-oscilloscope/adrv9009/advanced-plugin.html">Advanced plugin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-5" id="toctree-collapse-5"/><div class="collapse"><a class="reference internal" href="../../../../software/libiio/index.html">Libiio</a><label for="toctree-collapse-5"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../software/libiio/internals.html">About libiio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../software/libiio/cli.html">Command line utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../software/libiio/tips-tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-6" id="toctree-collapse-6"/><div class="collapse"><a class="reference internal" href="../../../../software/matlab/index.html">MATLAB &amp; Simulink Toolboxes</a><label for="toctree-collapse-6"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../software/matlab/hsx-toolbox/index.html">High Speed Converter Toolbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../software/matlab/transceiver-toolbox/index.html">Transceiver Toolbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../software/matlab/bsp-extend.html">Extending Device Interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../software/pyadi-iio/index.html">PyADI-IIO</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">Evaluation Boards</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3" id="toctree-collapse-3" checked=""/><div class="collapse"><a class="reference internal" href="../../index.html">User guides</a><label for="toctree-collapse-3"><div class="icon"></div></label></div><ul class="current">
-<li class="toctree-l2 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3-1" id="toctree-collapse-3-1" checked=""/><div class="collapse"><a class="reference internal" href="../index.html">ADRV9009 &amp; ADRV9008</a><label for="toctree-collapse-3-1"><div class="icon"></div></label></div><ul class="current">
+<li class="toctree-l1 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7" id="toctree-collapse-7" checked=""/><div class="collapse"><a class="reference internal" href="../../index.html">User guides</a><label for="toctree-collapse-7"><div class="icon"></div></label></div><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../eval-adxl355-pmdz/index.html">EVAL-ADXL355-PMDZ User Guide</a></li>
+<li class="toctree-l2 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7-1" id="toctree-collapse-7-1" checked=""/><div class="collapse"><a class="reference internal" href="../index.html">ADRV9009 &amp; ADRV9008</a><label for="toctree-collapse-7-1"><div class="icon"></div></label></div><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l3 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3-1-1" id="toctree-collapse-3-1-1" checked=""/><div class="collapse"><a class="reference internal" href="index.html">Quickstart</a><label for="toctree-collapse-3-1-1"><div class="icon"></div></label></div><ul class="current">
+<li class="toctree-l3 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7-1-1" id="toctree-collapse-7-1-1" checked=""/><div class="collapse"><a class="reference internal" href="index.html">Quickstart</a><label for="toctree-collapse-7-1-1"><div class="icon"></div></label></div><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">ZCU102</a></li>
 </ul>
 </li>
@@ -172,7 +214,26 @@ Content on this topic
 </ul>
 <p class="caption" role="heading"><span class="caption-text">University Program</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../university/index.html">Engineering University Program</a></li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-8" id="toctree-collapse-8"/><div class="collapse"><a class="reference internal" href="../../../../university/index.html">Engineering University Program</a><label for="toctree-collapse-8"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-8-1" id="toctree-collapse-8-1"/><div class="collapse"><a class="reference internal" href="../../../../university/active_learning/index.html">Active Learning: Student-oriented Lab Exercises</a><label for="toctree-collapse-8-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../university/active_learning/wien_bridge_oscillator/index.html">Activity: The Wien Bridge Oscillator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../university/active_learning/efficiency_power_loss/index.html">Activity: Efficiency, Power Loss, and Thermal Management</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Learning</span></p>
+<ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-9" id="toctree-collapse-9"/><div class="collapse"><a class="reference internal" href="../../../../learning/index.html">Learning! Tutorials, Workshops, Etc</a><label for="toctree-collapse-9"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../learning/tutorial_prec_adc/index.html">Precision ADC Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../learning/converter_connectivity_tutorial/index.html">Converter Connectivity Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../learning/sw_infrastructure/index.html">Key ADI’s Software Infrastructure for designing with ADCs, DACs, and Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../learning/tools_for_ls/index.html">Tools for Low Speed Mixed Signal System Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../learning/tools_for_prec_wb/index.html">Tools for Precision Wideband Mixed Signal System Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../learning/tools_for_hs/index.html">Tools for High-Speed Mixed Signal System Design</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contributing and Guidelines</span></p>
 <ul>
@@ -192,12 +253,12 @@ Content on this topic
         <div class="bodywrapper" id="top-anchor">
           <div class="body" role="main">
             
-  <section id="adrv9009-w-pcbz-zynq-ultrascale-mpsoc-zcu102-quick-start-guide">
-<span id="adrv9009-quickstart-zynqmp"></span><h1>ADRV9009-W/PCBZ Zynq UltraScale+ MPSoC ZCU102 Quick Start Guide<a class="headerlink" href="#adrv9009-w-pcbz-zynq-ultrascale-mpsoc-zcu102-quick-start-guide" title="Link to this heading">¶</a></h1>
+  <section id="zcu102-quickstart">
+<span id="adrv9009-quickstart-zynqmp"></span><h1>ZCU102 Quickstart<a class="headerlink" href="#zcu102-quickstart" title="Link to this heading">#</a></h1>
 <a class="reference internal image-reference" href="../../../../_images/adrv9009_zcu102_quickstart.png"><img alt="../../../../_images/adrv9009_zcu102_quickstart.png" src="../../../../_images/adrv9009_zcu102_quickstart.png" style="width: 600px;" />
 </a>
-<p>This guide provides some quick instructions (still takes awhile to download, and
-set things up) on how to setup the ADRV9009-W/PCBZ on:</p>
+<p>This guide provides some quick instructions on how to setup the ADRV9009-W/PCBZ
+on:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.xilinx.com/ZCU102">ZCU102</a></p></li>
 </ul>
@@ -210,14 +271,14 @@ source</a></p></li>
 BOOT.BIN</a></p></li>
 </ul>
 <section id="required-software">
-<h2>Required Software<a class="headerlink" href="#required-software" title="Link to this heading">¶</a></h2>
+<h2>Required Software<a class="headerlink" href="#required-software" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>SD Card 8GB imaged with Kuiper Linux (see <a class="reference internal" href="../../../../linux/kuiper/sdcard/index.html#kuiper-sdcard"><span class="std std-ref">SD Card flashing</span></a>)</p></li>
 <li><p>A UART terminal (Putty/Tera Term/Minicom, etc.), Baud rate 115200 (8N1).</p></li>
 </ul>
 </section>
 <section id="required-hardware">
-<h2>Required Hardware<a class="headerlink" href="#required-hardware" title="Link to this heading">¶</a></h2>
+<h2>Required Hardware<a class="headerlink" href="#required-hardware" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>AMD Xilinx <a class="reference external" href="https://www.xilinx.com/ZCU102">ZCU102</a> Rev 1.0 board</p></li>
 <li><p>ADRV9009-W/PCBZ FMC board.</p></li>
@@ -228,7 +289,7 @@ BOOT.BIN</a></p></li>
 </ul>
 </section>
 <section id="testing">
-<h2>Testing<a class="headerlink" href="#testing" title="Link to this heading">¶</a></h2>
+<h2>Testing<a class="headerlink" href="#testing" title="Link to this heading">#</a></h2>
 <a class="reference internal image-reference" href="../../../../_images/zcu102.jpg"><img alt="../../../../_images/zcu102.jpg" src="../../../../_images/zcu102.jpg" style="width: 900px;" />
 </a>
 <ul class="simple">
@@ -254,11 +315,11 @@ ttyUSB or COM port registered)</p></li>
 Although the boards feature ESD protection circuitry, permanent damage may occur on devices subjected to high-energy electrostatic discharges. Therefore, proper ESD precautions are recommended to avoid performance degradation or loss of functionality. This includes removing static charge on external equipment, cables, or antennas before connecting to the device. </p>
 </div>
 </div><section id="console-output">
-<h3>Console Output<a class="headerlink" href="#console-output" title="Link to this heading">¶</a></h3>
+<h3>Console Output<a class="headerlink" href="#console-output" title="Link to this heading">#</a></h3>
 <div><div class="collapsible docutils container">
-<input class="collapsible_input" id="486d6a48288b82b41536afba5588bf31a2dafe3c" name="486d6a48288b82b41536afba5588bf31a2dafe3c" type="checkbox"></input><label for="486d6a48288b82b41536afba5588bf31a2dafe3c"><p>Complete boot log</p>
+<input class="collapsible_input" id="4364e3e845913c5a94cd050b14928ddaa28fd823" name="4364e3e845913c5a94cd050b14928ddaa28fd823" type="checkbox"></input><label for="4364e3e845913c5a94cd050b14928ddaa28fd823"><p>Complete boot log</p>
 <div class="icon"></div></label><div class="collapsible_content docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Xilinx Zynq MP First Stage Boot Loader
+<div class="code-shell"><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>Xilinx Zynq MP First Stage Boot Loader
 Release 2017.4   May 11 2018  -  15:08:48
 NOTICE:  ATF running on XCZU9EG/silicon v4/RTL5.1 at 0xfffea000, with PMU firmware
 NOTICE:  BL31: Secure code at 0x0
@@ -740,41 +801,54 @@ Last login: Tue May 15 07:20:04 UTC 2018 on tty1
 Welcome to Linaro 14.04 (GNU/Linux 4.9.0-g6834429-dirty aarch64)
 
  * Documentation:  https://wiki.analog.com/ https://ez.analog.com/
-
-root@analog:~#
 </pre></div>
 </div>
-</div>
-</div>
-</div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>iio_info<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>iio:device
-<span class="c1"># iio:device3: adrv9009-phy</span>
-<span class="c1"># iio:device1: ad9528-1</span>
-<span class="c1"># iio:device6: axi-adrv9009-rx-hpc (buffer capable)</span>
-<span class="c1"># iio:device4: axi-adrv9009-rx-obs-hpc (buffer capable)</span>
-<span class="c1"># iio:device2: ad7291</span>
-<span class="c1"># iio:device0: ams</span>
-<span class="c1"># iio:device5: axi-adrv9009-tx-hpc (buffer capable)</span>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>user@analog:~$
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fru-dump<span class="w"> </span>-b<span class="w"> </span>/sys/bus/i2c/devices/16-0050/eeprom
-<span class="c1"># read 256 bytes from /sys/bus/i2c/devices/16-0050/eeprom</span>
-<span class="c1"># Date of Man     : Tue Nov 27 14:39:00 2012</span>
-<span class="c1"># Manufacturer    : Analog Devices</span>
-<span class="c1"># Product Name    : Wide Tuning Range AD9371 Eval Brd</span>
-<span class="c1"># Serial Number   : 0000</span>
-<span class="c1"># Part Number     : ADRV9371-W/PCBZ</span>
-<span class="c1"># FRU File ID     : Empty Field</span>
-<span class="c1"># PCB Rev         : A</span>
-<span class="c1"># PCB ID          : 08-042591</span>
-<span class="c1"># BOM Rev         : A</span>
-<span class="c1"># Uses LVDS       : Y</span>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-</section>
+<div class="clear-left"></div></div></div></div>
+</div>
+</div><div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>iio_info<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>iio:device
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>iio:device3: adrv9009-phy
+iio:device1: ad9528-1
+iio:device6: axi-adrv9009-rx-hpc (buffer capable)
+iio:device4: axi-adrv9009-rx-obs-hpc (buffer capable)
+iio:device2: ad7291
+iio:device0: ams
+iio:device5: axi-adrv9009-tx-hpc (buffer capable)
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div><div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>fru-dump<span class="w"> </span>-b<span class="w"> </span>/sys/bus/i2c/devices/16-0050/eeprom
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>read 256 bytes from /sys/bus/i2c/devices/16-0050/eeprom
+Date of Man     : Tue Nov 27 14:39:00 2012
+Manufacturer    : Analog Devices
+Product Name    : Wide Tuning Range AD9371 Eval Brd
+Serial Number   : 0000
+Part Number     : ADRV9371-W/PCBZ
+FRU File ID     : Empty Field
+PCB Rev         : A
+PCB ID          : 08-042591
+BOM Rev         : A
+Uses LVDS       : Y
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div></section>
 <section id="iio-oscilloscope-remote">
-<h3>IIO Oscilloscope Remote<a class="headerlink" href="#iio-oscilloscope-remote" title="Link to this heading">¶</a></h3>
-<p>Please see also here:
-<a class="reference external" href="https://wiki.analog.com/resources/tools-software/linux-software/iio_oscilloscope">Oscilloscope</a>.</p>
+<h3>IIO Oscilloscope Remote<a class="headerlink" href="#iio-oscilloscope-remote" title="Link to this heading">#</a></h3>
+<p>Please see also <a class="reference internal" href="../../../../software/iio-oscilloscope/index.html#iio-oscilloscope"><span class="std std-ref">IIO Oscilloscope</span></a>.</p>
 <p>The IIO Oscilloscope application can be used to connect to another platform that
 has a connected device in order to configure the device and read data from it.</p>
 <p>Build and start <code class="docutils literal notranslate"><span class="pre">osc</span></code> on a network enabled Linux host.</p>
@@ -796,8 +870,8 @@ could be hiding. You can do this from the terminal as well with
           </div>
               <div class="related">
                 &nbsp;
-    <a href="index.html" title="Previous document (Alt+Shift+LeftArrow)" class="prev">ADRV9009 quickstart guides</a>
-    <a href="../basic-iq-datafiles.html" title="Next document (Alt+Shift+RightArrow)" class="next">ADRV9009 Basic IQ Datafiles</a>
+    <a href="index.html" title="Previous document (Alt+Shift+LeftArrow)" class="prev">Quickstart</a>
+    <a href="../basic-iq-datafiles.html" title="Next document (Alt+Shift+RightArrow)" class="next">Basic IQ Datafiles</a>
               </div>
           
         </div>

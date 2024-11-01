@@ -7,11 +7,12 @@
 
     <title>Documentation guidelines &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../_static/style.min.css?v=434060ed" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.min.css?v=95305861" />
     <script src="../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script defer="" src="../_static/app.umd.js?v=c93eadd1"></script>
+    <link rel="icon" href="../_static/icon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="Creating new pages" href="creating_new_pages.html" />
@@ -77,6 +78,7 @@
     <root>
   <a href="../index.html" class="current">System Level</a>
   <a href="../../hdl/index.html">HDL</a>
+  <a href="../../testbenches/index.html">HDL Testbenches</a>
   <a href="../../pyadi-iio/index.html">Hardware Python Interfaces</a>
   <a href="../../libiio/index.html">libiio</a>
   <a href="../../no-OS/index.html">no-OS</a>
@@ -121,6 +123,7 @@ Content on this topic
   <root>
   <a href="../index.html" class="current">System Level</a>
   <a href="../../hdl/index.html">HDL</a>
+  <a href="../../testbenches/index.html">HDL Testbenches</a>
   <a href="../../pyadi-iio/index.html">Hardware Python Interfaces</a>
   <a href="../../libiio/index.html">libiio</a>
   <a href="../../no-OS/index.html">no-OS</a>
@@ -133,7 +136,7 @@ Content on this topic
 </div>
 <div class="toc-tree">
   <html>
-  <body><p class="caption" role="heading"><span class="caption-text">Linux Software</span></p>
+  <body><p class="caption" role="heading"><span class="caption-text">Kuiper &amp; Linux Kernel</span></p>
 <ul>
 <li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1" id="toctree-collapse-1"/><div class="collapse"><a class="reference internal" href="../linux/kuiper/index.html">Kuiper Linux</a><label for="toctree-collapse-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l2"><a class="reference internal" href="../linux/kuiper/release-notes.html">Release notes</a></li>
@@ -142,18 +145,57 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../linux/kuiper/update.html">Updating</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../linux/drivers/index.html">Linux drivers</a></li>
-<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2" id="toctree-collapse-2"/><div class="collapse"><a class="reference internal" href="../linux/kernel/index.html">Linux Kernel and devicetrees</a><label for="toctree-collapse-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2" id="toctree-collapse-2"/><div class="collapse"><a class="reference internal" href="../linux/drivers/index.html">Linux drivers</a><label for="toctree-collapse-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-1" id="toctree-collapse-2-1"/><div class="collapse"><a class="reference internal" href="../linux/drivers/iio-transceiver/index.html">IIO Transceivers</a><label for="toctree-collapse-2-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-1-1" id="toctree-collapse-2-1-1"/><div class="collapse"><a class="reference internal" href="../linux/drivers/iio-transceiver/adrv9009/index.html">ADRV9009, ADRV9008-1, ADRV9008-2</a><label for="toctree-collapse-2-1-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l4"><a class="reference internal" href="../linux/drivers/iio-transceiver/adrv9009/customization.html">Customization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-2" id="toctree-collapse-2-2"/><div class="collapse"><a class="reference internal" href="../linux/drivers/iio/index.html">Linux Industrial I/O Subsystem</a><label for="toctree-collapse-2-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../linux/drivers/iio/iio-trig-sysfs.html">iio-trig-sysfs driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../linux/drivers/iio/iio-trig-bfin-timer.html">iio-trig-bfin-timer driver</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3" id="toctree-collapse-3"/><div class="collapse"><a class="reference internal" href="../linux/kernel/index.html">Kernel and devicetrees</a><label for="toctree-collapse-3"><div class="icon"></div></label></div><ul>
 <li class="toctree-l2"><a class="reference internal" href="../linux/kernel/petalinux.html">Building with Petalinux</a></li>
 </ul>
 </li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Software</span></p>
+<ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-4" id="toctree-collapse-4"/><div class="collapse"><a class="reference internal" href="../software/iio-oscilloscope/index.html">IIO Oscilloscope</a><label for="toctree-collapse-4"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-4-1" id="toctree-collapse-4-1"/><div class="collapse"><a class="reference internal" href="../software/iio-oscilloscope/adrv9009/index.html">ADRV9009</a><label for="toctree-collapse-4-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../software/iio-oscilloscope/adrv9009/plugin.html">Standard Plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/iio-oscilloscope/adrv9009/advanced-plugin.html">Advanced plugin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-5" id="toctree-collapse-5"/><div class="collapse"><a class="reference internal" href="../software/libiio/index.html">Libiio</a><label for="toctree-collapse-5"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../software/libiio/internals.html">About libiio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/libiio/cli.html">Command line utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/libiio/tips-tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-6" id="toctree-collapse-6"/><div class="collapse"><a class="reference internal" href="../software/matlab/index.html">MATLAB &amp; Simulink Toolboxes</a><label for="toctree-collapse-6"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../software/matlab/hsx-toolbox/index.html">High Speed Converter Toolbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/matlab/transceiver-toolbox/index.html">Transceiver Toolbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/matlab/bsp-extend.html">Extending Device Interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software/pyadi-iio/index.html">PyADI-IIO</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">Evaluation Boards</span></p>
 <ul>
-<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3" id="toctree-collapse-3"/><div class="collapse"><a class="reference internal" href="../eval/user-guide/index.html">User guides</a><label for="toctree-collapse-3"><div class="icon"></div></label></div><ul>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3-1" id="toctree-collapse-3-1"/><div class="collapse"><a class="reference internal" href="../eval/user-guide/adrv9009/index.html">ADRV9009 &amp; ADRV9008</a><label for="toctree-collapse-3-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7" id="toctree-collapse-7"/><div class="collapse"><a class="reference internal" href="../eval/user-guide/index.html">User guides</a><label for="toctree-collapse-7"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../eval/user-guide/eval-adxl355-pmdz/index.html">EVAL-ADXL355-PMDZ User Guide</a></li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7-1" id="toctree-collapse-7-1"/><div class="collapse"><a class="reference internal" href="../eval/user-guide/adrv9009/index.html">ADRV9009 &amp; ADRV9008</a><label for="toctree-collapse-7-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../eval/user-guide/adrv9009/prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3-1-1" id="toctree-collapse-3-1-1"/><div class="collapse"><a class="reference internal" href="../eval/user-guide/adrv9009/quickstart/index.html">Quickstart</a><label for="toctree-collapse-3-1-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7-1-1" id="toctree-collapse-7-1-1"/><div class="collapse"><a class="reference internal" href="../eval/user-guide/adrv9009/quickstart/index.html">Quickstart</a><label for="toctree-collapse-7-1-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l4"><a class="reference internal" href="../eval/user-guide/adrv9009/quickstart/zynqmp.html">ZCU102</a></li>
 </ul>
 </li>
@@ -165,7 +207,26 @@ Content on this topic
 </ul>
 <p class="caption" role="heading"><span class="caption-text">University Program</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../university/index.html">Engineering University Program</a></li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-8" id="toctree-collapse-8"/><div class="collapse"><a class="reference internal" href="../university/index.html">Engineering University Program</a><label for="toctree-collapse-8"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-8-1" id="toctree-collapse-8-1"/><div class="collapse"><a class="reference internal" href="../university/active_learning/index.html">Active Learning: Student-oriented Lab Exercises</a><label for="toctree-collapse-8-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../university/active_learning/wien_bridge_oscillator/index.html">Activity: The Wien Bridge Oscillator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../university/active_learning/efficiency_power_loss/index.html">Activity: Efficiency, Power Loss, and Thermal Management</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Learning</span></p>
+<ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-9" id="toctree-collapse-9"/><div class="collapse"><a class="reference internal" href="../learning/index.html">Learning! Tutorials, Workshops, Etc</a><label for="toctree-collapse-9"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../learning/tutorial_prec_adc/index.html">Precision ADC Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../learning/converter_connectivity_tutorial/index.html">Converter Connectivity Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../learning/sw_infrastructure/index.html">Key ADI’s Software Infrastructure for designing with ADCs, DACs, and Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../learning/tools_for_ls/index.html">Tools for Low Speed Mixed Signal System Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../learning/tools_for_prec_wb/index.html">Tools for Precision Wideband Mixed Signal System Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../learning/tools_for_hs/index.html">Tools for High-Speed Mixed Signal System Design</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contributing and Guidelines</span></p>
 <ul class="current">
@@ -186,28 +247,30 @@ Content on this topic
           <div class="body" role="main">
             
   <section id="documentation-guidelines">
-<span id="docs-guidelines"></span><h1>Documentation guidelines<a class="headerlink" href="#documentation-guidelines" title="Link to this heading">¶</a></h1>
+<span id="docs-guidelines"></span><h1>Documentation guidelines<a class="headerlink" href="#documentation-guidelines" title="Link to this heading">#</a></h1>
 <p>This documentation is built with <a class="reference external" href="https://www.sphinx-doc.org">Sphinx</a> and
 all source code is available at the path <a class="icon git reference external" href="https://github.com/analogdevicesinc/documentation/tree/main/docs">docs</a>.</p>
-<p>To contribute to it, open a pull request with the changes to
-<a class="icon git reference external" href="https://github.com/analogdevicesinc/documentation/tree/main/">this repository</a>, just make sure to read the general
-<a class="reference external" href="https://analogdevicesinc.github.io/doctools/docs_guidelines.html#docs-guidelines" title="(in Doctools v0.3)"><span>Documentation guidelines</span></a> first <strong>and</strong> the additional guidelines
-below specific to the System Level Documentation repository.</p>
+<p>To contribute to it, first read <a class="reference internal" href="forking_publishing.html#forking-publishing"><span class="std std-ref">Forking and publishing</span></a>,
+read the guidelines
+(both the <a class="reference external" href="https://analogdevicesinc.github.io/doctools/docs_guidelines.html#docs-guidelines" title="(in Doctools v0.3)"><span class="xref std std-ref">general</span></a> <strong>and</strong> the
+additional guidelines below)
+and also <a class="reference internal" href="creating_new_pages.html#creating-new-pages"><span class="std std-ref">Creating new pages</span></a>.</p>
+<p>When you are satisfied with your contribution, open a pull request with the
+changes to <a class="icon git reference external" href="https://github.com/analogdevicesinc/documentation/tree/main/">this repository</a>.</p>
 <section id="templates">
-<h2>Templates<a class="headerlink" href="#templates" title="Link to this heading">¶</a></h2>
-<p>Templates are available:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>No template is available yet.</p>
-</div>
-<p>Remove the <code class="docutils literal notranslate"><span class="pre">:orphan:</span></code> in the first line, it is to hide the templates from the
-<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-toctree">TOC tree</a>,
-and make sure to remove any placeholder text and instructive comment.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The old wiki uses <a class="reference external" href="https://www.dokuwiki.org/dokuwiki">dokuwiki</a>. When
-importing text from there, consider <code class="docutils literal notranslate"><span class="pre">pandoc</span></code> and the tips accross the
-<a class="reference external" href="https://analogdevicesinc.github.io/doctools/docs_guidelines.html#docs-guidelines" title="(in Doctools v0.3)"><span>Documentation guidelines</span></a> to convert it to reST.</p>
+<h2>Templates<a class="headerlink" href="#templates" title="Link to this heading">#</a></h2>
+<p>Any page can be used as a template.</p>
+<p>In particular, for evaluation board user-guide, use the <a class="reference internal" href="../eval/user-guide/adrv9009/index.html#adrv9009"><span class="std std-ref">ADRV9009 &amp; ADRV9008</span></a> pages
+as a template.</p>
+<p>For (future) template pages with <code class="docutils literal notranslate"><span class="pre">:orphan:</span></code> on the first line, remove it.
+This marker is used to hide the templates from the
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-toctree">TOC tree</a>.</p>
+<p>Also, instructions using the comment syntax may be present on the page and also
+need to be removed.
+Those comments have the format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span>
+   <span class="n">I</span><span class="s1">&#39;m a comment</span>
+</pre></div>
 </div>
 </section>
 </section>

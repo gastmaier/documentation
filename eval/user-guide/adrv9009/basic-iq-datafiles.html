@@ -5,17 +5,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ADRV9009 Basic IQ Datafiles &#8212; System Level Documentation  documentation</title>
+    <title>Basic IQ Datafiles &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/style.min.css?v=434060ed" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.min.css?v=95305861" />
     <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script defer="" src="../../../_static/app.umd.js?v=c93eadd1"></script>
+    <link rel="icon" href="../../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Engineering University Program" href="../../../university/index.html" />
-    <link rel="prev" title="ADRV9009-W/PCBZ Zynq UltraScale+ MPSoC ZCU102 Quick Start Guide" href="quickstart/zynqmp.html" />
+    <link rel="prev" title="ZCU102 Quickstart" href="quickstart/zynqmp.html" />
    
   
   <meta name="global_root" content="../../../../">
@@ -78,6 +79,7 @@
     <root>
   <a href="../../../index.html" class="current">System Level</a>
   <a href="../../../../hdl/index.html">HDL</a>
+  <a href="../../../../testbenches/index.html">HDL Testbenches</a>
   <a href="../../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
   <a href="../../../../libiio/index.html">libiio</a>
   <a href="../../../../no-OS/index.html">no-OS</a>
@@ -96,7 +98,7 @@
         </div>
         <nav>
           <ul>
-<li><a class="reference internal" href="#">ADRV9009 Basic IQ Datafiles</a><ul>
+<li><a class="reference internal" href="#">Basic IQ Datafiles</a><ul>
 <li><a class="reference internal" href="#example-files">Example files</a></li>
 <li><a class="reference internal" href="#matlab-format">MATLAB format</a></li>
 <li><a class="reference internal" href="#binary-format">Binary Format</a></li>
@@ -128,6 +130,7 @@ Content on this topic
   <root>
   <a href="../../../index.html" class="current">System Level</a>
   <a href="../../../../hdl/index.html">HDL</a>
+  <a href="../../../../testbenches/index.html">HDL Testbenches</a>
   <a href="../../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
   <a href="../../../../libiio/index.html">libiio</a>
   <a href="../../../../no-OS/index.html">no-OS</a>
@@ -140,7 +143,7 @@ Content on this topic
 </div>
 <div class="toc-tree">
   <html>
-  <body><p class="caption" role="heading"><span class="caption-text">Linux Software</span></p>
+  <body><p class="caption" role="heading"><span class="caption-text">Kuiper &amp; Linux Kernel</span></p>
 <ul>
 <li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1" id="toctree-collapse-1"/><div class="collapse"><a class="reference internal" href="../../../linux/kuiper/index.html">Kuiper Linux</a><label for="toctree-collapse-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../linux/kuiper/release-notes.html">Release notes</a></li>
@@ -149,18 +152,57 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../../../linux/kuiper/update.html">Updating</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../linux/drivers/index.html">Linux drivers</a></li>
-<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2" id="toctree-collapse-2"/><div class="collapse"><a class="reference internal" href="../../../linux/kernel/index.html">Linux Kernel and devicetrees</a><label for="toctree-collapse-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2" id="toctree-collapse-2"/><div class="collapse"><a class="reference internal" href="../../../linux/drivers/index.html">Linux drivers</a><label for="toctree-collapse-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-1" id="toctree-collapse-2-1"/><div class="collapse"><a class="reference internal" href="../../../linux/drivers/iio-transceiver/index.html">IIO Transceivers</a><label for="toctree-collapse-2-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-1-1" id="toctree-collapse-2-1-1"/><div class="collapse"><a class="reference internal" href="../../../linux/drivers/iio-transceiver/adrv9009/index.html">ADRV9009, ADRV9008-1, ADRV9008-2</a><label for="toctree-collapse-2-1-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../linux/drivers/iio-transceiver/adrv9009/customization.html">Customization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-2" id="toctree-collapse-2-2"/><div class="collapse"><a class="reference internal" href="../../../linux/drivers/iio/index.html">Linux Industrial I/O Subsystem</a><label for="toctree-collapse-2-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../linux/drivers/iio/iio-trig-sysfs.html">iio-trig-sysfs driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../linux/drivers/iio/iio-trig-bfin-timer.html">iio-trig-bfin-timer driver</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3" id="toctree-collapse-3"/><div class="collapse"><a class="reference internal" href="../../../linux/kernel/index.html">Kernel and devicetrees</a><label for="toctree-collapse-3"><div class="icon"></div></label></div><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../linux/kernel/petalinux.html">Building with Petalinux</a></li>
 </ul>
 </li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Software</span></p>
+<ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-4" id="toctree-collapse-4"/><div class="collapse"><a class="reference internal" href="../../../software/iio-oscilloscope/index.html">IIO Oscilloscope</a><label for="toctree-collapse-4"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-4-1" id="toctree-collapse-4-1"/><div class="collapse"><a class="reference internal" href="../../../software/iio-oscilloscope/adrv9009/index.html">ADRV9009</a><label for="toctree-collapse-4-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../software/iio-oscilloscope/adrv9009/plugin.html">Standard Plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../software/iio-oscilloscope/adrv9009/advanced-plugin.html">Advanced plugin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-5" id="toctree-collapse-5"/><div class="collapse"><a class="reference internal" href="../../../software/libiio/index.html">Libiio</a><label for="toctree-collapse-5"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/libiio/internals.html">About libiio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/libiio/cli.html">Command line utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/libiio/tips-tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-6" id="toctree-collapse-6"/><div class="collapse"><a class="reference internal" href="../../../software/matlab/index.html">MATLAB &amp; Simulink Toolboxes</a><label for="toctree-collapse-6"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/matlab/hsx-toolbox/index.html">High Speed Converter Toolbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/matlab/transceiver-toolbox/index.html">Transceiver Toolbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/matlab/bsp-extend.html">Extending Device Interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/pyadi-iio/index.html">PyADI-IIO</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">Evaluation Boards</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3" id="toctree-collapse-3" checked=""/><div class="collapse"><a class="reference internal" href="../index.html">User guides</a><label for="toctree-collapse-3"><div class="icon"></div></label></div><ul class="current">
-<li class="toctree-l2 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3-1" id="toctree-collapse-3-1" checked=""/><div class="collapse"><a class="reference internal" href="index.html">ADRV9009 &amp; ADRV9008</a><label for="toctree-collapse-3-1"><div class="icon"></div></label></div><ul class="current">
+<li class="toctree-l1 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7" id="toctree-collapse-7" checked=""/><div class="collapse"><a class="reference internal" href="../index.html">User guides</a><label for="toctree-collapse-7"><div class="icon"></div></label></div><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../eval-adxl355-pmdz/index.html">EVAL-ADXL355-PMDZ User Guide</a></li>
+<li class="toctree-l2 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7-1" id="toctree-collapse-7-1" checked=""/><div class="collapse"><a class="reference internal" href="index.html">ADRV9009 &amp; ADRV9008</a><label for="toctree-collapse-7-1"><div class="icon"></div></label></div><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3-1-1" id="toctree-collapse-3-1-1"/><div class="collapse"><a class="reference internal" href="quickstart/index.html">Quickstart</a><label for="toctree-collapse-3-1-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7-1-1" id="toctree-collapse-7-1-1"/><div class="collapse"><a class="reference internal" href="quickstart/index.html">Quickstart</a><label for="toctree-collapse-7-1-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l4"><a class="reference internal" href="quickstart/zynqmp.html">ZCU102</a></li>
 </ul>
 </li>
@@ -172,7 +214,26 @@ Content on this topic
 </ul>
 <p class="caption" role="heading"><span class="caption-text">University Program</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../university/index.html">Engineering University Program</a></li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-8" id="toctree-collapse-8"/><div class="collapse"><a class="reference internal" href="../../../university/index.html">Engineering University Program</a><label for="toctree-collapse-8"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-8-1" id="toctree-collapse-8-1"/><div class="collapse"><a class="reference internal" href="../../../university/active_learning/index.html">Active Learning: Student-oriented Lab Exercises</a><label for="toctree-collapse-8-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../university/active_learning/wien_bridge_oscillator/index.html">Activity: The Wien Bridge Oscillator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../university/active_learning/efficiency_power_loss/index.html">Activity: Efficiency, Power Loss, and Thermal Management</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Learning</span></p>
+<ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-9" id="toctree-collapse-9"/><div class="collapse"><a class="reference internal" href="../../../learning/index.html">Learning! Tutorials, Workshops, Etc</a><label for="toctree-collapse-9"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../learning/tutorial_prec_adc/index.html">Precision ADC Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../learning/converter_connectivity_tutorial/index.html">Converter Connectivity Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../learning/sw_infrastructure/index.html">Key ADI’s Software Infrastructure for designing with ADCs, DACs, and Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../learning/tools_for_ls/index.html">Tools for Low Speed Mixed Signal System Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../learning/tools_for_prec_wb/index.html">Tools for Precision Wideband Mixed Signal System Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../learning/tools_for_hs/index.html">Tools for High-Speed Mixed Signal System Design</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contributing and Guidelines</span></p>
 <ul>
@@ -192,14 +253,14 @@ Content on this topic
         <div class="bodywrapper" id="top-anchor">
           <div class="body" role="main">
             
-  <section id="adrv9009-basic-iq-datafiles">
-<h1>ADRV9009 Basic IQ Datafiles<a class="headerlink" href="#adrv9009-basic-iq-datafiles" title="Link to this heading">¶</a></h1>
+  <section id="basic-iq-datafiles">
+<h1>Basic IQ Datafiles<a class="headerlink" href="#basic-iq-datafiles" title="Link to this heading">#</a></h1>
 <p>DDS Mode - DAC Buffer Output allows loading of Matlab MAT, Binary and ASCII TEXT
 sample files.</p>
 <a class="reference internal image-reference" href="../../../_images/adrv9009_dac_data.png"><img alt="../../../_images/adrv9009_dac_data.png" src="../../../_images/adrv9009_dac_data.png" style="width: 600px;" />
 </a>
 <section id="example-files">
-<h2>Example files<a class="headerlink" href="#example-files" title="Link to this heading">¶</a></h2>
+<h2>Example files<a class="headerlink" href="#example-files" title="Link to this heading">#</a></h2>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <thead>
@@ -309,7 +370,7 @@ This is expected, and normal.</p>
 </div>
 </section>
 <section id="matlab-format">
-<h2>MATLAB format<a class="headerlink" href="#matlab-format" title="Link to this heading">¶</a></h2>
+<h2>MATLAB format<a class="headerlink" href="#matlab-format" title="Link to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">./osc</span></code> application uses the
 <a class="reference external" href="http://sourceforge.net/projects/matio/">MAT File I/O Library</a>
 to be able to read
@@ -331,7 +392,7 @@ assumed to be full scale.</p></li>
 in <a class="reference external" href="https://www.mathworks.com/products/matlab">MATLAB</a> for further explanation.</p>
 </section>
 <section id="binary-format">
-<h2>Binary Format<a class="headerlink" href="#binary-format" title="Link to this heading">¶</a></h2>
+<h2>Binary Format<a class="headerlink" href="#binary-format" title="Link to this heading">#</a></h2>
 <p>In binary format each I or Q word is in 16-bit signed format.</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
@@ -401,7 +462,7 @@ therefore 64-bit wide.</p>
 </div>
 </section>
 <section id="ascii-format">
-<h2>ASCII Format<a class="headerlink" href="#ascii-format" title="Link to this heading">¶</a></h2>
+<h2>ASCII Format<a class="headerlink" href="#ascii-format" title="Link to this heading">#</a></h2>
 <p>A valid ASCII file is prefixed with a ‘TEXT’ magic string. Values are delimited
 by either comma, spaces or tabs.</p>
 <p>Samples are separated by rows.</p>
@@ -446,7 +507,7 @@ valid range with the ‘TEXTU’ option is:</p>
 </div>
 </section>
 <section id="sample-c-code-application">
-<h2>Sample C code Application<a class="headerlink" href="#sample-c-code-application" title="Link to this heading">¶</a></h2>
+<h2>Sample C code Application<a class="headerlink" href="#sample-c-code-application" title="Link to this heading">#</a></h2>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdint.h&gt;</span>
@@ -522,69 +583,82 @@ valid range with the ‘TEXTU’ option is:</p>
 </div>
 </section>
 <section id="compiling-the-sample-application">
-<h2>Compiling the Sample Application<a class="headerlink" href="#compiling-the-sample-application" title="Link to this heading">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gcc<span class="w"> </span>do_iq.c<span class="w"> </span>-o<span class="w"> </span>do_iq<span class="w"> </span>-lm
+<h2>Compiling the Sample Application<a class="headerlink" href="#compiling-the-sample-application" title="Link to this heading">#</a></h2>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-</section>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>gcc<span class="w"> </span>do_iq.c<span class="w"> </span>-o<span class="w"> </span>do_iq<span class="w"> </span>-lm
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div></section>
 <section id="usage-examples">
-<h2>Usage Examples<a class="headerlink" href="#usage-examples" title="Link to this heading">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./do_iq<span class="w"> </span>-a<span class="w"> </span><span class="m">1</span>.0<span class="w"> </span>-f<span class="w"> </span><span class="m">20</span><span class="w"> </span>cw_fullscale_f20.bin
-<span class="c1"># 32-bit Word: I : Q</span>
-<span class="c1"># 0x00007FFF : 0 : 32767</span>
-<span class="c1"># 0x278D79BB : 10125 : 31163</span>
-<span class="c1"># 0x4B3B678D : 19259 : 26509</span>
-<span class="c1"># 0x678D4B3B : 26509 : 19259</span>
-<span class="c1"># 0x79BB278D : 31163 : 10125</span>
-<span class="c1"># 0x7FFF0000 : 32767 : 0</span>
-<span class="c1"># 0x79BBD873 : 31163 : -10125</span>
-<span class="c1"># 0x678DB4C5 : 26509 : -19259</span>
-<span class="c1"># 0x4B3B9873 : 19259 : -26509</span>
-<span class="c1"># 0x278D8645 : 10125 : -31163</span>
-<span class="c1"># 0x00008001 : 0 : -32767</span>
-<span class="c1"># 0xD8738645 : -10125 : -31163</span>
-<span class="c1"># 0xB4C59873 : -19259 : -26509</span>
-<span class="c1"># 0x9873B4C5 : -26509 : -19259</span>
-<span class="c1"># 0x8645D873 : -31163 : -10125</span>
-<span class="c1"># 0x80010000 : -32767 : 0</span>
-<span class="c1"># 0x8645278D : -31163 : 10125</span>
-<span class="c1"># 0x98734B3B : -26509 : 19259</span>
-<span class="c1"># 0xB4C5678D : -19259 : 26509</span>
-<span class="c1"># 0xD87379BB : -10125 : 31163</span>
+<h2>Usage Examples<a class="headerlink" href="#usage-examples" title="Link to this heading">#</a></h2>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./do_iq<span class="w"> </span>-a<span class="w"> </span><span class="m">0</span>.5<span class="w"> </span>-f<span class="w"> </span><span class="m">20</span><span class="w"> </span>cw_halfscale_f20.bin
-<span class="c1"># 32-bit Word: I : Q</span>
-<span class="c1"># 0x00003FFF : 0 : 16383</span>
-<span class="c1"># 0x13C63CDD : 5062 : 15581</span>
-<span class="c1"># 0x259D33C6 : 9629 : 13254</span>
-<span class="c1"># 0x33C6259D : 13254 : 9629</span>
-<span class="c1"># 0x3CDD13C6 : 15581 : 5062</span>
-<span class="c1"># 0x3FFF0000 : 16383 : 0</span>
-<span class="c1"># 0x3CDDEC3A : 15581 : -5062</span>
-<span class="c1"># 0x33C6DA63 : 13254 : -9629</span>
-<span class="c1"># 0x259DCC3A : 9629 : -13254</span>
-<span class="c1"># 0x13C6C323 : 5062 : -15581</span>
-<span class="c1"># 0x0000C001 : 0 : -16383</span>
-<span class="c1"># 0xEC3AC323 : -5062 : -15581</span>
-<span class="c1"># 0xDA63CC3A : -9629 : -13254</span>
-<span class="c1"># 0xCC3ADA63 : -13254 : -9629</span>
-<span class="c1"># 0xC323EC3A : -15581 : -5062</span>
-<span class="c1"># 0xC0010000 : -16383 : 0</span>
-<span class="c1"># 0xC32313C6 : -15581 : 5062</span>
-<span class="c1"># 0xCC3A259D : -13254 : 9629</span>
-<span class="c1"># 0xDA6333C6 : -9629 : 13254</span>
-<span class="c1"># 0xEC3A3CDD : -5062 : 15581</span>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>./do_iq<span class="w"> </span>-a<span class="w"> </span><span class="m">1</span>.0<span class="w"> </span>-f<span class="w"> </span><span class="m">20</span><span class="w"> </span>cw_fullscale_f20.bin
 </pre></div>
 </div>
-</section>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>32-bit Word: I : Q
+0x00007FFF : 0 : 32767
+0x278D79BB : 10125 : 31163
+0x4B3B678D : 19259 : 26509
+0x678D4B3B : 26509 : 19259
+0x79BB278D : 31163 : 10125
+0x7FFF0000 : 32767 : 0
+0x79BBD873 : 31163 : -10125
+0x678DB4C5 : 26509 : -19259
+0x4B3B9873 : 19259 : -26509
+0x278D8645 : 10125 : -31163
+0x00008001 : 0 : -32767
+0xD8738645 : -10125 : -31163
+0xB4C59873 : -19259 : -26509
+0x9873B4C5 : -26509 : -19259
+0x8645D873 : -31163 : -10125
+0x80010000 : -32767 : 0
+0x8645278D : -31163 : 10125
+0x98734B3B : -26509 : 19259
+0xB4C5678D : -19259 : 26509
+0xD87379BB : -10125 : 31163
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div><div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>./do_iq<span class="w"> </span>-a<span class="w"> </span><span class="m">0</span>.5<span class="w"> </span>-f<span class="w"> </span><span class="m">20</span><span class="w"> </span>cw_halfscale_f20.bin
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>32-bit Word: I : Q
+0x00003FFF : 0 : 16383
+0x13C63CDD : 5062 : 15581
+0x259D33C6 : 9629 : 13254
+0x33C6259D : 13254 : 9629
+0x3CDD13C6 : 15581 : 5062
+0x3FFF0000 : 16383 : 0
+0x3CDDEC3A : 15581 : -5062
+0x33C6DA63 : 13254 : -9629
+0x259DCC3A : 9629 : -13254
+0x13C6C323 : 5062 : -15581
+0x0000C001 : 0 : -16383
+0xEC3AC323 : -5062 : -15581
+0xDA63CC3A : -9629 : -13254
+0xCC3ADA63 : -13254 : -9629
+0xC323EC3A : -15581 : -5062
+0xC0010000 : -16383 : 0
+0xC32313C6 : -15581 : 5062
+0xCC3A259D : -13254 : 9629
+0xDA6333C6 : -9629 : 13254
+0xEC3A3CDD : -5062 : 15581
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div></section>
 </section>
 
 
           </div>
               <div class="related">
                 &nbsp;
-    <a href="quickstart/zynqmp.html" title="Previous document (Alt+Shift+LeftArrow)" class="prev">ADRV9009-W/PCBZ Zynq UltraScale+ MPSoC ZCU102 Quick Start Guide</a>
+    <a href="quickstart/zynqmp.html" title="Previous document (Alt+Shift+LeftArrow)" class="prev">ZCU102 Quickstart</a>
     <a href="../../../university/index.html" title="Next document (Alt+Shift+RightArrow)" class="next">Engineering University Program</a>
               </div>
           
