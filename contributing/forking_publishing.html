@@ -109,6 +109,7 @@
 <li><a class="reference internal" href="#adding-content">Adding content</a></li>
 <li><a class="reference internal" href="#pushing-and-triggering-the-ci">Pushing and triggering the CI</a></li>
 <li><a class="reference internal" href="#resuming-work-at-a-later-time">Resuming work at a later time</a></li>
+<li><a class="reference internal" href="#understanding-git-lfs">Understanding git lfs</a></li>
 </ul>
 </li>
 </ul>
@@ -156,14 +157,18 @@ Content on this topic
 </ul>
 </li>
 <li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2" id="toctree-collapse-2"/><div class="collapse"><a class="reference internal" href="../linux/drivers/index.html">Linux drivers</a><label for="toctree-collapse-2"><div class="icon"></div></label></div><ul>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-1" id="toctree-collapse-2-1"/><div class="collapse"><a class="reference internal" href="../linux/drivers/iio-transceiver/index.html">IIO Transceivers</a><label for="toctree-collapse-2-1"><div class="icon"></div></label></div><ul>
-<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-1-1" id="toctree-collapse-2-1-1"/><div class="collapse"><a class="reference internal" href="../linux/drivers/iio-transceiver/adrv9009/index.html">ADRV9009, ADRV9008-1, ADRV9008-2</a><label for="toctree-collapse-2-1-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-1" id="toctree-collapse-2-1"/><div class="collapse"><a class="reference internal" href="../linux/drivers/iio-adc/index.html">IIO ADC</a><label for="toctree-collapse-2-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../linux/drivers/iio-adc/ad4052/index.html">AD4052</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-2" id="toctree-collapse-2-2"/><div class="collapse"><a class="reference internal" href="../linux/drivers/iio-transceiver/index.html">IIO Transceivers</a><label for="toctree-collapse-2-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-2-1" id="toctree-collapse-2-2-1"/><div class="collapse"><a class="reference internal" href="../linux/drivers/iio-transceiver/adrv9009/index.html">ADRV9009, ADRV9008-1, ADRV9008-2</a><label for="toctree-collapse-2-2-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l4"><a class="reference internal" href="../linux/drivers/iio-transceiver/adrv9009/customization.html">Customization</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-2" id="toctree-collapse-2-2"/><div class="collapse"><a class="reference internal" href="../linux/drivers/iio/index.html">Linux Industrial I/O Subsystem</a><label for="toctree-collapse-2-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-3" id="toctree-collapse-2-3"/><div class="collapse"><a class="reference internal" href="../linux/drivers/iio/index.html">Linux Industrial I/O Subsystem</a><label for="toctree-collapse-2-3"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../linux/drivers/iio/iio-trig-sysfs.html">iio-trig-sysfs driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../linux/drivers/iio/iio-trig-bfin-timer.html">iio-trig-bfin-timer driver</a></li>
 </ul>
@@ -496,6 +501,46 @@ configure GitHub Pages at <em>github.com/&lt;your_user&gt;/documentation/setting
 </pre></div>
 </div>
 <div class="clear-left"></div></div></div><p>Edit, build, commit, push as usual.</p>
+</section>
+<section id="understanding-git-lfs">
+<h2>Understanding git lfs<a class="headerlink" href="#understanding-git-lfs" title="Link to this heading">#</a></h2>
+<p>Since git lfs is not that common in the wild, it may be tricky to get the hang
+of it.</p>
+<p>First of all, the basics:
+lfs replaces binaries files with pointers, and stores the binaries outside the
+git repository, in an external server.</p>
+<p>When you do <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone/pull</span></code>, by default lfs will also download the binaries
+at the “smudge” step.
+You can change this behaviour by setting globally
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">lfs</span> <span class="pre">install</span> <span class="pre">--skip-smudge</span></code> or temporally with <code class="docutils literal notranslate"><span class="pre">GIT_LFS_SKIP_SMUDGE=1</span></code>
+environment variable.</p>
+<p>If during a clone or pull you obtain the error:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Encountered</span> <span class="n">n</span> <span class="n">file</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">that</span> <span class="n">should</span> <span class="n">have</span> <span class="n">been</span> <span class="n">pointers</span>
+</pre></div>
+</div>
+<p>That simply means that someone pushed files to remote that should have been
+pointers (defined in the <em>.gitattributes</em> file).
+And to fix is simple:</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>--renomalize<span class="w"> </span>.
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Convert binary files to pointers&quot;</span>
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div><p>And advise the committer to ensure he has git lfs enabled with
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">lfs</span> <span class="pre">install</span></code>.</p>
 </section>
 </section>
 
