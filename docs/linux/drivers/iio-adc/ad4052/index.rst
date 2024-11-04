@@ -112,8 +112,13 @@ The following custom attributes are available:
    - - ``adi,functional-mode``
      - | 0
        | 1
-     - | Sample is 12 or 16 bit.
-       | Sample is 24 or 16-bit burst average of n-samples.
+     - | Sample is 16\* or 12-bit\*\*.
+       | Sample is 24\* or 16-bit\*\* burst average of n-samples.
+
+Legend:
+
+* \* Valid for AD4052/AD4058.
+* \*\* Valid for AD4050/AD4056.
 
 .. important::
 
@@ -204,6 +209,7 @@ This device can be found under */sys/bus/iio/devices/*
 One way to check if the device and driver are present is using **iio_info**:
 
 .. shell::
+   :no-path:
 
    $iio_info
         iio:device0: ad4052 (buffer capable)
@@ -225,10 +231,11 @@ One way to check if the device and driver are present is using **iio_info**:
 You can go to the device folder using:
 
 .. shell::
+   :no-path:
 
    $cd $(grep -rw /sys/bus/iio/devices/*/name -e "ad4052" -l | xargs dirname)
 
-.. important::
+.. note::
 
    As specified in the devicetree section, the device supports
    multiple functional modes.
@@ -269,8 +276,10 @@ configurable as a power of 2, up to a maximum of 2\ :sup:`11`.
 Display all available number(in samples) of averaging operations on the buffer:
 
 .. shell::
+   :no-path:
 
-   /sys/bus/iio/devices/iio:device0
+   $cd /sys/bus/iio/devices/iio\:device0 ; pwd
+    /sys/bus/iio/devices/iio:device0
    $cat averaging_filter_available
     2 4 8 16 32 64 128 256 512 1024 2048 4096
 
@@ -299,9 +308,25 @@ Change the sample averaging count:
    For single shot readings, the conversion time may take longer than between
    the CNV assertion and the SPI read transfer, resulting in invalid readings.
 
-.. todo::
+Sample rate for burst and monitor mode
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Add support to TIMER_CONFIG.FS_BURST_AUTO
+Leveraging the device internal clock, the sample rate for burst and monitor
+mode can be configured:
+
+.. attention::
+
+   Even though AD4056 and AD4058 do not support 2MSPS and 1MSPS,
+   their reset value are still 2MSPS (0x00).
+   Writing these options to these devices will return ``-EINVAL``.
+
+.. shell::
+   :no-path:
+
+   $cd /sys/bus/iio/devices/iio\:device0 ; pwd
+   $echo 1000000 > fs_burst_auto
+   $cat fs_burst_auto
+    1000000
 
 Auto suspend
 ^^^^^^^^^^^^
@@ -325,10 +350,13 @@ sleep mode.
 This is to avoid putting the device to sleep when sampling single shot readings
 without a buffer.
 
-Trigger Mode
+Monitor Mode
 ^^^^^^^^^^^^
 
-The driver can yield IIO Events for the device trigger mode interrupt.
+The driver yield a IIO Event for the device threshold interrupt in device
+monitor mode.
+The event is triggered for either direction (rising or falling the max/min
+threshold values).
 Configure the device threshold and hysteresis values:
 
 .. shell::
@@ -341,7 +369,7 @@ Configure the device threshold and hysteresis values:
    $echo 125 > events/thresh_rising_hysteresis
    $echo 125 > events/thresh_falling_hysteresis
 
-Enable trigger mode:
+Enable monitor mode:
 
 .. shell::
    :no-path:
@@ -349,7 +377,7 @@ Enable trigger mode:
    /sys/bus/iio/devices/iio\:device0
    $echo 1 > events/thresh_either_en
 
-At trigger mode, since the device is contiguously sampling, the device is active:
+At monitor mode, since the device is contiguously sampling, the device is active:
 
 .. shell::
    :no-path:
@@ -367,7 +395,7 @@ Threshold events will increment the interrupt count:
      ...
      46:          3 GIC-0  90 Edge      ad4052
 
-The driver puts the device in trigger mode after every event or access, until
+The driver puts the device in monitor mode after every device access, until
 disabling the threshold event with:
 
 .. shell::
@@ -375,6 +403,28 @@ disabling the threshold event with:
 
    /sys/bus/iio/devices/iio\:device0
    $echo 0 > events/thresh_either_en
+
+.. caution::
+
+   Re-entering monitor mode will trigger a interrupt if the sampling is still
+   outside the sampling range.
+
+The user is responsible to catching IIO Event and clearing the device status
+register.
+
+.. shell::
+   :no-path:
+
+   $echo 0x41 > direct_reg_access
+   $cat direct_reg_access
+    0x88
+   $echo 0x41 0x02 > direct_reg_access
+   $cat direct_reg_access
+    0x80
+
+Usually, the user should disable the event after receiving the interrupt and
+then fetch and clear the status register, to avoid triggering new interrupts
+if the sampling value is still outside the threshold range.
 
 Data acquisition
 ^^^^^^^^^^^^^^^^
@@ -463,6 +513,6 @@ Write and verify the value:
 .. shell::
    :no-path:
 
-   $echo 0xA 0x5F> direct_reg_access
+   $echo 0xA 0x5F > direct_reg_access
    $cat direct_reg_access
     0x5F
