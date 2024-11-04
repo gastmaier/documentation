@@ -114,8 +114,9 @@
 <li><a class="reference internal" href="#kernel-configuration">Kernel configuration</a></li>
 <li><a class="reference internal" href="#driver-testing">Driver testing</a><ul>
 <li><a class="reference internal" href="#burst-averaging-mode">Burst averaging mode</a></li>
+<li><a class="reference internal" href="#sample-rate-for-burst-and-monitor-mode">Sample rate for burst and monitor mode</a></li>
 <li><a class="reference internal" href="#auto-suspend">Auto suspend</a></li>
-<li><a class="reference internal" href="#trigger-mode">Trigger Mode</a></li>
+<li><a class="reference internal" href="#monitor-mode">Monitor Mode</a></li>
 <li><a class="reference internal" href="#data-acquisition">Data acquisition</a></li>
 <li><a class="reference internal" href="#debug-mode">Debug mode</a></li>
 </ul>
@@ -399,14 +400,19 @@ The following custom attributes are available:</p>
 </div>
 </td>
 <td><div class="line-block">
-<div class="line">Sample is 12 or 16 bit.</div>
-<div class="line">Sample is 24 or 16-bit burst average of n-samples.</div>
+<div class="line">Sample is 16* or 12-bit**.</div>
+<div class="line">Sample is 24* or 16-bit** burst average of n-samples.</div>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 </div>
+<p>Legend:</p>
+<ul class="simple">
+<li><p>* Valid for AD4052/AD4058.</p></li>
+<li><p>** Valid for AD4050/AD4056.</p></li>
+</ul>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">spi-max-frequency</span></code> must be a multiple of a 25MHz clock
@@ -485,7 +491,7 @@ set of SPI timing requirements that are supported by the
 <h3>Driver testing<a class="headerlink" href="#driver-testing" title="Link to this heading">#</a></h3>
 <p>This device can be found under <em>/sys/bus/iio/devices/</em></p>
 <p>One way to check if the device and driver are present is using <strong>iio_info</strong>:</p>
-<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
 </pre></div>
 </div>
 <div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>iio_info
@@ -509,14 +515,14 @@ set of SPI timing requirements that are supported by the
 </pre></div>
 </div>
 <div class="clear-left"></div></div></div><p>You can go to the device folder using:</p>
-<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
 </pre></div>
 </div>
 <div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="k">$(</span>grep<span class="w"> </span>-rw<span class="w"> </span>/sys/bus/iio/devices/*/name<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;ad4052&quot;</span><span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>dirname<span class="k">)</span>
 </pre></div>
 </div>
-<div class="clear-left"></div></div></div><div class="admonition important">
-<p class="admonition-title">Important</p>
+<div class="clear-left"></div></div></div><div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>As specified in the devicetree section, the device supports
 multiple functional modes.
 This example describes the steps for the 24-bit burst averaging mode.</p>
@@ -549,7 +555,16 @@ lrwxrwxrwx 1 root root    0 Nov  1 19:40 subsystem -&gt; ../../../../../../../..
 <p>The AD4052 device family has support for a burst averaging mode that’s
 configurable as a power of 2, up to a maximum of 2<sup>11</sup>.</p>
 <p>Display all available number(in samples) of averaging operations on the buffer:</p>
-<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>/sys/bus/iio/devices/iio:device0$
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/sys/bus/iio/devices/iio<span class="se">\:</span>device0<span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nb">pwd</span>
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>/sys/bus/iio/devices/iio:device0
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
 </pre></div>
 </div>
 <div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>averaging_filter_available
@@ -591,11 +606,39 @@ the default buffer wait time is not modified.</p>
 <p>For single shot readings, the conversion time may take longer than between
 the CNV assertion and the SPI read transfer, resulting in invalid readings.</p>
 </div>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>Add support to TIMER_CONFIG.FS_BURST_AUTO</p>
-</div>
 </section>
+<section id="sample-rate-for-burst-and-monitor-mode">
+<h4>Sample rate for burst and monitor mode<a class="headerlink" href="#sample-rate-for-burst-and-monitor-mode" title="Link to this heading">#</a></h4>
+<p>Leveraging the device internal clock, the sample rate for burst and monitor
+mode can be configured:</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Even though AD4056 and AD4058 do not support 2MSPS and 1MSPS,
+their reset value are still 2MSPS (0x00).
+Writing these options to these devices will return <code class="docutils literal notranslate"><span class="pre">-EINVAL</span></code>.</p>
+</div>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/sys/bus/iio/devices/iio<span class="se">\:</span>device0<span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nb">pwd</span>
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="m">1000000</span><span class="w"> </span>&gt;<span class="w"> </span>fs_burst_auto
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>fs_burst_auto
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>1000000
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div></section>
 <section id="auto-suspend">
 <h4>Auto suspend<a class="headerlink" href="#auto-suspend" title="Link to this heading">#</a></h4>
 <p>The device enters sleep mode (low power) when no acquisition is being made.
@@ -619,9 +662,12 @@ sleep mode.
 This is to avoid putting the device to sleep when sampling single shot readings
 without a buffer.</p>
 </section>
-<section id="trigger-mode">
-<h4>Trigger Mode<a class="headerlink" href="#trigger-mode" title="Link to this heading">#</a></h4>
-<p>The driver can yield IIO Events for the device trigger mode interrupt.
+<section id="monitor-mode">
+<h4>Monitor Mode<a class="headerlink" href="#monitor-mode" title="Link to this heading">#</a></h4>
+<p>The driver yield a IIO Event for the device threshold interrupt in device
+monitor mode.
+The event is triggered for either direction (rising or falling the max/min
+threshold values).
 Configure the device threshold and hysteresis values:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
 </pre></div>
@@ -656,14 +702,14 @@ Configure the device threshold and hysteresis values:</p>
 <div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="m">125</span><span class="w"> </span>&gt;<span class="w"> </span>events/thresh_falling_hysteresis
 </pre></div>
 </div>
-<div class="clear-left"></div></div></div><p>Enable trigger mode:</p>
+<div class="clear-left"></div></div></div><p>Enable monitor mode:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
 </pre></div>
 </div>
 <div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>events/thresh_either_en
 </pre></div>
 </div>
-<div class="clear-left"></div></div></div><p>At trigger mode, since the device is contiguously sampling, the device is active:</p>
+<div class="clear-left"></div></div></div><p>At monitor mode, since the device is contiguously sampling, the device is active:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
 </pre></div>
 </div>
@@ -685,7 +731,7 @@ Configure the device threshold and hysteresis values:</p>
  46:          3 GIC-0  90 Edge      ad4052
 </pre></div>
 </div>
-<div class="clear-left"></div></div></div><p>The driver puts the device in trigger mode after every event or access, until
+<div class="clear-left"></div></div></div><p>The driver puts the device in monitor mode after every device access, until
 disabling the threshold event with:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
 </pre></div>
@@ -693,7 +739,47 @@ disabling the threshold event with:</p>
 <div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="m">0</span><span class="w"> </span>&gt;<span class="w"> </span>events/thresh_either_en
 </pre></div>
 </div>
-<div class="clear-left"></div></div></div></section>
+<div class="clear-left"></div></div></div><div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Re-entering monitor mode will trigger a interrupt if the sampling is still
+outside the sampling range.</p>
+</div>
+<p>The user is responsible to catching IIO Event and clearing the device status
+register.</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span>0x41<span class="w"> </span>&gt;<span class="w"> </span>direct_reg_access
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>direct_reg_access
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>0x88
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span>0x41<span class="w"> </span>0x02<span class="w"> </span>&gt;<span class="w"> </span>direct_reg_access
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>direct_reg_access
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>0x80
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div><p>Usually, the user should disable the event after receiving the interrupt and
+then fetch and clear the status register, to avoid triggering new interrupts
+if the sampling value is still outside the threshold range.</p>
+</section>
 <section id="data-acquisition">
 <h4>Data acquisition<a class="headerlink" href="#data-acquisition" title="Link to this heading">#</a></h4>
 <p>The data acquisition is performed using a buffer system:</p>
@@ -826,7 +912,7 @@ write the scratchpad register:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span>0xA<span class="w"> </span>0x5F&gt;<span class="w"> </span>direct_reg_access
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span>0xA<span class="w"> </span>0x5F<span class="w"> </span>&gt;<span class="w"> </span>direct_reg_access
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
