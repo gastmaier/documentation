@@ -299,12 +299,82 @@ Change the sample averaging count:
    For single shot readings, the conversion time may take longer than between
    the CNV assertion and the SPI read transfer, resulting in invalid readings.
 
+.. todo::
+
+   Add support to TIMER_CONFIG.FS_BURST_AUTO
+
+Auto suspend
+^^^^^^^^^^^^
+
+The device enters sleep mode (low power) when no acquisition is being made.
+Display the current runtime status:
+
+.. shell::
+   :no-path:
+
+   $cat /sys/bus/spi/devices/spi0.0/power/runtime_status
+    suspend
+
+.. caution::
+
+   The power management methods are coupled to the spi device and not the
+   iio device.
+
+There is a timeout of 1 second before the power management puts the device in
+sleep mode.
+This is to avoid putting the device to sleep when sampling single shot readings
+without a buffer.
+
 Trigger Mode
 ^^^^^^^^^^^^
 
-.. todo::
+The driver can yield IIO Events for the device trigger mode interrupt.
+Configure the device threshold and hysteresis values:
 
-   Add Trigger mode info
+.. shell::
+   :no-path:
+
+   $cd /sys/bus/iio/devices/iio\:device0 ; pwd
+    /sys/bus/iio/devices/iio\:device0
+   $echo 1000 > events/thresh_rising_value
+   $echo -1000 > events/thresh_falling_value
+   $echo 125 > events/thresh_rising_hysteresis
+   $echo 125 > events/thresh_falling_hysteresis
+
+Enable trigger mode:
+
+.. shell::
+   :no-path:
+
+   /sys/bus/iio/devices/iio\:device0
+   $echo 1 > events/thresh_either_en
+
+At trigger mode, since the device is contiguously sampling, the device is active:
+
+.. shell::
+   :no-path:
+
+   $cat /sys/bus/spi/devices/spi0.0/power/runtime_status
+    active
+
+Threshold events will increment the interrupt count:
+
+.. shell::
+   :no-path:
+
+   $cat /proc/interrupts
+               CPU0
+     ...
+     46:          3 GIC-0  90 Edge      ad4052
+
+The driver puts the device in trigger mode after every event or access, until
+disabling the threshold event with:
+
+.. shell::
+   :no-path:
+
+   /sys/bus/iio/devices/iio\:device0
+   $echo 0 > events/thresh_either_en
 
 Data acquisition
 ^^^^^^^^^^^^^^^^
