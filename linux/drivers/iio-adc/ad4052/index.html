@@ -113,10 +113,11 @@
 <li><a class="reference internal" href="#usage">Usage</a><ul>
 <li><a class="reference internal" href="#kernel-configuration">Kernel configuration</a></li>
 <li><a class="reference internal" href="#driver-testing">Driver testing</a><ul>
-<li><a class="reference internal" href="#burst-averaging-mode">Burst averaging mode</a></li>
+<li><a class="reference internal" href="#oversampling">Oversampling</a></li>
 <li><a class="reference internal" href="#sample-rate-for-burst-and-monitor-mode">Sample rate for burst and monitor mode</a></li>
+<li><a class="reference internal" href="#sample-rate-for-buffer-reading-with-pwm-trigger">Sample rate for buffer reading with PWM trigger</a></li>
 <li><a class="reference internal" href="#auto-suspend">Auto suspend</a></li>
-<li><a class="reference internal" href="#monitor-mode">Monitor Mode</a></li>
+<li><a class="reference internal" href="#monitor-mode">Monitor mode</a></li>
 <li><a class="reference internal" href="#data-acquisition">Data acquisition</a></li>
 <li><a class="reference internal" href="#debug-mode">Debug mode</a></li>
 </ul>
@@ -382,37 +383,7 @@ May be the same clock as the SPI Controller driver.</p>
 </section>
 <section id="adc-node">
 <h3>ADC node<a class="headerlink" href="#adc-node" title="Link to this heading">#</a></h3>
-<p>The AD4052 is a SPI-compatible ADC so it should be under a SPI controller.
-The following custom attributes are available:</p>
-<div class="table-wrapper docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Attribute name</p></th>
-<th class="head"><p>Values</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">adi,functional-mode</span></code></p></td>
-<td><div class="line-block">
-<div class="line">0</div>
-<div class="line">1</div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line">Sample is 16* or 12-bit**.</div>
-<div class="line">Sample is 24* or 16-bit** burst average of n-samples.</div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Legend:</p>
-<ul class="simple">
-<li><p>* Valid for AD4052/AD4058.</p></li>
-<li><p>** Valid for AD4050/AD4056.</p></li>
-</ul>
+<p>The AD4052 is a SPI-compatible ADC so it should be under a SPI controller.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">spi-max-frequency</span></code> must be a multiple of a 25MHz clock
@@ -424,16 +395,13 @@ and the <code class="docutils literal notranslate"><span class="pre">dmas</span>
         <span class="n">reg</span> <span class="o">=</span> <span class="o">&lt;</span><span class="mi">0</span><span class="o">&gt;</span><span class="p">;</span>
         <span class="n">spi</span><span class="o">-</span><span class="nb">max</span><span class="o">-</span><span class="n">frequency</span> <span class="o">=</span> <span class="o">&lt;</span><span class="mi">25000000</span><span class="o">&gt;</span><span class="p">;</span>
         <span class="n">clocks</span> <span class="o">=</span> <span class="o">&lt;&amp;</span><span class="n">spi_clk</span><span class="o">&gt;</span><span class="p">;</span>
-        <span class="n">clock</span><span class="o">-</span><span class="n">names</span> <span class="o">=</span> <span class="s2">&quot;ref_clk&quot;</span><span class="p">;</span>
         <span class="n">dmas</span> <span class="o">=</span> <span class="o">&lt;&amp;</span><span class="n">rx_dma</span> <span class="mi">0</span><span class="o">&gt;</span><span class="p">;</span>
         <span class="n">dma</span><span class="o">-</span><span class="n">names</span> <span class="o">=</span> <span class="s2">&quot;rx&quot;</span><span class="p">;</span>
         <span class="n">pwm</span><span class="o">-</span><span class="n">names</span> <span class="o">=</span> <span class="s2">&quot;cnv&quot;</span><span class="p">;</span>
         <span class="n">pwms</span> <span class="o">=</span> <span class="o">&lt;&amp;</span><span class="n">adc_trigger</span> <span class="mi">0</span> <span class="mi">0</span><span class="o">&gt;</span><span class="p">,</span>
-        <span class="n">cnv</span><span class="o">-</span><span class="n">gpios</span> <span class="o">=</span> <span class="o">&lt;&amp;</span><span class="n">gpio0</span> <span class="mi">88</span> <span class="n">GPIO_ACTIVE_LOW</span><span class="o">&gt;</span><span class="p">;</span>
-        <span class="n">interrupt</span><span class="o">-</span><span class="n">parent</span> <span class="o">=</span> <span class="o">&lt;&amp;</span><span class="n">intc</span><span class="o">&gt;</span><span class="p">;</span>
-        <span class="n">interrupts</span> <span class="o">=</span> <span class="o">&lt;</span><span class="mi">0</span> <span class="mi">58</span> <span class="n">IRQ_TYPE_EDGE_RISING</span><span class="o">&gt;</span><span class="p">;</span>
-
-        <span class="n">adi</span><span class="p">,</span><span class="n">functional</span><span class="o">-</span><span class="n">mode</span> <span class="o">=</span> <span class="o">&lt;</span><span class="mi">0</span><span class="o">&gt;</span><span class="p">;</span>
+        <span class="n">cnv</span><span class="o">-</span><span class="n">gpios</span> <span class="o">=</span> <span class="o">&lt;&amp;</span><span class="n">gpio0</span> <span class="mi">88</span> <span class="n">GPIO_ACTIVE_HIGH</span><span class="o">&gt;</span><span class="p">;</span>
+        <span class="n">gp1</span><span class="o">-</span><span class="n">gpios</span> <span class="o">=</span> <span class="o">&lt;&amp;</span><span class="n">gpio0</span> <span class="mi">87</span> <span class="n">GPIO_ACTIVE_HIGH</span><span class="o">&gt;</span><span class="p">;</span>
+        <span class="n">gp0</span><span class="o">-</span><span class="n">gpios</span> <span class="o">=</span> <span class="o">&lt;&amp;</span><span class="n">gpio0</span> <span class="mi">86</span> <span class="n">GPIO_ACTIVE_HIGH</span><span class="o">&gt;</span><span class="p">;</span>
     <span class="p">};</span>
 <span class="p">};</span>
 </pre></div>
@@ -535,26 +503,66 @@ This example describes the steps for the 24-bit burst averaging mode.</p>
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>total 0
-drwxr-xr-x 2 root root    0 Nov  1 19:40 buffer
-drwxr-xr-x 2 root root    0 Nov  1 19:40 buffer0
--r--r--r-- 1 root root 4096 Nov  1 19:40 dev
-drwxr-xr-x 2 root root    0 Nov  1 19:40 events
--rw-r--r-- 1 root root 4096 Nov  1 19:40 in_voltage0_raw
--rw-r--r-- 1 root root 4096 Nov  1 19:40 in_voltage0_sampling_frequency
--r--r--r-- 1 root root 4096 Nov  1 19:40 name
-lrwxrwxrwx 1 root root    0 Nov  1 19:40 of_node -&gt; ../../../../../../../../firmware/devicetree/base/fpga-axi@0/spi@44a00000/ad4052@0
-drwxr-xr-x 2 root root    0 Nov  1 19:40 power
-drwxr-xr-x 2 root root    0 Nov  1 19:40 scan_elements
-lrwxrwxrwx 1 root root    0 Nov  1 19:40 subsystem -&gt; ../../../../../../../../bus/iio
--rw-r--r-- 1 root root 4096 Nov  1 19:40 uevent
--r--r--r-- 1 root root 4096 Nov  1 19:40 waiting_for_supplier
+drwxr-xr-x 2 root root    0 Nov 16 21:27 buffer
+drwxr-xr-x 2 root root    0 Nov 16 21:27 buffer0
+-r--r--r-- 1 root root 4096 Nov 16 21:27 dev
+drwxr-xr-x 2 root root    0 Nov 16 21:27 events
+-rw-r--r-- 1 root root 4096 Nov 16 21:27 in_voltage_oversampling_ratio
+-rw-r--r-- 1 root root 4096 Nov 16 21:27 in_voltage_raw
+-rw-r--r-- 1 root root 4096 Nov 16 21:27 in_voltage_sampling_frequency
+-r--r--r-- 1 root root 4096 Nov 16 21:27 in_voltage_sampling_frequency_available
+-r--r--r-- 1 root root 4096 Nov 16 21:27 name
+lrwxrwxrwx 1 root root    0 Nov 16 21:27 of_node -&gt; ../../../../../../../../firmware/devicetree/base/fpga-axi@0/spi@44a00000/ad4052@0
+drwxr-xr-x 2 root root    0 Nov 16 21:27 power
+drwxr-xr-x 2 root root    0 Nov 16 21:27 scan_elements
+lrwxrwxrwx 1 root root    0 Nov 16 21:27 subsystem -&gt; ../../../../../../../../bus/iio
+-rw-r--r-- 1 root root 4096 Nov 16 21:27 uevent
+-r--r--r-- 1 root root 4096 Nov 16 21:27 waiting_for_supplier
 </pre></div>
 </div>
-<div class="clear-left"></div></div></div><section id="burst-averaging-mode">
-<h4>Burst averaging mode<a class="headerlink" href="#burst-averaging-mode" title="Link to this heading">#</a></h4>
+<div class="clear-left"></div></div></div><section id="oversampling">
+<h4>Oversampling<a class="headerlink" href="#oversampling" title="Link to this heading">#</a></h4>
 <p>The AD4052 device family has support for a burst averaging mode that’s
-configurable as a power of 2, up to a maximum of 2<sup>11</sup>.</p>
-<p>Display all available number(in samples) of averaging operations on the buffer:</p>
+exposed as the oversampling attribute.
+Writing value 0 or 1 returns the device to sample mode.</p>
+<p>Display current oversampling value:</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>in_voltage_oversampling_ratio
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>64
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div><p>Change the sample averaging count:</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="m">2048</span><span class="w"> </span>&gt;<span class="w"> </span>in_voltage_oversampling_ratio
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>in_voltage_oversampling_ratio
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>2048
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div><div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Please note that averaging on low sampling rates will timeout if
+the default buffer wait time is not modified.</p>
+<p>For single shot readings, it will also timeout in 1 second.</p>
+</div>
+</section>
+<section id="sample-rate-for-burst-and-monitor-mode">
+<h4>Sample rate for burst and monitor mode<a class="headerlink" href="#sample-rate-for-burst-and-monitor-mode" title="Link to this heading">#</a></h4>
+<p>Leveraging the device internal clock, the sample rate for burst and monitor
+mode can be configured.</p>
+<p>Display all available sample rates:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
 </pre></div>
 </div>
@@ -567,72 +575,52 @@ configurable as a power of 2, up to a maximum of 2<sup>11</sup>.</p>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>averaging_filter_available
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>in_voltage_sampling_frequency_available
 </pre></div>
 </div>
-<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>2 4 8 16 32 64 128 256 512 1024 2048 4096
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>2000000 1000000 300000 100000 33300 10000 3000 500 333 250 200 166 140 125 111
 </pre></div>
 </div>
-<div class="clear-left"></div></div></div><p>Display current sample averaging count:</p>
-<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>/sys/bus/iio/devices/iio:device0$
-</pre></div>
-</div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>averaging_filter
-</pre></div>
-</div>
-<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>64
-</pre></div>
-</div>
-<div class="clear-left"></div></div></div><p>Change the sample averaging count:</p>
-<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>/sys/bus/iio/devices/iio:device0$
-</pre></div>
-</div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="m">2048</span><span class="w"> </span>&gt;<span class="w"> </span>averaging_filter
-</pre></div>
-</div>
-<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>/sys/bus/iio/devices/iio:device0$
-</pre></div>
-</div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>averaging_filter
-</pre></div>
-</div>
-<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>2048
-</pre></div>
-</div>
-<div class="clear-left"></div></div></div><div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Please note that averaging on low sampling rates will timeout if
-the default buffer wait time is not modified.</p>
-<p>For single shot readings, the conversion time may take longer than between
-the CNV assertion and the SPI read transfer, resulting in invalid readings.</p>
-</div>
-</section>
-<section id="sample-rate-for-burst-and-monitor-mode">
-<h4>Sample rate for burst and monitor mode<a class="headerlink" href="#sample-rate-for-burst-and-monitor-mode" title="Link to this heading">#</a></h4>
-<p>Leveraging the device internal clock, the sample rate for burst and monitor
-mode can be configured:</p>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>Even though AD4056 and AD4058 do not support 2MSPS and 1MSPS,
-their reset value are still 2MSPS (0x00).
-Writing these options to these devices will return <code class="docutils literal notranslate"><span class="pre">-EINVAL</span></code>.</p>
-</div>
+<div class="clear-left"></div></div></div><p>Set the desired sample rate:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/sys/bus/iio/devices/iio<span class="se">\:</span>device0<span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nb">pwd</span>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="m">1000000</span><span class="w"> </span>&gt;<span class="w"> </span>in_voltage_sampling_frequency
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="m">1000000</span><span class="w"> </span>&gt;<span class="w"> </span>fs_burst_auto
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>in_voltage_sampling_frequency
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>1000000
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div></section>
+<section id="sample-rate-for-buffer-reading-with-pwm-trigger">
+<h4>Sample rate for buffer reading with PWM trigger<a class="headerlink" href="#sample-rate-for-buffer-reading-with-pwm-trigger" title="Link to this heading">#</a></h4>
+<p>Set the desired period of the PWM trigger to set the sampling frequency
+of bufferred reading.</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/sys/bus/iio/devices/iio<span class="se">\:</span>device0/buffer<span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nb">pwd</span>
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>/sys/bus/iio/devices/iio\:device0/buffer
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>fs_burst_auto
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="m">1000000</span><span class="w"> </span>&gt;<span class="w"> </span>sampling_frequency
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>sampling_frequency
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>1000000
@@ -663,7 +651,7 @@ This is to avoid putting the device to sleep when sampling single shot readings
 without a buffer.</p>
 </section>
 <section id="monitor-mode">
-<h4>Monitor Mode<a class="headerlink" href="#monitor-mode" title="Link to this heading">#</a></h4>
+<h4>Monitor mode<a class="headerlink" href="#monitor-mode" title="Link to this heading">#</a></h4>
 <p>The driver yield a IIO Event for the device threshold interrupt in device
 monitor mode.
 The event is triggered for either direction (rising or falling the max/min
@@ -675,7 +663,7 @@ Configure the device threshold and hysteresis values:</p>
 <div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/sys/bus/iio/devices/iio<span class="se">\:</span>device0<span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nb">pwd</span>
 </pre></div>
 </div>
-<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>/sys/bus/iio/devices/iio\:device0
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>/sys/bus/iio/devices/iio:device0
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
@@ -741,12 +729,18 @@ disabling the threshold event with:</p>
 </div>
 <div class="clear-left"></div></div></div><div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>Re-entering monitor mode will trigger a interrupt if the sampling is still
-outside the sampling range.</p>
+<p>The device is locked from any other access until the monitor mode is
+disabled.</p>
 </div>
 <p>The user is responsible to catching IIO Event and clearing the device status
 register.</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="m">0</span><span class="w"> </span>&gt;<span class="w"> </span>events/thresh_either_en
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
 </pre></div>
 </div>
 <div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span>0x41<span class="w"> </span>&gt;<span class="w"> </span>direct_reg_access
@@ -776,14 +770,20 @@ register.</p>
 <div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>0x80
 </pre></div>
 </div>
-<div class="clear-left"></div></div></div><p>Usually, the user should disable the event after receiving the interrupt and
-then fetch and clear the status register, to avoid triggering new interrupts
-if the sampling value is still outside the threshold range.</p>
-</section>
+<div class="clear-left"></div></div></div></section>
 <section id="data-acquisition">
 <h4>Data acquisition<a class="headerlink" href="#data-acquisition" title="Link to this heading">#</a></h4>
 <p>The data acquisition is performed using a buffer system:</p>
-<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>/sys/bus/iio/devices/iio:device0/$
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
+</pre></div>
+</div>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/sys/bus/iio/devices/iio<span class="se">\:</span>device0<span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nb">pwd</span>
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>/sys/bus/iio/devices/iio:device0
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
 </pre></div>
 </div>
 <div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>buffer
@@ -792,10 +792,10 @@ if the sampling value is still outside the threshold range.</p>
 <div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>data_available  enable  length  length_align_bytes  watermark
 </pre></div>
 </div>
-<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>/sys/bus/iio/devices/iio:device0/$
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>scan_elements/
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>scan_elements
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>in_voltage0_en  in_voltage0_index  in_voltage0_type
@@ -811,15 +811,6 @@ data won’t be buffered for that specific channel.</p></li>
 </ul>
 <p>Enable and read 400 samples:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
-</pre></div>
-</div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/sys/bus/iio/devices/iio:device0<span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nb">pwd</span>
-</pre></div>
-</div>
-<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>/sys/bus/iio/devices/iio:device0
-</pre></div>
-</div>
-<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
 </pre></div>
 </div>
 <div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>scan_elements/in_voltage0_en
@@ -886,7 +877,7 @@ write the scratchpad register:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/sys/kernel/debug/iio/iio:device0<span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nb">pwd</span>
+<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/sys/kernel/debug/iio/iio<span class="se">\:</span>device0<span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nb">pwd</span>
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>/sys/kernel/debug/iio/iio:device0
