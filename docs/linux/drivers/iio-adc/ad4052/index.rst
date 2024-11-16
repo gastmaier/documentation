@@ -101,24 +101,6 @@ ADC node
 ~~~~~~~~
 
 The AD4052 is a SPI-compatible ADC so it should be under a SPI controller.
-The following custom attributes are available:
-
-.. list-table::
-   :header-rows: 1
-
-   - - Attribute name
-     - Values
-     - Description
-   - - ``adi,functional-mode``
-     - | 0
-       | 1
-     - | Sample is 16\* or 12-bit\*\*.
-       | Sample is 24\* or 16-bit\*\* burst average of n-samples.
-
-Legend:
-
-* \* Valid for AD4052/AD4058.
-* \*\* Valid for AD4050/AD4056.
 
 .. important::
 
@@ -133,16 +115,13 @@ Legend:
              reg = <0>;
              spi-max-frequency = <25000000>;
              clocks = <&spi_clk>;
-             clock-names = "ref_clk";
              dmas = <&rx_dma 0>;
              dma-names = "rx";
              pwm-names = "cnv";
              pwms = <&adc_trigger 0 0>,
-             cnv-gpios = <&gpio0 88 GPIO_ACTIVE_LOW>;
-             interrupt-parent = <&intc>;
-             interrupts = <0 58 IRQ_TYPE_EDGE_RISING>;
-
-             adi,functional-mode = <0>;
+             cnv-gpios = <&gpio0 88 GPIO_ACTIVE_HIGH>;
+             gp1-gpios = <&gpio0 87 GPIO_ACTIVE_HIGH>;
+             gp0-gpios = <&gpio0 86 GPIO_ACTIVE_HIGH>;
          };
      };
 
@@ -248,56 +227,46 @@ In the folder there are several files that can set specific device attributes:
    /sys/bus/iio/devices/iio:device0
    $ls -l
     total 0
-    drwxr-xr-x 2 root root    0 Nov  1 19:40 buffer
-    drwxr-xr-x 2 root root    0 Nov  1 19:40 buffer0
-    -r--r--r-- 1 root root 4096 Nov  1 19:40 dev
-    drwxr-xr-x 2 root root    0 Nov  1 19:40 events
-    -rw-r--r-- 1 root root 4096 Nov  1 19:40 in_voltage0_raw
-    -rw-r--r-- 1 root root 4096 Nov  1 19:40 in_voltage0_sampling_frequency
-    -r--r--r-- 1 root root 4096 Nov  1 19:40 name
-    lrwxrwxrwx 1 root root    0 Nov  1 19:40 of_node -> ../../../../../../../../firmware/devicetree/base/fpga-axi@0/spi@44a00000/ad4052@0
-    drwxr-xr-x 2 root root    0 Nov  1 19:40 power
-    drwxr-xr-x 2 root root    0 Nov  1 19:40 scan_elements
-    lrwxrwxrwx 1 root root    0 Nov  1 19:40 subsystem -> ../../../../../../../../bus/iio
-    -rw-r--r-- 1 root root 4096 Nov  1 19:40 uevent
-    -r--r--r-- 1 root root 4096 Nov  1 19:40 waiting_for_supplier
+    drwxr-xr-x 2 root root    0 Nov 16 21:27 buffer
+    drwxr-xr-x 2 root root    0 Nov 16 21:27 buffer0
+    -r--r--r-- 1 root root 4096 Nov 16 21:27 dev
+    drwxr-xr-x 2 root root    0 Nov 16 21:27 events
+    -rw-r--r-- 1 root root 4096 Nov 16 21:27 in_voltage_oversampling_ratio
+    -rw-r--r-- 1 root root 4096 Nov 16 21:27 in_voltage_raw
+    -rw-r--r-- 1 root root 4096 Nov 16 21:27 in_voltage_sampling_frequency
+    -r--r--r-- 1 root root 4096 Nov 16 21:27 in_voltage_sampling_frequency_available
+    -r--r--r-- 1 root root 4096 Nov 16 21:27 name
+    lrwxrwxrwx 1 root root    0 Nov 16 21:27 of_node -> ../../../../../../../../firmware/devicetree/base/fpga-axi@0/spi@44a00000/ad4052@0
+    drwxr-xr-x 2 root root    0 Nov 16 21:27 power
+    drwxr-xr-x 2 root root    0 Nov 16 21:27 scan_elements
+    lrwxrwxrwx 1 root root    0 Nov 16 21:27 subsystem -> ../../../../../../../../bus/iio
+    -rw-r--r-- 1 root root 4096 Nov 16 21:27 uevent
+    -r--r--r-- 1 root root 4096 Nov 16 21:27 waiting_for_supplier
 
-Burst averaging mode
-^^^^^^^^^^^^^^^^^^^^
+Oversampling
+^^^^^^^^^^^^
 
 The AD4052 device family has support for a burst averaging mode that's
-configurable as a power of 2, up to a maximum of 2\ :sup:`11`.
+exposed as the oversampling attribute.
+Writing value 0 or 1 returns the device to sample mode.
 
-.. important:
-
-   The burst averaging mode works only with the functional mode is set to burst
-   averaging mode on the devicetree.
-
-Display all available number(in samples) of averaging operations on the buffer:
+Display current oversampling value:
 
 .. shell::
    :no-path:
 
-   $cd /sys/bus/iio/devices/iio\:device0 ; pwd
-    /sys/bus/iio/devices/iio:device0
-   $cat averaging_filter_available
-    2 4 8 16 32 64 128 256 512 1024 2048 4096
-
-Display current sample averaging count:
-
-.. shell::
-
    /sys/bus/iio/devices/iio:device0
-   $cat averaging_filter
+   $cat in_voltage_oversampling_ratio
     64
 
 Change the sample averaging count:
 
 .. shell::
+   :no-path:
 
    /sys/bus/iio/devices/iio:device0
-   $echo 2048 > averaging_filter
-   $cat averaging_filter
+   $echo 2048 > in_voltage_oversampling_ratio
+   $cat in_voltage_oversampling_ratio
    2048
 
 .. important::
@@ -305,27 +274,47 @@ Change the sample averaging count:
    Please note that averaging on low sampling rates will timeout if
    the default buffer wait time is not modified.
 
-   For single shot readings, the conversion time may take longer than between
-   the CNV assertion and the SPI read transfer, resulting in invalid readings.
+   For single shot readings, it will also timeout in 1 second.
 
 Sample rate for burst and monitor mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Leveraging the device internal clock, the sample rate for burst and monitor
-mode can be configured:
+mode can be configured.
 
-.. attention::
-
-   Even though AD4056 and AD4058 do not support 2MSPS and 1MSPS,
-   their reset value are still 2MSPS (0x00).
-   Writing these options to these devices will return ``-EINVAL``.
+Display all available sample rates:
 
 .. shell::
    :no-path:
 
    $cd /sys/bus/iio/devices/iio\:device0 ; pwd
-   $echo 1000000 > fs_burst_auto
-   $cat fs_burst_auto
+    /sys/bus/iio/devices/iio:device0
+   $cat in_voltage_sampling_frequency_available
+    2000000 1000000 300000 100000 33300 10000 3000 500 333 250 200 166 140 125 111
+
+Set the desired sample rate:
+
+.. shell::
+   :no-path:
+
+   /cd /sys/bus/iio/devices/iio\:device0 ; pwd
+   $echo 1000000 > in_voltage_sampling_frequency
+   $cat in_voltage_sampling_frequency
+    1000000
+
+Sample rate for buffer reading with PWM trigger
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Set the desired period of the PWM trigger to set the sampling frequency
+of bufferred reading.
+
+.. shell::
+   :no-path:
+
+   $cd /sys/bus/iio/devices/iio\:device0/buffer ; pwd
+    /sys/bus/iio/devices/iio\:device0/buffer
+   $echo 1000000 > sampling_frequency
+   $cat sampling_frequency
     1000000
 
 Auto suspend
@@ -350,7 +339,7 @@ sleep mode.
 This is to avoid putting the device to sleep when sampling single shot readings
 without a buffer.
 
-Monitor Mode
+Monitor mode
 ^^^^^^^^^^^^
 
 The driver yield a IIO Event for the device threshold interrupt in device
@@ -363,7 +352,7 @@ Configure the device threshold and hysteresis values:
    :no-path:
 
    $cd /sys/bus/iio/devices/iio\:device0 ; pwd
-    /sys/bus/iio/devices/iio\:device0
+    /sys/bus/iio/devices/iio:device0
    $echo 1000 > events/thresh_rising_value
    $echo -1000 > events/thresh_falling_value
    $echo 125 > events/thresh_rising_hysteresis
@@ -406,8 +395,8 @@ disabling the threshold event with:
 
 .. caution::
 
-   Re-entering monitor mode will trigger a interrupt if the sampling is still
-   outside the sampling range.
+   The device is locked from any other access until the monitor mode is
+   disabled.
 
 The user is responsible to catching IIO Event and clearing the device status
 register.
@@ -415,6 +404,8 @@ register.
 .. shell::
    :no-path:
 
+   /sys/bus/iio/devices/iio\:device0
+   $echo 0 > events/thresh_either_en
    $echo 0x41 > direct_reg_access
    $cat direct_reg_access
     0x88
@@ -422,21 +413,19 @@ register.
    $cat direct_reg_access
     0x80
 
-Usually, the user should disable the event after receiving the interrupt and
-then fetch and clear the status register, to avoid triggering new interrupts
-if the sampling value is still outside the threshold range.
-
 Data acquisition
 ^^^^^^^^^^^^^^^^
 
 The data acquisition is performed using a buffer system:
 
 .. shell::
+   :no-path:
 
-   /sys/bus/iio/devices/iio:device0/
+   $cd /sys/bus/iio/devices/iio\:device0 ; pwd
+    /sys/bus/iio/devices/iio:device0
    $ls buffer
     data_available  enable  length  length_align_bytes  watermark
-   $ls scan_elements/
+   $ls scan_elements
     in_voltage0_en  in_voltage0_index  in_voltage0_type
 
 Every buffer implementation features a set of files:
@@ -452,8 +441,7 @@ Enable and read 400 samples:
 .. shell::
    :no-path:
 
-   $cd /sys/bus/iio/devices/iio:device0 ; pwd
-    /sys/bus/iio/devices/iio:device0
+   /sys/bus/iio/devices/iio\:device0
    $echo 1 > scan_elements/in_voltage0_en
    $echo 400 > buffer/length
    $echo 1 > buffer/enable
@@ -496,7 +484,7 @@ First go to the device debug folder:
 
 .. shell::
 
-   $cd /sys/kernel/debug/iio/iio:device0 ; pwd
+   $cd /sys/kernel/debug/iio/iio\:device0 ; pwd
     /sys/kernel/debug/iio/iio:device0
 
 Read the 0xA register:
