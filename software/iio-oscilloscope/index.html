@@ -7,17 +7,17 @@
 
     <title>IIO Oscilloscope &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/style.min.css?v=95305861" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.min.css?v=7f94efc5" />
     <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script defer="" src="../../_static/app.umd.js?v=c93eadd1"></script>
+    <script defer="" src="../../_static/app.umd.js?v=689b8755"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="icon" href="../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="ADRV9009" href="adrv9009/index.html" />
-    <link rel="prev" title="Building with Petalinux" href="../../linux/kernel/petalinux.html" />
+    <link rel="prev" title="Device Tree Modifications with system-user.dtsi" href="../../linux/kernel/petalinux-dts/petalinux-system-user.html" />
    
   
   <meta name="global_root" content="../../../">
@@ -94,7 +94,7 @@
     <div class="localtoc">
       <div class="tocwrapper">
         <div>
-          <div class="localtoc-header">On this page</div>
+          <div class="localtoc-header"></div>
           <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
         </div>
         <nav>
@@ -191,18 +191,14 @@ Content on this topic
 </ul>
 </li>
 <li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2" id="toctree-collapse-2"/><div class="collapse"><a class="reference internal" href="../../linux/drivers/index.html">Linux drivers</a><label for="toctree-collapse-2"><div class="icon"></div></label></div><ul>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-1" id="toctree-collapse-2-1"/><div class="collapse"><a class="reference internal" href="../../linux/drivers/iio-adc/index.html">IIO ADC</a><label for="toctree-collapse-2-1"><div class="icon"></div></label></div><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../linux/drivers/iio-adc/ad4052/index.html">AD4052</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-2" id="toctree-collapse-2-2"/><div class="collapse"><a class="reference internal" href="../../linux/drivers/iio-transceiver/index.html">IIO Transceivers</a><label for="toctree-collapse-2-2"><div class="icon"></div></label></div><ul>
-<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-2-1" id="toctree-collapse-2-2-1"/><div class="collapse"><a class="reference internal" href="../../linux/drivers/iio-transceiver/adrv9009/index.html">ADRV9009, ADRV9008-1, ADRV9008-2</a><label for="toctree-collapse-2-2-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-1" id="toctree-collapse-2-1"/><div class="collapse"><a class="reference internal" href="../../linux/drivers/iio-transceiver/index.html">IIO Transceivers</a><label for="toctree-collapse-2-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-1-1" id="toctree-collapse-2-1-1"/><div class="collapse"><a class="reference internal" href="../../linux/drivers/iio-transceiver/adrv9009/index.html">ADRV9009, ADRV9008-1, ADRV9008-2</a><label for="toctree-collapse-2-1-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../linux/drivers/iio-transceiver/adrv9009/customization.html">Customization</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-3" id="toctree-collapse-2-3"/><div class="collapse"><a class="reference internal" href="../../linux/drivers/iio/index.html">Linux Industrial I/O Subsystem</a><label for="toctree-collapse-2-3"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-2-2" id="toctree-collapse-2-2"/><div class="collapse"><a class="reference internal" href="../../linux/drivers/iio/index.html">Linux Industrial I/O Subsystem</a><label for="toctree-collapse-2-2"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../linux/drivers/iio/iio-trig-sysfs.html">iio-trig-sysfs driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../linux/drivers/iio/iio-trig-bfin-timer.html">iio-trig-bfin-timer driver</a></li>
 </ul>
@@ -210,7 +206,15 @@ Content on this topic
 </ul>
 </li>
 <li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3" id="toctree-collapse-3"/><div class="collapse"><a class="reference internal" href="../../linux/kernel/index.html">Kernel and devicetrees</a><label for="toctree-collapse-3"><div class="icon"></div></label></div><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../linux/kernel/petalinux.html">Building with Petalinux</a></li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3-1" id="toctree-collapse-3-1"/><div class="collapse"><a class="reference internal" href="../../linux/kernel/petalinux.html">Building with Petalinux</a><label for="toctree-collapse-3-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-3-1-1" id="toctree-collapse-3-1-1"/><div class="collapse"><a class="reference internal" href="../../linux/kernel/petalinux-dts/index.html">Petalinux Device Trees</a><label for="toctree-collapse-3-1-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../linux/kernel/petalinux-dts/petalinux-custom-dts.html">Custom Device Trees with meta-adi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../linux/kernel/petalinux-dts/petalinux-meta-adi-bypass.html">Custom Device Trees with DTG (meta-adi Bypass)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../linux/kernel/petalinux-dts/petalinux-system-user.html">Device Tree Modifications with system-user.dtsi</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -230,7 +234,13 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../libiio/tips-tricks.html">Tips &amp; Tricks</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-6" id="toctree-collapse-6"/><div class="collapse"><a class="reference internal" href="../matlab/index.html">MATLAB &amp; Simulink Toolboxes</a><label for="toctree-collapse-6"><div class="icon"></div></label></div><ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-6" id="toctree-collapse-6"/><div class="collapse"><a class="reference internal" href="../libm2k/index.html">Libm2k</a><label for="toctree-collapse-6"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../libm2k/calibration.html">Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libm2k/digital_communication.html">Digital communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libm2k/m2kcli.html">Command line utility</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7" id="toctree-collapse-7"/><div class="collapse"><a class="reference internal" href="../matlab/index.html">MATLAB &amp; Simulink Toolboxes</a><label for="toctree-collapse-7"><div class="icon"></div></label></div><ul>
 <li class="toctree-l2"><a class="reference internal" href="../matlab/hsx-toolbox/index.html">High Speed Converter Toolbox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../matlab/transceiver-toolbox/index.html">Transceiver Toolbox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../matlab/bsp-extend.html">Extending Device Interfaces</a></li>
@@ -240,15 +250,82 @@ Content on this topic
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Evaluation Boards</span></p>
 <ul>
-<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7" id="toctree-collapse-7"/><div class="collapse"><a class="reference internal" href="../../eval/user-guide/index.html">User guides</a><label for="toctree-collapse-7"><div class="icon"></div></label></div><ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-8" id="toctree-collapse-8"/><div class="collapse"><a class="reference internal" href="../../eval/user-guide/index.html">User guides</a><label for="toctree-collapse-8"><div class="icon"></div></label></div><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../eval/user-guide/eval-adxl355-pmdz/index.html">EVAL-ADXL355-PMDZ User Guide</a></li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7-1" id="toctree-collapse-7-1"/><div class="collapse"><a class="reference internal" href="../../eval/user-guide/adrv9009/index.html">ADRV9009 &amp; ADRV9008</a><label for="toctree-collapse-7-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-8-1" id="toctree-collapse-8-1"/><div class="collapse"><a class="reference internal" href="../../eval/user-guide/adrv9009/index.html">ADRV9009 &amp; ADRV9008</a><label for="toctree-collapse-8-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../eval/user-guide/adrv9009/prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-7-1-1" id="toctree-collapse-7-1-1"/><div class="collapse"><a class="reference internal" href="../../eval/user-guide/adrv9009/quickstart/index.html">Quickstart</a><label for="toctree-collapse-7-1-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-8-1-1" id="toctree-collapse-8-1-1"/><div class="collapse"><a class="reference internal" href="../../eval/user-guide/adrv9009/quickstart/index.html">Quickstart</a><label for="toctree-collapse-8-1-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../eval/user-guide/adrv9009/quickstart/zynqmp.html">ZCU102</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../eval/user-guide/adrv9009/basic-iq-datafiles.html">Basic IQ Datafiles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-8-2" id="toctree-collapse-8-2"/><div class="collapse"><a class="reference internal" href="../../eval/user-guide/adrv9026/index.html">ADRV9026 &amp; ADRV9029</a><label for="toctree-collapse-8-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../eval/user-guide/adrv9026/prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-8-2-1" id="toctree-collapse-8-2-1"/><div class="collapse"><a class="reference internal" href="../../eval/user-guide/adrv9026/quickstart/index.html">Quickstart</a><label for="toctree-collapse-8-2-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../eval/user-guide/adrv9026/quickstart/zynqmp.html">ZCU102</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../eval/user-guide/adrv9026/quickstart/versal.html">VCK190</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Products &amp; Tools</span></p>
+<ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-9" id="toctree-collapse-9"/><div class="collapse"><a class="reference internal" href="../../tools/m2k/index.html">ADALM2000</a><label for="toctree-collapse-9"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/m2k/devs/index.html">For Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/m2k/users/index.html">For End Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/m2k/help_support.html">Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/m2k/labview.html">Using With LabVIEW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/m2k/matlab.html">Using with MATLAB</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-10" id="toctree-collapse-10"/><div class="collapse"><a class="reference internal" href="../../tools/pluto-m2k/index.html">Common PLUTO&amp;M2K</a><label for="toctree-collapse-10"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pluto-m2k/building_the_image.html">Building the Firmware Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pluto-m2k/drivers.html">Installing Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pluto-m2k/firmware.html">Firmware Updates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pluto-m2k/obtaining_the_sources.html">Obtaining the Build Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pluto-m2k/reboot.html">Rebooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pluto-m2k/usb_otg_host.html">USB OTG – HOST function Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-11" id="toctree-collapse-11"/><div class="collapse"><a class="reference internal" href="../../tools/pluto/index.html">ADALM-PLUTO</a><label for="toctree-collapse-11"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-11-1" id="toctree-collapse-11-1"/><div class="collapse"><a class="reference internal" href="../../tools/pluto/devs/index.html">For Developers</a><label for="toctree-collapse-11-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tools/pluto/devs/usb_otg.html">USB OTG</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-11-2" id="toctree-collapse-11-2"/><div class="collapse"><a class="reference internal" href="../../tools/pluto/hacking/index.html">For Hackers</a><label for="toctree-collapse-11-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tools/pluto/hacking/hardware.html">ADALM-PLUTO Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tools/pluto/hacking/listening_to_yourself.html">Self Reception</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tools/pluto/hacking/power_amp.html">Controlling External Devices</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-11-3" id="toctree-collapse-11-3"/><div class="collapse"><a class="reference internal" href="../../tools/pluto/users/index.html">For End Users</a><label for="toctree-collapse-11-3"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tools/pluto/users/antennas.html">Antennas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pluto/help_support.html">Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pluto/prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pluto/transceiver_transferring_data.html">Controlling the transceiver and transferring data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/uartjtag/index.html">ADALM-UARTJTAG</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Apps &amp; Solutions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../solutions/application-software/index.html">Application Software</a></li>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-12" id="toctree-collapse-12"/><div class="collapse"><a class="reference internal" href="../../solutions/reference-designs/index.html">Reference Designs</a><label for="toctree-collapse-12"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-12-1" id="toctree-collapse-12-1"/><div class="collapse"><a class="reference internal" href="../../solutions/reference-designs/ad-bmse2e3w-sl/index.html">AD-BMSE2E3W-SL</a><label for="toctree-collapse-12-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../solutions/reference-designs/ad-bmse2e3w-sl/sample_application/index.html">Sample Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../solutions/reference-designs/ad-bmse2e3w-sl/software_guide/index.html">Software User Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-12-2" id="toctree-collapse-12-2"/><div class="collapse"><a class="reference internal" href="../../solutions/reference-designs/ad-cellpackbm-sl/index.html">AD-CELLPACKBM-SL</a><label for="toctree-collapse-12-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../solutions/reference-designs/ad-cellpackbm-sl/hardware_guide/index.html">Hardware User Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../solutions/reference-designs/ad-cellpackbm-sl/software_guide/index.html">Software User Guide</a></li>
 </ul>
 </li>
 </ul>
@@ -256,8 +333,8 @@ Content on this topic
 </ul>
 <p class="caption" role="heading"><span class="caption-text">University Program</span></p>
 <ul>
-<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-8" id="toctree-collapse-8"/><div class="collapse"><a class="reference internal" href="../../university/index.html">Engineering University Program</a><label for="toctree-collapse-8"><div class="icon"></div></label></div><ul>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-8-1" id="toctree-collapse-8-1"/><div class="collapse"><a class="reference internal" href="../../university/active_learning/index.html">Active Learning: Student-oriented Lab Exercises</a><label for="toctree-collapse-8-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13" id="toctree-collapse-13"/><div class="collapse"><a class="reference internal" href="../../university/index.html">Engineering University Program</a><label for="toctree-collapse-13"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-1" id="toctree-collapse-13-1"/><div class="collapse"><a class="reference internal" href="../../university/active_learning/index.html">Active Learning: Student-oriented Lab Exercises</a><label for="toctree-collapse-13-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../university/active_learning/wien_bridge_oscillator/index.html">Activity: The Wien Bridge Oscillator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../university/active_learning/efficiency_power_loss/index.html">Activity: Efficiency, Power Loss, and Thermal Management</a></li>
 </ul>
@@ -267,13 +344,14 @@ Content on this topic
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Learning</span></p>
 <ul>
-<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-9" id="toctree-collapse-9"/><div class="collapse"><a class="reference internal" href="../../learning/index.html">Learning! Tutorials, Workshops, Etc</a><label for="toctree-collapse-9"><div class="icon"></div></label></div><ul>
+<li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-14" id="toctree-collapse-14"/><div class="collapse"><a class="reference internal" href="../../learning/index.html">Learning! Tutorials, Workshops, Etc</a><label for="toctree-collapse-14"><div class="icon"></div></label></div><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../learning/tutorial_prec_adc/index.html">Precision ADC Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../learning/converter_connectivity_tutorial/index.html">Converter Connectivity Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../learning/sw_infrastructure/index.html">Key ADI’s Software Infrastructure for designing with ADCs, DACs, and Sensors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../learning/tools_for_ls/index.html">Tools for Low Speed Mixed Signal System Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../learning/tools_for_prec_wb/index.html">Tools for Precision Wideband Mixed Signal System Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../learning/tools_for_hs/index.html">Tools for High-Speed Mixed Signal System Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../learning/workshop_what_sw_for_sdr/index.html">What software do I need for my SDR?</a></li>
 </ul>
 </li>
 </ul>
@@ -296,10 +374,10 @@ Content on this topic
           <div class="body" role="main">
             
   <section id="iio-oscilloscope">
-<span id="id1"></span><h1>IIO Oscilloscope<a class="headerlink" href="#iio-oscilloscope" title="Link to this heading">#</a></h1>
+<span id="id1"></span><h1>IIO Oscilloscope<a class="headerlink" href="#iio-oscilloscope" title="Link to this heading"></a></h1>
 <img alt="../../_images/osc128.png" class="align-right" src="../../_images/osc128.png" />
 <section id="about">
-<h2>About<a class="headerlink" href="#about" title="Link to this heading">#</a></h2>
+<h2>About<a class="headerlink" href="#about" title="Link to this heading"></a></h2>
 <p>The <a class="icon git reference external" href="https://github.com/analogdevicesinc/iio-oscilloscope/tree/main/">ADI IIO Oscilloscope</a>
 is a cross platform GUI application, which demonstrates how to interface
 different evaluation boards from within a Linux system.
@@ -309,13 +387,13 @@ The application also allows to view and modify several settings of the
 evaluation board’s devices.</p>
 </section>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
 <section id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading">#</a></h3>
+<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h3>
 <p><a class="icon git reference external" href="https://github.com/analogdevicesinc/iio-oscilloscope/releases">Latest releases</a></p>
 </section>
 <section id="linux">
-<h3>Linux<a class="headerlink" href="#linux" title="Link to this heading">#</a></h3>
+<h3>Linux<a class="headerlink" href="#linux" title="Link to this heading"></a></h3>
 <p>To build on an embedded target (e.g. aarch64), we recommend using the
 <a class="reference internal" href="../../linux/kuiper/update.html#kuiper-update"><span class="std std-ref">Kuiper Linux Update scripts</span></a>.
 This is a tried/proven method that does everything in a quick script.</p>
@@ -327,7 +405,7 @@ for a maintained list):</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>apt-get<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>apt-get<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>libgtk2.0-dev<span class="w"> </span>libmatio-dev<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>libfftw3-dev<span class="w"> </span>libxml2<span class="w"> </span>libxml2-dev<span class="w"> </span>bison<span class="w"> </span>flex<span class="w"> </span>libavahi-common-dev<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>libavahi-client-dev<span class="w"> </span>libcurl4-openssl-dev<span class="w"> </span>libjansson-dev<span class="w"> </span>cmake<span class="w"> </span>libaio-dev<span class="w"> </span><span class="se">\</span>
@@ -351,19 +429,19 @@ by following
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/analogdevicesinc/iio-oscilloscope.git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/analogdevicesinc/iio-oscilloscope.git
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>iio-oscilloscope
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>iio-oscilloscope
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~/iio-oscilloscope$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>origin/main
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>origin/main
 </pre></div>
 </div>
 <div class="clear-left"></div></div></div></li>
@@ -372,19 +450,19 @@ and uncompress it:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://github.com/analogdevicesinc/iio-oscilloscope/archive/main.zip
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://github.com/analogdevicesinc/iio-oscilloscope/archive/main.zip
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>unzip<span class="w"> </span>master.zip
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>unzip<span class="w"> </span>master.zip
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>iio-oscilloscope
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>iio-oscilloscope
 </pre></div>
 </div>
 <div class="clear-left"></div></div></div></li>
@@ -392,19 +470,19 @@ and uncompress it:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~/build$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>../<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>-j<span class="w"> </span><span class="k">$(</span>nproc<span class="k">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>../<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>-j<span class="w"> </span><span class="k">$(</span>nproc<span class="k">)</span>
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~/build$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>make<span class="w"> </span>install
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>make<span class="w"> </span>install
 </pre></div>
 </div>
 <div class="clear-left"></div></div></div><ul>
@@ -419,7 +497,7 @@ environmental variable.
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>./osc
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./osc
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>./osc: error while loading shared libraries: libosc.so: cannot open shared object file: No such file or directory
@@ -433,7 +511,7 @@ which was loaded (since it didn’t find things in the library path).</p>
 </li>
 </ol>
 <section id="ubuntu-20-and-older">
-<h4>Ubuntu 20 and Older<a class="headerlink" href="#ubuntu-20-and-older" title="Link to this heading">#</a></h4>
+<h4>Ubuntu 20 and Older<a class="headerlink" href="#ubuntu-20-and-older" title="Link to this heading"></a></h4>
 <p>While compiling the IIO Scope for Ubuntu 20 and other older Linux distributions,
 you can face issues with the library gtkdatabox. To overcome this problem DON’T
 install the library using apt install/ other package managers.
@@ -443,13 +521,13 @@ This will ensure that gtkdatabox is compatible with GTK3</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>./configure
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./configure
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>make<span class="w"> </span>install
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>make<span class="w"> </span>install
 </pre></div>
 </div>
 <div class="clear-left"></div></div></div><p>Please not that in case some other gtkdatabox version is present in the system
@@ -458,13 +536,13 @@ symbols detected. Using GTK+ 2.x and GTK+ 3 in the same process is not supported
 Trace/breakpoint trap (core dumped)</p>
 </section>
 <section id="gtk2-based-iio-oscilloscope">
-<h4>GTK2 Based IIO-Oscilloscope<a class="headerlink" href="#gtk2-based-iio-oscilloscope" title="Link to this heading">#</a></h4>
+<h4>GTK2 Based IIO-Oscilloscope<a class="headerlink" href="#gtk2-based-iio-oscilloscope" title="Link to this heading"></a></h4>
 <p>If you’d like to build the previous version of IIO-Oscilloscope, which is based
 on GTK2 you will need to install the following packages:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>apt-get<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>libglib2.0-dev<span class="w"> </span>libgtk2.0-dev<span class="w"> </span>libgtkdatabox-dev<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>apt-get<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>libglib2.0-dev<span class="w"> </span>libgtk2.0-dev<span class="w"> </span>libgtkdatabox-dev<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>libmatio-dev<span class="w"> </span>libfftw3-dev<span class="w"> </span>libxml2<span class="w"> </span>libxml2-dev<span class="w"> </span>bison<span class="w"> </span>flex<span class="w"> </span>libavahi-common-dev<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>libavahi-client-dev<span class="w"> </span>libcurl4-openssl-dev<span class="w"> </span>libjansson-dev<span class="w"> </span>cmake<span class="w"> </span>libaio-dev<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>libserialport-dev
@@ -476,31 +554,31 @@ repository, which still uses GTK2 widgets:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/analogdevicesinc/iio-oscilloscope.git<span class="w"> </span>--branch<span class="w"> </span>2021_R2
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/analogdevicesinc/iio-oscilloscope.git<span class="w"> </span>--branch<span class="w"> </span>2021_R2
 </pre></div>
 </div>
 <div class="clear-left"></div></div></div><p>The other prerequisites and build steps are identical.</p>
 </section>
 </section>
 <section id="macos">
-<h3>macOS<a class="headerlink" href="#macos" title="Link to this heading">#</a></h3>
+<h3>macOS<a class="headerlink" href="#macos" title="Link to this heading"></a></h3>
 <p>The recommended method is to use brew with tfcollin’s tap:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>fix-gtk-upgrade<span class="w"> </span>https://github.com/tfcollins/homebrew-formulae.git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>fix-gtk-upgrade<span class="w"> </span>https://github.com/tfcollins/homebrew-formulae.git
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>homebrew-formulae
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>homebrew-formulae
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~/homebrew-formulae$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>--build-from-source<span class="w"> </span>./gtkdatabox-prev1.rb
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>--build-from-source<span class="w"> </span>./gtkdatabox-prev1.rb
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~/homebrew-formulae$
@@ -512,17 +590,17 @@ repository, which still uses GTK2 widgets:</p>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~/homebrew-formulae$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>--build-from-source<span class="w"> </span>./iio-oscilloscope.rb
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>--build-from-source<span class="w"> </span>./iio-oscilloscope.rb
 </pre></div>
 </div>
 <div class="clear-left"></div></div></div></section>
 </section>
 <section id="user-guide">
-<h2>User guide<a class="headerlink" href="#user-guide" title="Link to this heading">#</a></h2>
+<h2>User guide<a class="headerlink" href="#user-guide" title="Link to this heading"></a></h2>
 <section id="launching-the-application">
-<h3>Launching the application<a class="headerlink" href="#launching-the-application" title="Link to this heading">#</a></h3>
+<h3>Launching the application<a class="headerlink" href="#launching-the-application" title="Link to this heading"></a></h3>
 <section id="running-local">
-<h4>Running Local<a class="headerlink" href="#running-local" title="Link to this heading">#</a></h4>
+<h4>Running Local<a class="headerlink" href="#running-local" title="Link to this heading"></a></h4>
 <p>The application can run locally which means it runs on the same platform where
 your device is connected.</p>
 <p>To start the IIO Oscilloscope open up the start menu of your system and search
@@ -532,14 +610,14 @@ mouse cursor to the left side of your screen and “Dash home” button and type
 <img alt="../../_images/osc_launch.png" src="../../_images/osc_launch.png" />
 </section>
 <section id="running-remote">
-<h4>Running Remote<a class="headerlink" href="#running-remote" title="Link to this heading">#</a></h4>
+<h4>Running Remote<a class="headerlink" href="#running-remote" title="Link to this heading"></a></h4>
 <p>The application can be used to connect to another platform that has a connected
 device in order to configure the device and read data from it. You can connect
 in 3 different ways:</p>
 <ol class="arabic">
 <li><p>Manually:</p>
 <div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-number">Listing 1 </span><span class="caption-text">Run IIO Oscilloscope in remote mode</span><a class="headerlink" href="#id4" title="Link to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 1 </span><span class="caption-text">Run IIO Oscilloscope in remote mode</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
@@ -549,7 +627,7 @@ in 3 different ways:</p>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">OSC_REMOTE</span><span class="o">=</span>&lt;IP<span class="w"> </span>address<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>remote<span class="w"> </span>platform&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">OSC_REMOTE</span><span class="o">=</span>&lt;IP<span class="w"> </span>address<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>remote<span class="w"> </span>platform&gt;
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
@@ -561,7 +639,7 @@ in 3 different ways:</p>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="bold highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">IIOD_REMOTE</span><span class="o">=</span>&lt;IP<span class="w"> </span>address<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>remote<span class="w"> </span>platform&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">IIOD_REMOTE</span><span class="o">=</span>&lt;IP<span class="w"> </span>address<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>remote<span class="w"> </span>platform&gt;
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>osc
@@ -582,9 +660,9 @@ connected to the device on the network.</p></li>
 </section>
 </section>
 <section id="using-the-application">
-<h3>Using the application<a class="headerlink" href="#using-the-application" title="Link to this heading">#</a></h3>
+<h3>Using the application<a class="headerlink" href="#using-the-application" title="Link to this heading"></a></h3>
 <section id="main-window">
-<h4>Main Window<a class="headerlink" href="#main-window" title="Link to this heading">#</a></h4>
+<h4>Main Window<a class="headerlink" href="#main-window" title="Link to this heading"></a></h4>
 <img alt="../../_images/plugin_disconnect_button.png" class="align-left" src="../../_images/plugin_disconnect_button.png" />
 <p>Each plugin (or tab) can be detached from the main window simply by clicking on
 the button placed on the right side of the name of the plugin.
@@ -593,7 +671,7 @@ Close the detached window to attach the plugin back to the main window.</p>
 device recognized by the system. Additional plugins will be loaded for device
 debugging and monitoring purposes such as:</p>
 <section id="dmm-tab-plugin">
-<h5>DMM Tab/Plugin<a class="headerlink" href="#dmm-tab-plugin" title="Link to this heading">#</a></h5>
+<h5>DMM Tab/Plugin<a class="headerlink" href="#dmm-tab-plugin" title="Link to this heading"></a></h5>
 <img alt="../../_images/dmm_plugin.png" src="../../_images/dmm_plugin.png" />
 <p>The <strong>DMM</strong> Plugin: The Digital Multimeter continuously displays device specific
 data once the start button is activated.</p>
@@ -607,7 +685,7 @@ channels tab.</p></li>
 </ul>
 </section>
 <section id="debug-tab-plugin">
-<h5>Debug Tab/Plugin<a class="headerlink" href="#debug-tab-plugin" title="Link to this heading">#</a></h5>
+<h5>Debug Tab/Plugin<a class="headerlink" href="#debug-tab-plugin" title="Link to this heading"></a></h5>
 <img alt="../../_images/debug_plugin.png" src="../../_images/debug_plugin.png" />
 <p><strong>Debug</strong> Plugin: Is a tool for device debugging. Since “normal” users should
 not be doing this, features on this tab may not work unless you have started the
@@ -637,7 +715,7 @@ automatically as the register address changes.</p></li>
 </section>
 </section>
 <section id="hardware-specific-tab-plugins">
-<h3>Hardware Specific Tab/Plugins<a class="headerlink" href="#hardware-specific-tab-plugins" title="Link to this heading">#</a></h3>
+<h3>Hardware Specific Tab/Plugins<a class="headerlink" href="#hardware-specific-tab-plugins" title="Link to this heading"></a></h3>
 <p>There may be hardware specific plugins/tabs, specific to the platform you are
 running on.</p>
 <p>Each hardware plugin is documented individually:</p>
@@ -652,7 +730,7 @@ running on.</p>
 </div>
 <p>Here are a few common options:</p>
 <section id="capture-window">
-<h4>Capture Window<a class="headerlink" href="#capture-window" title="Link to this heading">#</a></h4>
+<h4>Capture Window<a class="headerlink" href="#capture-window" title="Link to this heading"></a></h4>
 <img alt="../../_images/osc_plot_window.png" class="align-right" src="../../_images/osc_plot_window.png" />
 <p>The Capture Window is where device data is displayed.</p>
 <ul class="simple">
@@ -760,7 +838,7 @@ scale</strong> is disabled.</p></li>
 </li>
 </ul>
 <section id="activating-markers">
-<h5>Activating Markers<a class="headerlink" href="#activating-markers" title="Link to this heading">#</a></h5>
+<h5>Activating Markers<a class="headerlink" href="#activating-markers" title="Link to this heading"></a></h5>
 <img alt="../../_images/markers_menu.png" class="align-right" src="../../_images/markers_menu.png" />
 <p>Markers are used for plot data measurement in when looking in the frequency
 domain or cross correlations. To activate the markers right click on the plot
@@ -782,7 +860,7 @@ plot and release the right button.</p>
 <p>To disable the markers select Markers Off from the marker menu.</p>
 </section>
 <section id="saving-captured-data">
-<h5>Saving Captured Data<a class="headerlink" href="#saving-captured-data" title="Link to this heading">#</a></h5>
+<h5>Saving Captured Data<a class="headerlink" href="#saving-captured-data" title="Link to this heading"></a></h5>
 <img alt="../../_images/osc_saveas_window.png" class="align-right" src="../../_images/osc_saveas_window.png" />
 <p>Once the data is captured, it can be saved using one of the following formats:</p>
 <ul class="simple">
@@ -794,7 +872,7 @@ plot and release the right button.</p>
 <p>Click on File &gt; Save As to open the dialog needed to save the data.</p>
 </section>
 <section id="channel-settings">
-<h5>Channel Settings<a class="headerlink" href="#channel-settings" title="Link to this heading">#</a></h5>
+<h5>Channel Settings<a class="headerlink" href="#channel-settings" title="Link to this heading"></a></h5>
 <img alt="../../_images/channel_settings_menu.png" class="align-right" src="../../_images/channel_settings_menu.png" />
 <ol class="arabic simple">
 <li><p>Simple math operation can be applied to the channel data. Right click on the
@@ -807,7 +885,7 @@ panel that will allow you to pick the desired color.</p></li>
 <p>The settings can be applied only in Time domain.</p>
 </section>
 <section id="trigger-settings">
-<h5>Trigger settings<a class="headerlink" href="#trigger-settings" title="Link to this heading">#</a></h5>
+<h5>Trigger settings<a class="headerlink" href="#trigger-settings" title="Link to this heading"></a></h5>
 <img alt="../../_images/trigger_settings.png" src="../../_images/trigger_settings.png" />
 <p>In time domain, it is possible to select a capture channel as the trigger source
 of the oscilloscope. To do so, right-click on the name of the device used for
@@ -819,7 +897,7 @@ level and edge.</p>
 </section>
 </section>
 <section id="provided-waveforms">
-<h2>Provided Waveforms<a class="headerlink" href="#provided-waveforms" title="Link to this heading">#</a></h2>
+<h2>Provided Waveforms<a class="headerlink" href="#provided-waveforms" title="Link to this heading"></a></h2>
 <p>Several waveforms are provided with the application for demonstration purposes,
 which can be loaded into different devices. However, these are generally not
 meant for transceiver characterization or demodulation. If you want to do such
@@ -827,21 +905,21 @@ tasks, we would recommend creation of your own waveforms from tools such as
 <a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz/software/basic_iq_datafiles">MATLAB</a>.</p>
 </section>
 <section id="source-code">
-<h2>Source code<a class="headerlink" href="#source-code" title="Link to this heading">#</a></h2>
+<h2>Source code<a class="headerlink" href="#source-code" title="Link to this heading"></a></h2>
 <section id="files">
-<h3>Files<a class="headerlink" href="#files" title="Link to this heading">#</a></h3>
+<h3>Files<a class="headerlink" href="#files" title="Link to this heading"></a></h3>
 <p>The source code for the entire application is at
 <a class="icon git reference external" href="https://github.com/analogdevicesinc/iio-oscilloscope/tree/main/">ADI IIO Oscilloscope repository</a>. You can ask
 questions about it on the <a class="icon ez reference external" href="https://ez.analog.com/community/linux-device-drivers">EngineerZone</a>.</p>
 </section>
 <section id="internals">
-<h3>Internals<a class="headerlink" href="#internals" title="Link to this heading">#</a></h3>
+<h3>Internals<a class="headerlink" href="#internals" title="Link to this heading"></a></h3>
 <p>If you want to make your own plugin, please refer to the
 <a class="reference external" href="https://wiki.analog.com/resources/tools-software/linux-software/iio_scope/internals">Internals</a> page.</p>
 </section>
 </section>
 <section id="more-information">
-<h2>More information<a class="headerlink" href="#more-information" title="Link to this heading">#</a></h2>
+<h2>More information<a class="headerlink" href="#more-information" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://wiki.analog.com/resources/fpga/xilinx/fmc/ad-fmcomms1-ebz">AD-FMCOMMS1-EBZ Reference Design</a></p></li>
 <li><p><a class="reference external" href="https://wiki.analog.com/resources/tools-software/linux-drivers/platforms/zynq">Linux with HDMI video output on the ZED and ZC702 boards</a></p></li>
@@ -859,7 +937,7 @@ questions about it on the <a class="icon ez reference external" href="https://ez
           </div>
               <div class="related">
                 &nbsp;
-    <a href="../../linux/kernel/petalinux.html" title="Previous document (Alt+Shift+LeftArrow)" class="prev">Building with Petalinux</a>
+    <a href="../../linux/kernel/petalinux-dts/petalinux-system-user.html" title="Previous document (Alt+Shift+LeftArrow)" class="prev">Device Tree Modifications with system-user.dtsi</a>
     <a href="adrv9009/index.html" title="Next document (Alt+Shift+RightArrow)" class="next">ADRV9009</a>
               </div>
           
