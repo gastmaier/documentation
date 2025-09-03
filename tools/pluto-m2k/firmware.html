@@ -4,14 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="Latest ADALM-PLUTO (PlutoSDR) Release" name="description" />
 
     <title>Firmware Updates &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/style.min.css?v=a9555194" />
-    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script defer="" src="../../_static/app.umd.js?v=689b8755"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=37266688" />
+    <script async="async" src="../../_static/app.umd.js?v=8f62bab2"></script>
     <link rel="icon" href="../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -19,8 +17,12 @@
     <link rel="prev" title="Installing Drivers" href="drivers.html" />
    
   
-  <meta name="global_root" content="../../../">
-  <meta name="repo" content="documentation">
+  
+  <meta name="repository" content="documentation">
+  <meta name="version" content="">
+  
+    <meta name="page_source_suffix" content=".rst">
+  
   
 
 
@@ -40,7 +42,6 @@
   }
 </style>
   </head><body>
-  <div class="banner"></div>
   <input type="checkbox" id="input-show-toc">
   <input type="checkbox" id="input-show-localtoc">
   <input type="checkbox" id="input-show-repotoc">
@@ -49,8 +50,7 @@
   <div class="search-area">
     <form action="" method="get">
       <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="search" placeholder="Search"/>
-      <button value="search" class="icon"></button>
-      <span id="search-progress"></span>
+      <button class="icon"></button>
     </form>
   </div>
   
@@ -61,9 +61,11 @@
     </div>
     <div id="right">
       <span>
-        <a id="logo-org" href="https://analog.com"></a>
+        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
+        
         <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs" tabindex="0">Docs</label>
+        
         <a id="logo" href="../../index.html">
           <div>System Level</div>
         </a>
@@ -78,22 +80,12 @@
   <div class="repotoc-tree overlay">
     <root>
   <a href="../../index.html" class="current">System Level</a>
-  <a href="../../../hdl/index.html">HDL</a>
-  <a href="../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../libiio/index.html">libiio</a>
-  <a href="../../../no-OS/index.html">no-OS</a>
-  <a href="../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../scopy/index.html">Scopy</a>
-  <a href="../../../doctools/index.html">Doctools</a>
 </root>
 
   </div>
     <div class="localtoc">
       <div class="tocwrapper">
-        <div>
-          <div class="localtoc-header"></div>
+        <div class="header localtoc-header">
           <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
         </div>
         <nav>
@@ -163,15 +155,6 @@ Content on this topic
 <div class="repotoc-tree">
   <root>
   <a href="../../index.html" class="current">System Level</a>
-  <a href="../../../hdl/index.html">HDL</a>
-  <a href="../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../libiio/index.html">libiio</a>
-  <a href="../../../no-OS/index.html">no-OS</a>
-  <a href="../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../scopy/index.html">Scopy</a>
-  <a href="../../../doctools/index.html">Doctools</a>
 </root>
 
 </div>
@@ -367,6 +350,9 @@ Content on this topic
   <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper" id="top-anchor">
+          <div class="body-header">
+  <nav class="breadcrumb"><ol><li><a href="index.html">Common PLUTO&amp;M2K</a></li></ol></nav>
+</div>
           <div class="body" role="main">
             
   <section id="firmware-updates">
@@ -376,8 +362,8 @@ Content on this topic
 <div class="admonition-download-adi-default-firmware-images admonition">
 <p class="admonition-title">Download ADI default firmware images</p>
 <ul class="simple">
-<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/plutosdr-fw/releases/latest">Latest ADALM-PLUTO (PlutoSDR) Release</a></p></li>
-<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/m2k-fw/releases/latest">Latest ADALM2000 (M2k) Release</a></p></li>
+<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/plutosdr-fw/releases/latest" target="_blank">Latest ADALM-PLUTO (PlutoSDR) Release</a></p></li>
+<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/m2k-fw/releases/latest" target="_blank">Latest ADALM2000 (M2k) Release</a></p></li>
 </ul>
 </div>
 <p>This zip file should include these files:</p>
@@ -515,7 +501,7 @@ included in the default image. There are times when this might not be possible
 device by unplugging it during a firmware upgrade).</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>There are very legitimate <a class="reference external" href="https://en.wikipedia.org/wiki/Firmware#BADUSB">Security Risks</a>
+<p>There are very legitimate <a class="icon link reference external" href="https://en.wikipedia.org/wiki/Firmware#BADUSB" target="_blank">Security Risks</a>
 about loading random
 firmware images onto devices like the ADALM-PLUTO or ADALM2000, however, we
 decided early on that a learning tool must be open and accessible for people to
@@ -721,7 +707,7 @@ Done
 <div class="clear-left"></div></div></div></section>
 <section id="dfu-update">
 <span id="pluto-m2k-firmware-dfu-update"></span><h2>DFU Update<a class="headerlink" href="#dfu-update" title="Link to this heading"></a></h2>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/USB#Device_Firmware_Upgrade">USB Device Firmware Upgrade</a> (DFU)
+<p><a class="icon link reference external" href="https://en.wikipedia.org/wiki/USB#Device_Firmware_Upgrade" target="_blank">USB Device Firmware Upgrade</a> (DFU)
 is an official USB device class specification of the USB Implementers Forum. It
 specifies a vendor and device independent way of updating the firmware of a USB
 device. The concept is to have only one vendor-independent update tool as part
@@ -813,15 +799,15 @@ environment?</p>
 <h4>Windows<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
 <p>The PlutoSDR/M2K driver package bundles also a dfu utility. There is a windows
 command console batch script called
-<a class="icon git reference external" href="https://raw.githubusercontent.com/analogdevicesinc/plutosdr_scripts/master/UPDATE.BAT">UPDATE.BAT</a>
+<a class="icon git reference external" href="https://raw.githubusercontent.com/analogdevicesinc/plutosdr_scripts/master/UPDATE.BAT" target="_blank">UPDATE.BAT</a>
 which eases the update procedure.</p>
 <ol class="arabic simple">
 <li><p>Download and save
-<a class="icon git reference external" href="https://raw.githubusercontent.com/analogdevicesinc/plutosdr_scripts/master/UPDATE.BAT">UPDATE.BAT</a></p></li>
+<a class="icon git reference external" href="https://raw.githubusercontent.com/analogdevicesinc/plutosdr_scripts/master/UPDATE.BAT" target="_blank">UPDATE.BAT</a></p></li>
 <li><p>Download and unzip the latest PlutoSDR respectively M2k release</p>
 <ol class="arabic simple">
-<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/plutosdr-fw/releases">PlutoSDR Release</a></p></li>
-<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/m2k-fw/releases">M2k Release</a></p></li>
+<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/plutosdr-fw/releases" target="_blank">PlutoSDR Release</a></p></li>
+<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/m2k-fw/releases" target="_blank">M2k Release</a></p></li>
 </ol>
 </li>
 <li><p>Open a windows command prompt</p></li>
@@ -971,7 +957,7 @@ section).</p></li>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>dfu-util</strong> - a short dfu primer
-<a class="reference external" href="http://dfu-util.sourceforge.net/dfu-util.1.html">DFU</a> has lots of options,
+<a class="icon link reference external" href="http://dfu-util.sourceforge.net/dfu-util.1.html" target="_blank">DFU</a> has lots of options,
 the ones to remember are:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">-l</span></code> List the currently attached DFU capable USB devices</p></li>
@@ -1185,9 +1171,9 @@ Resetting USB to switch back to runtime mode
 watching the release section on github. To do this, you need to be logged into
 github with a valid account (and have a valid email where you want notifications
 to show up). Then just go to the
-<a class="icon git reference external" href="https://github.com/analogdevicesinc/scopy/">Scopy</a>;
-<a class="icon git reference external" href="https://github.com/analogdevicesinc/m2k-fw/">M2k Firmware</a> or
-<a class="icon git reference external" href="https://github.com/analogdevicesinc/plutosdr-fw/">PlutoSDR Firmware</a>. Scopy has built in notification (it will tell you on
+<a class="icon git reference external" href="https://github.com/analogdevicesinc/scopy/" target="_blank">Scopy</a>;
+<a class="icon git reference external" href="https://github.com/analogdevicesinc/m2k-fw/" target="_blank">M2k Firmware</a> or
+<a class="icon git reference external" href="https://github.com/analogdevicesinc/plutosdr-fw/" target="_blank">PlutoSDR Firmware</a>. Scopy has built in notification (it will tell you on
 startup if a new feature is available, but if you are a lab manager, and still
 want to be notified - the default github notifications are the best solution).</p>
 <p>Click on the “Watch” button in the right hand side, then decide if you want to
@@ -1211,8 +1197,6 @@ need it bigger).</p>
         </div>
       </div>
   </div>
-
-  <div id="vertical-border"></div>
 
   <label id="cancel-area-show-toc" for="input-show-toc"></label>
   <label id="cancel-area-show-localtoc" for="input-show-localtoc"></label>

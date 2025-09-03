@@ -4,14 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="The objective of this exercise is to understand the operation of a Wien bridge oscillator, including a thorough understanding of the individual components:" name="description" />
 
     <title>Activity: The Wien Bridge Oscillator &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/style.min.css?v=a9555194" />
-    <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script defer="" src="../../../_static/app.umd.js?v=689b8755"></script>
+    <link rel="stylesheet" type="text/css" href="../../../_static/app.min.css?v=37266688" />
+    <script async="async" src="../../../_static/app.umd.js?v=8f62bab2"></script>
     <link rel="icon" href="../../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -19,8 +17,12 @@
     <link rel="prev" title="Active Learning: Student-oriented Lab Exercises" href="../index.html" />
    
   
-  <meta name="global_root" content="../../../../">
-  <meta name="repo" content="documentation">
+  
+  <meta name="repository" content="documentation">
+  <meta name="version" content="">
+  
+    <meta name="page_source_suffix" content=".rst">
+  
   
 
 
@@ -40,7 +42,6 @@
   }
 </style>
   </head><body>
-  <div class="banner"></div>
   <input type="checkbox" id="input-show-toc">
   <input type="checkbox" id="input-show-localtoc">
   <input type="checkbox" id="input-show-repotoc">
@@ -49,8 +50,7 @@
   <div class="search-area">
     <form action="" method="get">
       <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="search" placeholder="Search"/>
-      <button value="search" class="icon"></button>
-      <span id="search-progress"></span>
+      <button class="icon"></button>
     </form>
   </div>
   
@@ -61,9 +61,11 @@
     </div>
     <div id="right">
       <span>
-        <a id="logo-org" href="https://analog.com"></a>
+        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
+        
         <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs" tabindex="0">Docs</label>
+        
         <a id="logo" href="../../../index.html">
           <div>System Level</div>
         </a>
@@ -78,22 +80,12 @@
   <div class="repotoc-tree overlay">
     <root>
   <a href="../../../index.html" class="current">System Level</a>
-  <a href="../../../../hdl/index.html">HDL</a>
-  <a href="../../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../../libiio/index.html">libiio</a>
-  <a href="../../../../no-OS/index.html">no-OS</a>
-  <a href="../../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../../scopy/index.html">Scopy</a>
-  <a href="../../../../doctools/index.html">Doctools</a>
 </root>
 
   </div>
     <div class="localtoc">
       <div class="tocwrapper">
-        <div>
-          <div class="localtoc-header"></div>
+        <div class="header localtoc-header">
           <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
         </div>
         <nav>
@@ -133,15 +125,6 @@ Content on this topic
 <div class="repotoc-tree">
   <root>
   <a href="../../../index.html" class="current">System Level</a>
-  <a href="../../../../hdl/index.html">HDL</a>
-  <a href="../../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../../libiio/index.html">libiio</a>
-  <a href="../../../../no-OS/index.html">no-OS</a>
-  <a href="../../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../../scopy/index.html">Scopy</a>
-  <a href="../../../../doctools/index.html">Doctools</a>
 </root>
 
 </div>
@@ -337,6 +320,9 @@ Content on this topic
   <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper" id="top-anchor">
+          <div class="body-header">
+  <nav class="breadcrumb"><ol><li><a href="../../index.html">Engineering University Program</a></li><li><a href="../index.html">Active Learning: Student-oriented Lab Exercises</a></li></ol></nav>
+</div>
           <div class="body" role="main">
             
   <section id="activity-the-wien-bridge-oscillator">
@@ -627,7 +613,7 @@ oscilloscope, results should be similar to
 <dl class="simple">
 <dt><strong>Resources:</strong></dt><dd><ul class="simple">
 <li><p>Fritzing files: (To Do)</p></li>
-<li><p><a class="reference external" href="https://analogdevicesinc.github.io/DownGit/#/home?url=https://github.com/analogdevicesinc/education_tools/tree/master/m2k/ltspice/wien_bridge_osc">Wien Bridge Lab LTspice files</a></p></li>
+<li><p><a class="icon link reference external" href="https://analogdevicesinc.github.io/DownGit/#/home?url=https://github.com/analogdevicesinc/education_tools/tree/master/m2k/ltspice/wien_bridge_osc" target="_blank">Wien Bridge Lab LTspice files</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -635,11 +621,11 @@ oscilloscope, results should be similar to
 <section id="further-reading">
 <h2>Further Reading<a class="headerlink" href="#further-reading" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://m.eet.com/media/1146147/22254-61856.pdf">“Thank You, Bill Hewlett”, Jim Williams, EDN Magazine Feb. 2001</a></p></li>
-<li><p><a class="reference external" href="https://web.archive.org/web/20211006041636/https://www.hp.com/us-en/pdf/002patent_tcm_245_921599.pdf">U.S. Patent 2,268,872: Variable Frequency Oscillation Generator</a></p></li>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/media/en/technical-documentation/application-notes/an43f.pdf">Linear Technology Application Note 43</a></p></li>
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Wien_bridge_oscillator">Wien_bridge_oscillator</a></p></li>
-<li><p><a class="reference external" href="http://www.tronola.com/moorepage/Lamps.html">Using lamps for stabilizing oscillators</a></p></li>
+<li><p><a class="icon link reference external" href="https://m.eet.com/media/1146147/22254-61856.pdf" target="_blank">“Thank You, Bill Hewlett”, Jim Williams, EDN Magazine Feb. 2001</a></p></li>
+<li><p><a class="icon link reference external" href="https://web.archive.org/web/20211006041636/https://www.hp.com/us-en/pdf/002patent_tcm_245_921599.pdf" target="_blank">U.S. Patent 2,268,872: Variable Frequency Oscillation Generator</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/media/en/technical-documentation/application-notes/an43f.pdf" target="_blank">Linear Technology Application Note 43</a></p></li>
+<li><p><a class="icon link reference external" href="https://en.wikipedia.org/wiki/Wien_bridge_oscillator" target="_blank">Wien_bridge_oscillator</a></p></li>
+<li><p><a class="icon link reference external" href="http://www.tronola.com/moorepage/Lamps.html" target="_blank">Using lamps for stabilizing oscillators</a></p></li>
 </ul>
 </section>
 <section id="warning">
@@ -662,8 +648,6 @@ Although the boards feature ESD protection circuitry, permanent damage may occur
         </div>
       </div>
   </div>
-
-  <div id="vertical-border"></div>
 
   <label id="cancel-area-show-toc" for="input-show-toc"></label>
   <label id="cancel-area-show-localtoc" for="input-show-localtoc"></label>

@@ -4,14 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="This section only gives an overview on pyadi-iio, for all details, see the dedicated doc." name="description" />
 
     <title>PyADI-IIO &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/style.min.css?v=a9555194" />
-    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script defer="" src="../../_static/app.umd.js?v=689b8755"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=37266688" />
+    <script async="async" src="../../_static/app.umd.js?v=8f62bab2"></script>
     <link rel="icon" href="../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -19,8 +17,12 @@
     <link rel="prev" title="Extending Device Interfaces" href="../matlab/bsp-extend.html" />
    
   
-  <meta name="global_root" content="../../../">
-  <meta name="repo" content="documentation">
+  
+  <meta name="repository" content="documentation">
+  <meta name="version" content="">
+  
+    <meta name="page_source_suffix" content=".rst">
+  
   
 
 
@@ -40,7 +42,6 @@
   }
 </style>
   </head><body>
-  <div class="banner"></div>
   <input type="checkbox" id="input-show-toc">
   <input type="checkbox" id="input-show-localtoc">
   <input type="checkbox" id="input-show-repotoc">
@@ -49,8 +50,7 @@
   <div class="search-area">
     <form action="" method="get">
       <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="search" placeholder="Search"/>
-      <button value="search" class="icon"></button>
-      <span id="search-progress"></span>
+      <button class="icon"></button>
     </form>
   </div>
   
@@ -61,9 +61,11 @@
     </div>
     <div id="right">
       <span>
-        <a id="logo-org" href="https://analog.com"></a>
+        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
+        
         <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs" tabindex="0">Docs</label>
+        
         <a id="logo" href="../../index.html">
           <div>System Level</div>
         </a>
@@ -78,22 +80,12 @@
   <div class="repotoc-tree overlay">
     <root>
   <a href="../../index.html" class="current">System Level</a>
-  <a href="../../../hdl/index.html">HDL</a>
-  <a href="../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../libiio/index.html">libiio</a>
-  <a href="../../../no-OS/index.html">no-OS</a>
-  <a href="../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../scopy/index.html">Scopy</a>
-  <a href="../../../doctools/index.html">Doctools</a>
 </root>
 
   </div>
     <div class="localtoc">
       <div class="tocwrapper">
-        <div>
-          <div class="localtoc-header"></div>
+        <div class="header localtoc-header">
           <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
         </div>
         <nav>
@@ -136,15 +128,6 @@ Content on this topic
 <div class="repotoc-tree">
   <root>
   <a href="../../index.html" class="current">System Level</a>
-  <a href="../../../hdl/index.html">HDL</a>
-  <a href="../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../libiio/index.html">libiio</a>
-  <a href="../../../no-OS/index.html">no-OS</a>
-  <a href="../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../scopy/index.html">Scopy</a>
-  <a href="../../../doctools/index.html">Doctools</a>
 </root>
 
 </div>
@@ -340,6 +323,9 @@ Content on this topic
   <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper" id="top-anchor">
+          <div class="body-header">
+  <nav class="breadcrumb empty"><ol></ol></nav>
+</div>
           <div class="body" role="main">
             
   <section id="pyadi-iio">
@@ -347,7 +333,7 @@ Content on this topic
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This section only gives an overview on pyadi-iio, for all details, see
-<a class="reference external" href="https://analogdevicesinc.github.io/pyadi-iio/index.html" title="(in Analog Devices Hardware Python Interfaces v0.0.18)"><span class="xref std std-doc">the dedicated doc</span></a>.</p>
+<a class="icon link reference external" href="https://analogdevicesinc.github.io/pyadi-iio/index.html" target="_blank" title="(in Analog Devices Hardware Python Interfaces v0.0.19)"><span class="xref std std-doc">the dedicated doc</span></a>.</p>
 </div>
 <p>To simplify the use of different devices a python package was created interface
 with the different IIO drivers. The module pyadi-iio, provides device-specific
@@ -366,14 +352,14 @@ ADI development systems as well.</p>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>See <a class="reference external" href="https://analogdevicesinc.github.io/pyadi-iio/guides/quick.html" title="(in Analog Devices Hardware Python Interfaces v0.0.18)"><span>Quick Start</span></a> for a concise guide if you are
+<p>See <a class="icon link reference external" href="https://analogdevicesinc.github.io/pyadi-iio/guides/quick.html" target="_blank" title="(in Analog Devices Hardware Python Interfaces v0.0.19)"><span>Quick Start</span></a> for a concise guide if you are
 familiar with python.</p>
 </div>
 <section id="windows-installation">
 <h3>Windows Installation<a class="headerlink" href="#windows-installation" title="Link to this heading"></a></h3>
 <ol class="arabic">
-<li><p>Download and install the latest release of LibIIO from <a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/releases">ADI libiio repository (releases)</a>.</p></li>
-<li><p>Download and install <a class="reference external" href="https://www.python.org/downloads/windows/">Python for Windows</a>.</p></li>
+<li><p>Download and install the latest release of LibIIO from <a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/releases" target="_blank">ADI libiio repository (releases)</a>.</p></li>
+<li><p>Download and install <a class="icon link reference external" href="https://www.python.org/downloads/windows/" target="_blank">Python for Windows</a>.</p></li>
 <li><p>Install the libIIO bindings through pip.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pylibiio</span>
 </pre></div>
@@ -395,10 +381,10 @@ use the following command.</p>
 <section id="linux-installation">
 <h3>Linux Installation<a class="headerlink" href="#linux-installation" title="Link to this heading"></a></h3>
 <ol class="arabic">
-<li><p>It is recommended that Linux users build libiio from <a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/tree/main/README_BUILD.md">the build instructions</a></p>
+<li><p>It is recommended that Linux users build libiio from <a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/tree/main/README_BUILD.md" target="_blank">the build instructions</a></p>
 <ul class="simple">
 <li><p>Note that since v0.19 libiio requires
-<a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/tree/main/README_BUILD.md">cmake</a>
+<a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/tree/main/README_BUILD.md" target="_blank">cmake</a>
 flags to enable the python bindings during installation.</p></li>
 </ul>
 </li>
@@ -420,10 +406,10 @@ flags to enable the python bindings during installation.</p></li>
 <section id="mac-os-installation">
 <h3>Mac OS Installation<a class="headerlink" href="#mac-os-installation" title="Link to this heading"></a></h3>
 <ol class="arabic">
-<li><p>It is recommended that Mac OS users build libiio from <a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/tree/main/README_BUILD.md">the build instructions</a></p>
+<li><p>It is recommended that Mac OS users build libiio from <a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/tree/main/README_BUILD.md" target="_blank">the build instructions</a></p>
 <ul class="simple">
 <li><p>Note that since v0.19 libiio requires
-<a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/tree/main/README_BUILD.md">cmake</a>
+<a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/tree/main/README_BUILD.md" target="_blank">cmake</a>
 flags to enable the python bindings during installation.</p></li>
 </ul>
 </li>
@@ -443,8 +429,8 @@ flags to enable the python bindings during installation.</p></li>
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
-<p>Devices specific examples are available in the <a class="icon git reference external" href="https://github.com/analogdevicesinc/pyadi-iio/tree/main/examples">source repo</a>,
-and the <a class="reference external" href="https://analogdevicesinc.github.io/pyadi-iio/index.html" title="(in Analog Devices Hardware Python Interfaces v0.0.18)"><span class="xref std std-doc">dedicated doc</span></a>, but here is the basic idea</p>
+<p>Devices specific examples are available in the <a class="icon git reference external" href="https://github.com/analogdevicesinc/pyadi-iio/tree/main/examples" target="_blank">source repo</a>,
+and the <a class="icon link reference external" href="https://analogdevicesinc.github.io/pyadi-iio/index.html" target="_blank" title="(in Analog Devices Hardware Python Interfaces v0.0.19)"><span class="xref std std-doc">dedicated doc</span></a>, but here is the basic idea</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import library</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">adi</span>
 <span class="c1"># Create radio object</span>
@@ -458,7 +444,7 @@ and the <a class="reference external" href="https://analogdevicesinc.github.io/p
 </section>
 <section id="supported-devices-parts">
 <h2>Supported Devices/Parts<a class="headerlink" href="#supported-devices-parts" title="Link to this heading"></a></h2>
-<p>See <a class="icon git reference external" href="https://github.com/analogdevicesinc/pyadi-iio/tree/main/supported_parts.md">repo readme</a>
+<p>See <a class="icon git reference external" href="https://github.com/analogdevicesinc/pyadi-iio/tree/main/supported_parts.md" target="_blank">repo readme</a>
 for supported hardware.</p>
 </section>
 <section id="support">
@@ -466,20 +452,20 @@ for supported hardware.</p>
 <section id="documentation">
 <h3>Documentation<a class="headerlink" href="#documentation" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>All PyADI-IIO documentation is available <a class="reference external" href="https://analogdevicesinc.github.io/pyadi-iio/index.html" title="(in Analog Devices Hardware Python Interfaces v0.0.18)"><span class="xref std std-doc">here</span></a>.</p></li>
+<li><p>All PyADI-IIO documentation is available <a class="icon link reference external" href="https://analogdevicesinc.github.io/pyadi-iio/index.html" target="_blank" title="(in Analog Devices Hardware Python Interfaces v0.0.19)"><span class="xref std std-doc">here</span></a>.</p></li>
 </ul>
 </section>
 <section id="other-useful-links">
 <h3>Other Useful Links<a class="headerlink" href="#other-useful-links" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/pyadi-iio/tree/main/">Source</a></p></li>
-<li><p><a class="reference external" href="https://pypi.org/project/pyadi-iio/">PyPi</a></p></li>
+<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/pyadi-iio/tree/main/" target="_blank">Source</a></p></li>
+<li><p><a class="icon link reference external" href="https://pypi.org/project/pyadi-iio/" target="_blank">PyPi</a></p></li>
 </ul>
 </section>
 <section id="support-questions">
 <h3>Support Questions<a class="headerlink" href="#support-questions" title="Link to this heading"></a></h3>
 <p>Please direct support question or enhancement requests to the
-<a class="icon ez reference external" href="https://ez.analog.com/sw-interface-tools">Software Interface Tools Forums on EngineerZone</a></p>
+<a class="icon ez reference external" href="https://ez.analog.com/sw-interface-tools" target="_blank">Software Interface Tools Forums on EngineerZone</a></p>
 </section>
 </section>
 </section>
@@ -495,8 +481,6 @@ for supported hardware.</p>
         </div>
       </div>
   </div>
-
-  <div id="vertical-border"></div>
 
   <label id="cancel-area-show-toc" for="input-show-toc"></label>
   <label id="cancel-area-show-localtoc" for="input-show-localtoc"></label>

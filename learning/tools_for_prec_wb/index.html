@@ -4,14 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="This is a work in progress." name="description" />
 
     <title>Tools for Precision Wideband Mixed Signal System Design &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/style.min.css?v=a9555194" />
-    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script defer="" src="../../_static/app.umd.js?v=689b8755"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=37266688" />
+    <script async="async" src="../../_static/app.umd.js?v=8f62bab2"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="icon" href="../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -20,8 +18,12 @@
     <link rel="prev" title="Tools for Low Speed Mixed Signal System Design" href="../tools_for_ls/index.html" />
    
   
-  <meta name="global_root" content="../../../">
-  <meta name="repo" content="documentation">
+  
+  <meta name="repository" content="documentation">
+  <meta name="version" content="">
+  
+    <meta name="page_source_suffix" content=".rst">
+  
   
 
 
@@ -41,7 +43,6 @@
   }
 </style>
   </head><body>
-  <div class="banner"></div>
   <input type="checkbox" id="input-show-toc">
   <input type="checkbox" id="input-show-localtoc">
   <input type="checkbox" id="input-show-repotoc">
@@ -50,8 +51,7 @@
   <div class="search-area">
     <form action="" method="get">
       <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="search" placeholder="Search"/>
-      <button value="search" class="icon"></button>
-      <span id="search-progress"></span>
+      <button class="icon"></button>
     </form>
   </div>
   
@@ -62,9 +62,11 @@
     </div>
     <div id="right">
       <span>
-        <a id="logo-org" href="https://analog.com"></a>
+        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
+        
         <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs" tabindex="0">Docs</label>
+        
         <a id="logo" href="../../index.html">
           <div>System Level</div>
         </a>
@@ -79,22 +81,12 @@
   <div class="repotoc-tree overlay">
     <root>
   <a href="../../index.html" class="current">System Level</a>
-  <a href="../../../hdl/index.html">HDL</a>
-  <a href="../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../libiio/index.html">libiio</a>
-  <a href="../../../no-OS/index.html">no-OS</a>
-  <a href="../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../scopy/index.html">Scopy</a>
-  <a href="../../../doctools/index.html">Doctools</a>
 </root>
 
   </div>
     <div class="localtoc">
       <div class="tocwrapper">
-        <div>
-          <div class="localtoc-header"></div>
+        <div class="header localtoc-header">
           <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
         </div>
         <nav>
@@ -140,15 +132,6 @@ Content on this topic
 <div class="repotoc-tree">
   <root>
   <a href="../../index.html" class="current">System Level</a>
-  <a href="../../../hdl/index.html">HDL</a>
-  <a href="../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../libiio/index.html">libiio</a>
-  <a href="../../../no-OS/index.html">no-OS</a>
-  <a href="../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../scopy/index.html">Scopy</a>
-  <a href="../../../doctools/index.html">Doctools</a>
 </root>
 
 </div>
@@ -344,6 +327,9 @@ Content on this topic
   <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper" id="top-anchor">
+          <div class="body-header">
+  <nav class="breadcrumb"><ol><li><a href="../index.html">Learning! Tutorials, Workshops, Etc</a></li></ol></nav>
+</div>
           <div class="body" role="main">
             
   <section id="tools-for-precision-wideband-mixed-signal-system-design">
@@ -399,11 +385,11 @@ keyboard one).</p></li>
 <li><p>5V USB-C wall adapter for Raspberry Pi</p></li>
 <li><p>Colorimeter Setup. This is not in production (yet), but full gerbers
 are provided. The pull request is in review,
-<a class="reference external" href="https://github.com/analogdevicesinc/education_tools/pull/48">HERE</a></p></li>
+<a class="icon link reference external" href="https://github.com/analogdevicesinc/education_tools/pull/48" target="_blank">HERE</a></p></li>
 <li><p>Optical absorbance demonstration material such as:</p>
 <ul>
-<li><p>Optical filters such as <a class="reference external" href="https://www.mcmaster.com/7769T9/">Roscolux Selector Pack</a></p></li>
-<li><p><a class="reference external" href="https://www.apifishcare.com/product/ph-test-adjuster-kit">API pH test and adjust kit</a></p></li>
+<li><p>Optical filters such as <a class="icon link reference external" href="https://www.mcmaster.com/7769T9/" target="_blank">Roscolux Selector Pack</a></p></li>
+<li><p><a class="icon link reference external" href="https://www.apifishcare.com/product/ph-test-adjuster-kit" target="_blank">API pH test and adjust kit</a></p></li>
 </ul>
 </li>
 <li><p>16GB (or larger) Class 10 (or faster) micro-SD card, with
@@ -414,9 +400,9 @@ are provided. The pull request is in review,
 <li><p>Host Windows/Linux/Mac computer on same network as Raspberry Pi</p></li>
 </ul>
 </li>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/ADALM2000">ADALM2000</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/ADALM2000" target="_blank">ADALM2000</a></p></li>
 <li><p>Clone or download zip of the Python code for this tutorial from:
-<a class="reference external" href="https://github.com/cristina-suteu/ftc23-hstpwi/">Python Code for the Hardware and Software Tools for Precision Wideband Instrumentation Workshop</a></p></li>
+<a class="icon link reference external" href="https://github.com/cristina-suteu/ftc23-hstpwi/" target="_blank">Python Code for the Hardware and Software Tools for Precision Wideband Instrumentation Workshop</a></p></li>
 </ul>
 <p>This probably isn’t necessary as of Kuiper 2022r2, but just in case
 you want to update pyadi-iio or have the examples in your home
@@ -515,8 +501,6 @@ as a hands-on workshop:</p>
         </div>
       </div>
   </div>
-
-  <div id="vertical-border"></div>
 
   <label id="cancel-area-show-toc" for="input-show-toc"></label>
   <label id="cancel-area-show-localtoc" for="input-show-localtoc"></label>

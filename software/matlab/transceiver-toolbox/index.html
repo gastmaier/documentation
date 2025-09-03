@@ -4,14 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="This section only gives an overview on the Transceiver Toolbox, for all details, see the dedicated doc." name="description" />
 
     <title>Transceiver Toolbox &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/style.min.css?v=a9555194" />
-    <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script defer="" src="../../../_static/app.umd.js?v=689b8755"></script>
+    <link rel="stylesheet" type="text/css" href="../../../_static/app.min.css?v=37266688" />
+    <script async="async" src="../../../_static/app.umd.js?v=8f62bab2"></script>
     <link rel="icon" href="../../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -19,8 +17,12 @@
     <link rel="prev" title="High Speed Converter Toolbox" href="../hsx-toolbox/index.html" />
    
   
-  <meta name="global_root" content="../../../../">
-  <meta name="repo" content="documentation">
+  
+  <meta name="repository" content="documentation">
+  <meta name="version" content="">
+  
+    <meta name="page_source_suffix" content=".rst">
+  
   
 
 
@@ -40,7 +42,6 @@
   }
 </style>
   </head><body>
-  <div class="banner"></div>
   <input type="checkbox" id="input-show-toc">
   <input type="checkbox" id="input-show-localtoc">
   <input type="checkbox" id="input-show-repotoc">
@@ -49,8 +50,7 @@
   <div class="search-area">
     <form action="" method="get">
       <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="search" placeholder="Search"/>
-      <button value="search" class="icon"></button>
-      <span id="search-progress"></span>
+      <button class="icon"></button>
     </form>
   </div>
   
@@ -61,9 +61,11 @@
     </div>
     <div id="right">
       <span>
-        <a id="logo-org" href="https://analog.com"></a>
+        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
+        
         <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs" tabindex="0">Docs</label>
+        
         <a id="logo" href="../../../index.html">
           <div>System Level</div>
         </a>
@@ -78,22 +80,12 @@
   <div class="repotoc-tree overlay">
     <root>
   <a href="../../../index.html" class="current">System Level</a>
-  <a href="../../../../hdl/index.html">HDL</a>
-  <a href="../../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../../libiio/index.html">libiio</a>
-  <a href="../../../../no-OS/index.html">no-OS</a>
-  <a href="../../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../../scopy/index.html">Scopy</a>
-  <a href="../../../../doctools/index.html">Doctools</a>
 </root>
 
   </div>
     <div class="localtoc">
       <div class="tocwrapper">
-        <div>
-          <div class="localtoc-header"></div>
+        <div class="header localtoc-header">
           <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
         </div>
         <nav>
@@ -150,15 +142,6 @@ Content on this topic
 <div class="repotoc-tree">
   <root>
   <a href="../../../index.html" class="current">System Level</a>
-  <a href="../../../../hdl/index.html">HDL</a>
-  <a href="../../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../../libiio/index.html">libiio</a>
-  <a href="../../../../no-OS/index.html">no-OS</a>
-  <a href="../../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../../scopy/index.html">Scopy</a>
-  <a href="../../../../doctools/index.html">Doctools</a>
 </root>
 
 </div>
@@ -354,6 +337,9 @@ Content on this topic
   <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper" id="top-anchor">
+          <div class="body-header">
+  <nav class="breadcrumb"><ol><li><a href="../index.html">MATLAB &amp; Simulink Toolboxes</a></li></ol></nav>
+</div>
           <div class="body" role="main">
             
   <section id="transceiver-toolbox">
@@ -362,46 +348,46 @@ Content on this topic
 <p class="admonition-title">Note</p>
 <p>This section only gives an overview on the Transceiver Toolbox,
 for all details, see
-<a class="reference external" href="https://analogdevicesinc.github.io/TransceiverToolbox/master">the dedicated doc</a>.</p>
+<a class="icon link reference external" href="https://analogdevicesinc.github.io/TransceiverToolbox/master" target="_blank">the dedicated doc</a>.</p>
 </div>
 <p>Analog Devices Transceiver Toolbox For MATLAB and Simulink is a
 set of tools to model, interface, and target with ADI
 transceiver devices within MATLAB and Simulink. These are combined into single
 Toolbox which contains a set of Board Support Packages (BSP). The list of
 supported boards is provided
-<a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/matlab_bsp#supported_boards">here</a>.</p>
+<a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/matlab_bsp#supported_boards" target="_blank">here</a>.</p>
 <section id="quick-start-with-toolbox">
 <h2>Quick Start with Toolbox<a class="headerlink" href="#quick-start-with-toolbox" title="Link to this heading"></a></h2>
 <p>The current stable Toolbox can be downloaded from the
-<a class="icon git reference external" href="https://github.com/analogdevicesinc/TransceiverToolbox/releases">ADI Transceiver Toolbox repository (releases)</a>.
+<a class="icon git reference external" href="https://github.com/analogdevicesinc/TransceiverToolbox/releases" target="_blank">ADI Transceiver Toolbox repository (releases)</a>.
 Download the latest mltbx file then open that file within MATLAB. Opening the
 file will automatically install the Toolbox, adding the necessary components to
 your MATLAB path. The “Analog Devices, Inc. Transceiver Toolbox” will appear in
-your <a class="reference external" href="https://www.mathworks.com/help/matlab/matlab_env/manage-your-add-ons.html">Add-Ons Explore</a>
+your <a class="icon link reference external" href="https://www.mathworks.com/help/matlab/matlab_env/manage-your-add-ons.html" target="_blank">Add-Ons Explore</a>
 within MATLAB.</p>
 <div class="admonition-download admonition">
 <p class="admonition-title">Download</p>
-<p><a class="icon git reference external" href="https://github.com/analogdevicesinc/TransceiverToolbox/releases">ADI Transceiver Toolbox repository (releases)</a>.</p>
+<p><a class="icon git reference external" href="https://github.com/analogdevicesinc/TransceiverToolbox/releases" target="_blank">ADI Transceiver Toolbox repository (releases)</a>.</p>
 </div>
 <p>To interface and stream data with hardware will require installation of
 <a class="reference internal" href="../../libiio/index.html#libiio"><span class="std std-ref">Libiio</span></a>
 and one of two Hardware Support Packages from MathWorks. The libiio library can
-The libiio library can be obtained on <a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/tree/main/">ADI libiio repository</a> page
+The libiio library can be obtained on <a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/tree/main/" target="_blank">ADI libiio repository</a> page
 of the project.</p>
 <section id="libiio-installers">
 <h3>Libiio Installers<a class="headerlink" href="#libiio-installers" title="Link to this heading"></a></h3>
 <div class="admonition-download admonition">
 <p class="admonition-title">Download</p>
-<p>Stable releases are available at <a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/releases">ADI libiio repository (releases)</a>.</p>
+<p>Stable releases are available at <a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/releases" target="_blank">ADI libiio repository (releases)</a>.</p>
 </div>
 <div class="admonition-download admonition">
 <p class="admonition-title">Download</p>
 <div class="line-block">
 <div class="line">For releases after R2024a:</div>
-<div class="line"><a class="reference external" href="https://www.mathworks.com/matlabcentral/fileexchange/70616-soc-blockset-support-package-for-amd-fpga-and-soc-devices">SoC Blockset Support Package for AMD FPGA and SoC Devices</a></div>
+<div class="line"><a class="icon link reference external" href="https://www.mathworks.com/matlabcentral/fileexchange/70616-soc-blockset-support-package-for-amd-fpga-and-soc-devices" target="_blank">SoC Blockset Support Package for AMD FPGA and SoC Devices</a></div>
 <div class="line">For Releases R2023b and before, either:</div>
-<div class="line"><a class="reference external" href="https://www.mathworks.com/matlabcentral/fileexchange/48491-communications-toolbox-support-package-for-xilinx-zynq-based-radio">Communications Toolbox Support Package for Xilinx Zynq-Based Radio</a></div>
-<div class="line"><a class="reference external" href="https://www.mathworks.com/help/supportpkg/plutoradio/index.html">Communications Toolbox Support Package for Analog Devices ADALM-Pluto Radio</a></div>
+<div class="line"><a class="icon link reference external" href="https://www.mathworks.com/matlabcentral/fileexchange/48491-communications-toolbox-support-package-for-xilinx-zynq-based-radio" target="_blank">Communications Toolbox Support Package for Xilinx Zynq-Based Radio</a></div>
+<div class="line"><a class="icon link reference external" href="https://www.mathworks.com/help/supportpkg/plutoradio/index.html" target="_blank">Communications Toolbox Support Package for Analog Devices ADALM-Pluto Radio</a></div>
 </div>
 </div>
 <p>is required to use the streaming system objects or blocks. These support
@@ -416,30 +402,30 @@ for AMD Devices.</p>
 streaming into MATLAB or Simulink only the following MathWorks toolboxes are
 required:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.mathworks.com/products/communications/">Communications Toolbox</a></p></li>
-<li><p><a class="reference external" href="https://www.mathworks.com/products/dsp-system/">DSP System Toolbox</a></p></li>
-<li><p><a class="reference external" href="https://www.mathworks.com/products/signal/">Signal Processing Toolbox</a></p></li>
-<li><p><a class="reference external" href="https://www.mathworks.com/products/soc.html">SoC Blockset</a></p></li>
-<li><p><a class="reference external" href="https://www.mathworks.com/matlabcentral/fileexchange/70616-soc-blockset-support-package-for-amd-fpga-and-soc-devices">SoC Blockset Support Package for AMD FPGA and SoC Devices (FREE)</a></p></li>
+<li><p><a class="icon link reference external" href="https://www.mathworks.com/products/communications/" target="_blank">Communications Toolbox</a></p></li>
+<li><p><a class="icon link reference external" href="https://www.mathworks.com/products/dsp-system/" target="_blank">DSP System Toolbox</a></p></li>
+<li><p><a class="icon link reference external" href="https://www.mathworks.com/products/signal/" target="_blank">Signal Processing Toolbox</a></p></li>
+<li><p><a class="icon link reference external" href="https://www.mathworks.com/products/soc.html" target="_blank">SoC Blockset</a></p></li>
+<li><p><a class="icon link reference external" href="https://www.mathworks.com/matlabcentral/fileexchange/70616-soc-blockset-support-package-for-amd-fpga-and-soc-devices" target="_blank">SoC Blockset Support Package for AMD FPGA and SoC Devices (FREE)</a></p></li>
 </ul>
 <p>For HDL code generation the following are required:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.mathworks.com/products/hdl-coder">HDL-Coder</a></p></li>
-<li><p><a class="reference external" href="https://www.mathworks.com/hardware-support/zynq-hdl-coder">Xilinx Zynq Support from HDL Coder (FREE)</a></p></li>
+<li><p><a class="icon link reference external" href="https://www.mathworks.com/products/hdl-coder" target="_blank">HDL-Coder</a></p></li>
+<li><p><a class="icon link reference external" href="https://www.mathworks.com/hardware-support/zynq-hdl-coder" target="_blank">Xilinx Zynq Support from HDL Coder (FREE)</a></p></li>
 </ul>
 <p>Specific demos may require other toolboxes:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz/software/matlab_bsp_modem">QPSK Modem</a></p></li>
-<li><p><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/adrv936x_rfsom/tutorials/frequency_hopping">Frequency Hopping</a></p></li>
-<li><p><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/adrv936x_rfsom/tutorials/loopback_delay_estimation">Loopback Delay Estimation</a></p></li>
-<li><p><a class="reference external" href="https://wiki.analog.com/resources/tools-software/transceiver-toolbox/examples/pluto_lte_app">ADALM-PLUTO LTE App</a></p></li>
+<li><p><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz/software/matlab_bsp_modem" target="_blank">QPSK Modem</a></p></li>
+<li><p><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/adrv936x_rfsom/tutorials/frequency_hopping" target="_blank">Frequency Hopping</a></p></li>
+<li><p><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/adrv936x_rfsom/tutorials/loopback_delay_estimation" target="_blank">Loopback Delay Estimation</a></p></li>
+<li><p><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/tools-software/transceiver-toolbox/examples/pluto_lte_app" target="_blank">ADALM-PLUTO LTE App</a></p></li>
 </ul>
 <p>Models of different transceivers may require different toolboxes as well. More
-information can be found <a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz/software/simrf">at the RF Blockset Model of AD9361 from MathWorks page</a>.</p>
+information can be found <a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz/software/simrf" target="_blank">at the RF Blockset Model of AD9361 from MathWorks page</a>.</p>
 </section>
 <section id="api-documentation">
 <h3>API Documentation<a class="headerlink" href="#api-documentation" title="Link to this heading"></a></h3>
-<p>See at <a class="reference external" href="https://analogdevicesinc.github.io/TransceiverToolbox/master">Latest Transceiver Toolbox API doc</a></p>
+<p>See at <a class="icon link reference external" href="https://analogdevicesinc.github.io/TransceiverToolbox/master" target="_blank">Latest Transceiver Toolbox API doc</a></p>
 </section>
 <section id="building-the-toolbox-manually">
 <h3>Building the Toolbox Manually<a class="headerlink" href="#building-the-toolbox-manually" title="Link to this heading"></a></h3>
@@ -539,7 +525,7 @@ instantiated like above as:</p>
 <p>For example usage of certain objects, it can be useful to inspect their related
 test code which exercises initiations in different configurations. The available
 code is available in the GitHub repo folder
-<a class="reference external" href="https://github.com/analogdevicesinc/MathWorks_tools/tree/master/test">here</a>,
+<a class="icon link reference external" href="https://github.com/analogdevicesinc/MathWorks_tools/tree/master/test" target="_blank">here</a>,
 where object tests have the naming convention <code class="docutils literal notranslate"><span class="pre">&lt;Object&gt;Tests.m</span></code>.</p>
 <p>To get a list of currently available objects with the BSP installed simply run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span> <span class="n">adi</span>
@@ -590,10 +576,10 @@ various Analog Devices platforms</p></li>
 reference designs</p></li>
 </ul>
 <p>This Analog Devices Toolbox is based on the
-<a class="reference external" href="https://www.mathworks.com/help/hdlcoder/ug/board-and-reference-design-system.html">MathWorks Board and Reference Design Registration System</a>.</p>
+<a class="icon link reference external" href="https://www.mathworks.com/help/hdlcoder/ug/board-and-reference-design-system.html" target="_blank">MathWorks Board and Reference Design Registration System</a>.</p>
 <section id="functionality">
 <h3>Functionality<a class="headerlink" href="#functionality" title="Link to this heading"></a></h3>
-<p>The <a class="reference external" href="https://www.mathworks.com/help/hdlcoder/examples/getting-started-with-hardware-software-codesign-workflow-for-xilinx-zynq-platform.html">MathWorks HDL Workflow Advisor</a>
+<p>The <a class="icon link reference external" href="https://www.mathworks.com/help/hdlcoder/examples/getting-started-with-hardware-software-codesign-workflow-for-xilinx-zynq-platform.html" target="_blank">MathWorks HDL Workflow Advisor</a>
 enables users to automatically generate HDL code from a Simulink model. The user
 can choose from a selection of several different Target Workflows, including
 <code class="docutils literal notranslate"><span class="pre">ASIC/FPGA</span></code>, <code class="docutils literal notranslate"><span class="pre">FPGA-In-The-Loop</span></code>, and <code class="docutils literal notranslate"><span class="pre">IP</span> <span class="pre">Core</span> <span class="pre">Generation</span></code>. Target Platform
@@ -755,7 +741,7 @@ in Vivado. The project can be found in the <em>hdl_prj/vivado_ip_prj</em> folder
 </section>
 <section id="further-reading">
 <h4>Further Reading<a class="headerlink" href="#further-reading" title="Link to this heading"></a></h4>
-<p><a class="icon adi reference external" href="https://www.analog.com/library/analogDialogue/archives/49-12/four-step-sdr-04.html">Four Quick Steps to Production: Using Model-Based Design for Software-Defined Radio - Part 4</a></p>
+<p><a class="icon adi reference external" href="https://www.analog.com/library/analogDialogue/archives/49-12/four-step-sdr-04.html" target="_blank">Four Quick Steps to Production: Using Model-Based Design for Software-Defined Radio - Part 4</a></p>
 </section>
 </section>
 <section id="creating-a-boot-bin-from-hdl-workflow-advisor">
@@ -768,7 +754,7 @@ devicetree and kernel image selected.
 <a class="reference internal" href="../../../linux/kuiper/sdcard/index.html#kuiper-sdcard"><span class="std std-ref">Follow this process here</span></a>.</p>
 <p>Once your SD card is ready, in step 4.3 “Build FPGA Bitstream” of HDL Workflow
 Advisor select a custom Tcl file for synthesis build. Utilize this
-<a class="icon git reference external" href="https://github.com/analogdevicesinc/TransceiverToolbox/tree/main/CI/scripts/adi_build.tcl">adi_build.tcl</a>
+<a class="icon git reference external" href="https://github.com/analogdevicesinc/TransceiverToolbox/tree/main/CI/scripts/adi_build.tcl" target="_blank">adi_build.tcl</a>
 file located within the BSP as your custom tcl file.</p>
 <p><a class="reference internal" href="../../../_images/hwa_custom.png"><img alt="image1" src="../../../_images/hwa_custom.png" style="width: 600px;" /></a></p>
 <p>Once the bitstream is built it will generate the BOOT.BIN necessary for booting
@@ -794,8 +780,8 @@ always traded off by the model developer.</p>
 <p>Some models are “complete” models, were developed and maintained by MathWorks,
 outside of ADI’s transceiver toolbox:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.mathworks.com/help/simrf/ug/ad9361-models.html">help/simrf/ug/ad9361-models.html</a></p></li>
-<li><p><a class="reference external" href="https://www.mathworks.com/help/simrf/ug/ad9371-models.html">help/simrf/ug/ad9371-models.html</a></p></li>
+<li><p><a class="icon link reference external" href="https://www.mathworks.com/help/simrf/ug/ad9361-models.html" target="_blank">help/simrf/ug/ad9361-models.html</a></p></li>
+<li><p><a class="icon link reference external" href="https://www.mathworks.com/help/simrf/ug/ad9371-models.html" target="_blank">help/simrf/ug/ad9371-models.html</a></p></li>
 </ul>
 </section>
 <section id="supported-boards">
@@ -941,19 +927,19 @@ documentation itself. To view run the following with MATLAB:</p>
 </div>
 <p>They can also be viewed on GitHub:</p>
 <ul class="simple">
-<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/TransceiverToolbox/tree/main/trx_examples/targeting">Targeting examples</a></p></li>
-<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/TransceiverToolbox/tree/main/trx_examples/streaming">Streaming examples</a></p></li>
+<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/TransceiverToolbox/tree/main/trx_examples/targeting" target="_blank">Targeting examples</a></p></li>
+<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/TransceiverToolbox/tree/main/trx_examples/streaming" target="_blank">Streaming examples</a></p></li>
 </ul>
 <p>Highlighted demos:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://wiki.analog.com/resources/tools-software/resources/eval/user-guides/adrv936x_rfsom/tutorials/frequency_hopping">Frequency hopping</a></p></li>
-<li><p><a class="reference external" href="https://wiki.analog.com/resources/tools-software/resources/eval/user-guides/adrv936x_rfsom/tutorials/loopback_delay_estimation">Loopback delay estimation</a></p></li>
-<li><p><a class="reference external" href="https://wiki.analog.com/resources/tools-software/resources/eval/user-guides/ad9361_agc_tuning">AGC Optimization</a></p></li>
+<li><p><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/tools-software/resources/eval/user-guides/adrv936x_rfsom/tutorials/frequency_hopping" target="_blank">Frequency hopping</a></p></li>
+<li><p><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/tools-software/resources/eval/user-guides/adrv936x_rfsom/tutorials/loopback_delay_estimation" target="_blank">Loopback delay estimation</a></p></li>
+<li><p><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/tools-software/resources/eval/user-guides/ad9361_agc_tuning" target="_blank">AGC Optimization</a></p></li>
 </ul>
 </section>
 <section id="help-support">
 <h2>Help &amp; Support<a class="headerlink" href="#help-support" title="Link to this heading"></a></h2>
-<p>Questions? <a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz/help_and_support">Ask Help &amp; Support</a>.</p>
+<p>Questions? <a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz/help_and_support" target="_blank">Ask Help &amp; Support</a>.</p>
 </section>
 <section id="common-issues">
 <h2>Common Issues<a class="headerlink" href="#common-issues" title="Link to this heading"></a></h2>
@@ -992,8 +978,6 @@ the following within MATLAB:</p>
         </div>
       </div>
   </div>
-
-  <div id="vertical-border"></div>
 
   <label id="cancel-area-show-toc" for="input-show-toc"></label>
   <label id="cancel-area-show-localtoc" for="input-show-localtoc"></label>

@@ -4,14 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="Analog Devices Kuiper Linux is a distribution based on Raspberry Pi OS for the Raspberry Pi. It incorporates thousands of Linux device drivers for ADI products, and is created with ease of use in mind. The reasoning for creating this distribution is to minimize the barriers to integrating ADI hardware devices into an embedded Linux system. ADI Kuiper Linux also includes a host of additional applications, software libraries, and utilities including for rapid prototyping and development" name="description" />
 
     <title>Kuiper Linux &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/style.min.css?v=a9555194" />
-    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script defer="" src="../../_static/app.umd.js?v=689b8755"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=37266688" />
+    <script async="async" src="../../_static/app.umd.js?v=8f62bab2"></script>
     <link rel="icon" href="../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -19,8 +17,12 @@
     <link rel="prev" title="System Level Documentation" href="../../index.html" />
    
   
-  <meta name="global_root" content="../../../">
-  <meta name="repo" content="documentation">
+  
+  <meta name="repository" content="documentation">
+  <meta name="version" content="">
+  
+    <meta name="page_source_suffix" content=".rst">
+  
   
 
 
@@ -40,7 +42,6 @@
   }
 </style>
   </head><body>
-  <div class="banner"></div>
   <input type="checkbox" id="input-show-toc">
   <input type="checkbox" id="input-show-localtoc">
   <input type="checkbox" id="input-show-repotoc">
@@ -49,8 +50,7 @@
   <div class="search-area">
     <form action="" method="get">
       <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="search" placeholder="Search"/>
-      <button value="search" class="icon"></button>
-      <span id="search-progress"></span>
+      <button class="icon"></button>
     </form>
   </div>
   
@@ -61,9 +61,11 @@
     </div>
     <div id="right">
       <span>
-        <a id="logo-org" href="https://analog.com"></a>
+        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
+        
         <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs" tabindex="0">Docs</label>
+        
         <a id="logo" href="../../index.html">
           <div>System Level</div>
         </a>
@@ -78,22 +80,12 @@
   <div class="repotoc-tree overlay">
     <root>
   <a href="../../index.html" class="current">System Level</a>
-  <a href="../../../hdl/index.html">HDL</a>
-  <a href="../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../libiio/index.html">libiio</a>
-  <a href="../../../no-OS/index.html">no-OS</a>
-  <a href="../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../scopy/index.html">Scopy</a>
-  <a href="../../../doctools/index.html">Doctools</a>
 </root>
 
   </div>
     <div class="localtoc">
       <div class="tocwrapper">
-        <div>
-          <div class="localtoc-header"></div>
+        <div class="header localtoc-header">
           <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
         </div>
         <nav>
@@ -145,15 +137,6 @@ Content on this topic
 <div class="repotoc-tree">
   <root>
   <a href="../../index.html" class="current">System Level</a>
-  <a href="../../../hdl/index.html">HDL</a>
-  <a href="../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../libiio/index.html">libiio</a>
-  <a href="../../../no-OS/index.html">no-OS</a>
-  <a href="../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../scopy/index.html">Scopy</a>
-  <a href="../../../doctools/index.html">Doctools</a>
 </root>
 
 </div>
@@ -349,6 +332,9 @@ Content on this topic
   <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper" id="top-anchor">
+          <div class="body-header">
+  <nav class="breadcrumb empty"><ol></ol></nav>
+</div>
           <div class="body" role="main">
             
   <section id="kuiper-linux">
@@ -1220,8 +1206,8 @@ well with:
 <section id="advanced-information-for-power-users">
 <h2>Advanced Information For Power Users<a class="headerlink" href="#advanced-information-for-power-users" title="Link to this heading"></a></h2>
 <p><a class="reference internal" href="../kernel/index.html#linux-kernel"><span class="std std-ref">Kernel and devicetrees</span></a></p>
-<p><a class="reference external" href="https://analogdevicesinc.github.io/hdl/user_guide/build_hdl.html#build-hdl" title="(in HDL)"><span>Build an HDL project</span></a></p>
-<p><a class="reference external" href="https://analogdevicesinc.github.io/hdl/user_guide/build_boot_bin.html#build-boot-bin" title="(in HDL)"><span>Build the boot image BOOT.BIN</span></a></p>
+<p><a class="icon link reference external" href="https://analogdevicesinc.github.io/hdl/user_guide/build_hdl.html#build-hdl" target="_blank" title="(in HDL)"><span>Build an HDL project</span></a></p>
+<p><a class="icon link reference external" href="https://analogdevicesinc.github.io/hdl/user_guide/build_boot_bin.html#build-boot-bin" target="_blank" title="(in HDL)"><span>Build the boot image BOOT.BIN</span></a></p>
 </section>
 </section>
 
@@ -1236,8 +1222,6 @@ well with:
         </div>
       </div>
   </div>
-
-  <div id="vertical-border"></div>
 
   <label id="cancel-area-show-toc" for="input-show-toc"></label>
   <label id="cancel-area-show-localtoc" for="input-show-localtoc"></label>

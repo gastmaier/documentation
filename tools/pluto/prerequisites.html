@@ -4,14 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="To understand what the prerequisites are for using the ADALM-PLUTO (PlutoSDR), you need to understand what you are trying to do, and what software environment you want to do it in. The PlutoSDR is a powerful/flexible device, which can be used both in a standalone mode, or with a host, in multiple different software environments. The one that is best is unique to the problem at hand, so we don’t specifically recommend a single solution. This page discusses both hardware and software options, and lists the most common 1 configurations:" name="description" />
 
     <title>Prerequisites &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/style.min.css?v=a9555194" />
-    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script defer="" src="../../_static/app.umd.js?v=689b8755"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=37266688" />
+    <script async="async" src="../../_static/app.umd.js?v=8f62bab2"></script>
     <link rel="icon" href="../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -19,8 +17,12 @@
     <link rel="prev" title="Support" href="help_support.html" />
    
   
-  <meta name="global_root" content="../../../">
-  <meta name="repo" content="documentation">
+  
+  <meta name="repository" content="documentation">
+  <meta name="version" content="">
+  
+    <meta name="page_source_suffix" content=".rst">
+  
   
 
 
@@ -40,7 +42,6 @@
   }
 </style>
   </head><body>
-  <div class="banner"></div>
   <input type="checkbox" id="input-show-toc">
   <input type="checkbox" id="input-show-localtoc">
   <input type="checkbox" id="input-show-repotoc">
@@ -49,8 +50,7 @@
   <div class="search-area">
     <form action="" method="get">
       <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="search" placeholder="Search"/>
-      <button value="search" class="icon"></button>
-      <span id="search-progress"></span>
+      <button class="icon"></button>
     </form>
   </div>
   
@@ -61,9 +61,11 @@
     </div>
     <div id="right">
       <span>
-        <a id="logo-org" href="https://analog.com"></a>
+        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
+        
         <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs" tabindex="0">Docs</label>
+        
         <a id="logo" href="../../index.html">
           <div>System Level</div>
         </a>
@@ -78,22 +80,12 @@
   <div class="repotoc-tree overlay">
     <root>
   <a href="../../index.html" class="current">System Level</a>
-  <a href="../../../hdl/index.html">HDL</a>
-  <a href="../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../libiio/index.html">libiio</a>
-  <a href="../../../no-OS/index.html">no-OS</a>
-  <a href="../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../scopy/index.html">Scopy</a>
-  <a href="../../../doctools/index.html">Doctools</a>
 </root>
 
   </div>
     <div class="localtoc">
       <div class="tocwrapper">
-        <div>
-          <div class="localtoc-header"></div>
+        <div class="header localtoc-header">
           <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
         </div>
         <nav>
@@ -133,15 +125,6 @@ Content on this topic
 <div class="repotoc-tree">
   <root>
   <a href="../../index.html" class="current">System Level</a>
-  <a href="../../../hdl/index.html">HDL</a>
-  <a href="../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../libiio/index.html">libiio</a>
-  <a href="../../../no-OS/index.html">no-OS</a>
-  <a href="../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../scopy/index.html">Scopy</a>
-  <a href="../../../doctools/index.html">Doctools</a>
 </root>
 
 </div>
@@ -337,6 +320,9 @@ Content on this topic
   <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper" id="top-anchor">
+          <div class="body-header">
+  <nav class="breadcrumb"><ol><li><a href="index.html">ADALM-PLUTO</a></li></ol></nav>
+</div>
           <div class="body" role="main">
             
   <section id="prerequisites">
@@ -398,27 +384,27 @@ to a license.</p>
 <div><ul class="simple">
 <li><p>If you are a student or faculty at a post-secondary institution
 (University, Community College, etc), check out MathWorks
-<a class="reference external" href="https://www.mathworks.com/academia.html">Academic</a> section. Many schools provide a
-<a class="reference external" href="https://www.mathworks.com//academia/tah-support-program/eligibility/?s_tid=srctitle">Total Academic Headcount (TAH)</a>
-license or some require/ask their students to obtain <a class="reference external" href="https://www.mathworks.com//academia/student_version.html">Student version</a> <a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></li>
-<li><p>If you are a hobbyist, enthusiast or maker, check out <a class="reference external" href="https://www.mathworks.com//products/matlab-home.html">MATLAB Home</a>.</p></li>
+<a class="icon link reference external" href="https://www.mathworks.com/academia.html" target="_blank">Academic</a> section. Many schools provide a
+<a class="icon link reference external" href="https://www.mathworks.com//academia/tah-support-program/eligibility/?s_tid=srctitle" target="_blank">Total Academic Headcount (TAH)</a>
+license or some require/ask their students to obtain <a class="icon link reference external" href="https://www.mathworks.com//academia/student_version.html" target="_blank">Student version</a> <a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></li>
+<li><p>If you are a hobbyist, enthusiast or maker, check out <a class="icon link reference external" href="https://www.mathworks.com//products/matlab-home.html" target="_blank">MATLAB Home</a>.</p></li>
 <li><p>There are many license options, if you are unsure, check out the
 MathWorks <cite>store &lt;store&gt;</cite></p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p>You need to have a host computer, which supports the minimum <a class="reference external" href="https://www.mathworks.com//support/sysreq.html">System Requirements for MATLAB</a>.</p></li>
+<li><p>You need to have a host computer, which supports the minimum <a class="icon link reference external" href="https://www.mathworks.com//support/sysreq.html" target="_blank">System Requirements for MATLAB</a>.</p></li>
 <li><p>No matter which license you have <a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>, the following toolboxes are
 required to use MATLAB with the PlutoSDR:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><a class="reference external" href="https://www.mathworks.com/products/dsp-system.html">DSP System Toolbox</a></p></li>
-<li><p><a class="reference external" href="https://www.mathworks.com/products/signal.html">Signal Processing Toolbox</a></p></li>
-<li><p><a class="reference external" href="https://www.mathworks.com/products/communications.html">Communications System Toolbox</a></p></li>
+<li><p><a class="icon link reference external" href="https://www.mathworks.com/products/dsp-system.html" target="_blank">DSP System Toolbox</a></p></li>
+<li><p><a class="icon link reference external" href="https://www.mathworks.com/products/signal.html" target="_blank">Signal Processing Toolbox</a></p></li>
+<li><p><a class="icon link reference external" href="https://www.mathworks.com/products/communications.html" target="_blank">Communications System Toolbox</a></p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p>You also will need a <a class="reference external" href="https://www.mathworks.com//support/compilers.html">supported and compatible compiler</a>, many which are zero cost, or
+<li><p>You also will need a <a class="icon link reference external" href="https://www.mathworks.com//support/compilers.html" target="_blank">supported and compatible compiler</a>, many which are zero cost, or
 free.</p></li>
 <li><p>We have verified things on a subset of what MATHWORKS supports, including
 Windows 10, Windows 8.1, Windows 8, Windows 7 Service Pack 1, macOS Sierra
@@ -432,9 +418,9 @@ Windows 10, Windows 8.1, Windows 8, Windows 7 Service Pack 1, macOS Sierra
 <h3>GNU Radio<a class="headerlink" href="#gnu-radio" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>GNU Radio is mostly a
-<a class="reference external" href="https://wiki.gnuradio.org/index.php/InstallingGR">Linux</a> only tool. It
+<a class="icon link reference external" href="https://wiki.gnuradio.org/index.php/InstallingGR" target="_blank">Linux</a> only tool. It
 can be run on
-<a class="reference external" href="https://wiki.gnuradio.org/index.php/InstallingGR#Windows">Windows</a>, but
+<a class="icon link reference external" href="https://wiki.gnuradio.org/index.php/InstallingGR#Windows" target="_blank">Windows</a>, but
 we have not tested in there.</p>
 <ul class="simple">
 <li><p>We have verified things on Ubuntu 16.04 LTS, Debian 8.x and updated
@@ -458,20 +444,20 @@ itself. We recommend at least 5V, 1A or above, depending on the firmware image.<
 <ol class="arabic simple">
 <li><p>AC adapters we have verified:</p>
 <ul class="simple">
-<li><p>Farnell’s <a class="reference external" href="http://www.newark.com/stontronics/t5875dv/psu-raspberry-pi-5v-2-5a-multi/dp/77Y6535">5.1V, 2.5A, Micro USB</a>
+<li><p>Farnell’s <a class="icon link reference external" href="http://www.newark.com/stontronics/t5875dv/psu-raspberry-pi-5v-2-5a-multi/dp/77Y6535" target="_blank">5.1V, 2.5A, Micro USB</a>
 with international plugs</p></li>
-<li><p>Adafruit’s <a class="reference external" href="https://www.adafruit.com/products/501">5V, 1A USB port</a>
-<a class="reference external" href="https://www.worldstandards.eu/electricity/plugs-and-sockets/ab/">NEMA 1-15</a>
+<li><p>Adafruit’s <a class="icon link reference external" href="https://www.adafruit.com/products/501" target="_blank">5V, 1A USB port</a>
+<a class="icon link reference external" href="https://www.worldstandards.eu/electricity/plugs-and-sockets/ab/" target="_blank">NEMA 1-15</a>
 plug, requires USB cable</p></li>
-<li><p>Adafruit’s <a class="reference external" href="https://www.adafruit.com/products/1995">5V, 2.4A Power Supply with MicroUSB Cable</a>,
-<a class="reference external" href="https://www.worldstandards.eu/electricity/plugs-and-sockets/ab/">NEMA 1-15</a> plug</p></li>
+<li><p>Adafruit’s <a class="icon link reference external" href="https://www.adafruit.com/products/1995" target="_blank">5V, 2.4A Power Supply with MicroUSB Cable</a>,
+<a class="icon link reference external" href="https://www.worldstandards.eu/electricity/plugs-and-sockets/ab/" target="_blank">NEMA 1-15</a> plug</p></li>
 </ul>
 </li>
 <li><p>Batteries we have verified:</p>
 <ul class="simple">
-<li><p>Adafruit’s <a class="reference external" href="https://www.adafruit.com/products/1959">USB Battery Pack, 2.2 Ah, 5V &#64; 1A</a></p></li>
-<li><p>Adafruit’s <a class="reference external" href="https://www.adafruit.com/products/1565">USB Battery Pack, 4 Ah, 5V &#64; 1A</a></p></li>
-<li><p>Adafruit’s <a class="reference external" href="https://www.adafruit.com/products/1566">USB Battery Pack, 10 Ah, 5V &#64; 2A</a></p></li>
+<li><p>Adafruit’s <a class="icon link reference external" href="https://www.adafruit.com/products/1959" target="_blank">USB Battery Pack, 2.2 Ah, 5V &#64; 1A</a></p></li>
+<li><p>Adafruit’s <a class="icon link reference external" href="https://www.adafruit.com/products/1565" target="_blank">USB Battery Pack, 4 Ah, 5V &#64; 1A</a></p></li>
+<li><p>Adafruit’s <a class="icon link reference external" href="https://www.adafruit.com/products/1566" target="_blank">USB Battery Pack, 10 Ah, 5V &#64; 2A</a></p></li>
 </ul>
 </li>
 </ol>
@@ -487,7 +473,7 @@ PlutoSDR has no idea anything is plugged in), and have things work out of the
 box to stream data over ethernet or Wifi.</p>
 <p>If the PlutoSDR finds a mass storage with specific shell or python script, it
 will begin to save data to the mass storage device (enabling you to do low cost
-<a class="reference external" href="https://en.wikipedia.org/wiki/Wireless_site_survey">wireless site surveys</a>),
+<a class="icon link reference external" href="https://en.wikipedia.org/wiki/Wireless_site_survey" target="_blank">wireless site surveys</a>),
 which you can load into SDR frameworks later.</p>
 </section>
 <section id="complex-hosts">
@@ -503,12 +489,12 @@ plug into a PlutoSDR with a kernel re-compile. check out the
 <aside class="footnote brackets" id="id5" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
 <p>If you have MATLAB Student edition, you will need the optional
-<a class="reference external" href="https://www.mathworks.com/products/communications.html">Communications System Toolbox</a></p>
+<a class="icon link reference external" href="https://www.mathworks.com/products/communications.html" target="_blank">Communications System Toolbox</a></p>
 </aside>
 <aside class="footnote brackets" id="id6" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
 <p>to check your installed/licensed toolboxes, type the <code class="docutils literal notranslate"><span class="pre">ver</span></code>
-<a class="reference external" href="https://www.mathworks.com/help/matlab/ref/ver.html">command</a> at a MATLAB command prompt</p>
+<a class="icon link reference external" href="https://www.mathworks.com/help/matlab/ref/ver.html" target="_blank">command</a> at a MATLAB command prompt</p>
 </aside>
 </aside>
 </section>
@@ -526,8 +512,6 @@ plug into a PlutoSDR with a kernel re-compile. check out the
         </div>
       </div>
   </div>
-
-  <div id="vertical-border"></div>
 
   <label id="cancel-area-show-toc" for="input-show-toc"></label>
   <label id="cancel-area-show-localtoc" for="input-show-localtoc"></label>

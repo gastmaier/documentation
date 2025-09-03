@@ -4,14 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="This section provides a concise guide on building the Linux kernel and devicetrees for different platforms on different hosts." name="description" />
 
     <title>Kernel and devicetrees &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/style.min.css?v=a9555194" />
-    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script defer="" src="../../_static/app.umd.js?v=689b8755"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=37266688" />
+    <script async="async" src="../../_static/app.umd.js?v=8f62bab2"></script>
     <link rel="icon" href="../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -19,8 +17,12 @@
     <link rel="prev" title="iio-trig-bfin-timer driver" href="../drivers/iio/iio-trig-bfin-timer.html" />
    
   
-  <meta name="global_root" content="../../../">
-  <meta name="repo" content="documentation">
+  
+  <meta name="repository" content="documentation">
+  <meta name="version" content="">
+  
+    <meta name="page_source_suffix" content=".rst">
+  
   
 
 
@@ -40,7 +42,6 @@
   }
 </style>
   </head><body>
-  <div class="banner"></div>
   <input type="checkbox" id="input-show-toc">
   <input type="checkbox" id="input-show-localtoc">
   <input type="checkbox" id="input-show-repotoc">
@@ -49,8 +50,7 @@
   <div class="search-area">
     <form action="" method="get">
       <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="search" placeholder="Search"/>
-      <button value="search" class="icon"></button>
-      <span id="search-progress"></span>
+      <button class="icon"></button>
     </form>
   </div>
   
@@ -61,9 +61,11 @@
     </div>
     <div id="right">
       <span>
-        <a id="logo-org" href="https://analog.com"></a>
+        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
+        
         <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs" tabindex="0">Docs</label>
+        
         <a id="logo" href="../../index.html">
           <div>System Level</div>
         </a>
@@ -78,22 +80,12 @@
   <div class="repotoc-tree overlay">
     <root>
   <a href="../../index.html" class="current">System Level</a>
-  <a href="../../../hdl/index.html">HDL</a>
-  <a href="../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../libiio/index.html">libiio</a>
-  <a href="../../../no-OS/index.html">no-OS</a>
-  <a href="../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../scopy/index.html">Scopy</a>
-  <a href="../../../doctools/index.html">Doctools</a>
 </root>
 
   </div>
     <div class="localtoc">
       <div class="tocwrapper">
-        <div>
-          <div class="localtoc-header"></div>
+        <div class="header localtoc-header">
           <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
         </div>
         <nav>
@@ -162,15 +154,6 @@ Content on this topic
 <div class="repotoc-tree">
   <root>
   <a href="../../index.html" class="current">System Level</a>
-  <a href="../../../hdl/index.html">HDL</a>
-  <a href="../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../libiio/index.html">libiio</a>
-  <a href="../../../no-OS/index.html">no-OS</a>
-  <a href="../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../scopy/index.html">Scopy</a>
-  <a href="../../../doctools/index.html">Doctools</a>
 </root>
 
 </div>
@@ -366,6 +349,9 @@ Content on this topic
   <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper" id="top-anchor">
+          <div class="body-header">
+  <nav class="breadcrumb empty"><ol></ol></nav>
+</div>
           <div class="body" role="main">
             
   <section id="kernel-and-devicetrees">
@@ -400,7 +386,7 @@ devicetrees for different platforms on different hosts.</p>
 <section id="using-a-script">
 <h3><a class="toc-backref" href="#id9" role="doc-backlink">Using a script</a><a class="headerlink" href="#using-a-script" title="Link to this heading"></a></h3>
 <p>We provide
-<a class="icon git reference external" href="https://raw.githubusercontent.com/analogdevicesinc/wiki-scripts/main/linux/build_zynq_kernel_image.sh">a script</a>
+<a class="icon git reference external" href="https://raw.githubusercontent.com/analogdevicesinc/wiki-scripts/main/linux/build_zynq_kernel_image.sh" target="_blank">a script</a>
 that does automates the build for Zynq using the Linaro toolchain.</p>
 <p>The script takes up to 3 parameters, but if left blank, it uses defaults:</p>
 <ol class="arabic simple">
@@ -584,7 +570,7 @@ Same goes for the <strong>$VITIS_VERSION</strong>, where you choose the Vitis ve
 <h5>Using the Linaro toolchain<a class="headerlink" href="#using-the-linaro-toolchain" title="Link to this heading"></a></h5>
 <p>Alternatively, the Linaro toolchain/compiler can be used to compile to kernel.
 Linaro compilers (that work with Zynq) can be downloaded from
-<a class="reference external" href="https://releases.linaro.org/components/toolchain/binaries/latest-7/arm-linux-gnueabi">here</a>.
+<a class="icon link reference external" href="https://releases.linaro.org/components/toolchain/binaries/latest-7/arm-linux-gnueabi" target="_blank">here</a>.
 Always use the latest release just in case.</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
@@ -675,301 +661,301 @@ Entry Point:  00008000
 </thead>
 <tbody>
 <tr class="row-even"><td><p>zynq-adrv9361-z7035-bob</p></td>
-<td><p><a class="icon adi reference external" href="https://www.analog.com/ADRV1CRR-BOB">ADRV1CRR-BOB</a></p></td>
+<td><p><a class="icon adi reference external" href="https://www.analog.com/ADRV1CRR-BOB" target="_blank">ADRV1CRR-BOB</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADRV9361">ADRV9361</a></div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADRV9361" target="_blank">ADRV9361</a></div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-adrv9361-z7035-bob-cmos</p></td>
-<td><p><a class="icon adi reference external" href="https://www.analog.com/ADRV1CRR-BOB">ADRV1CRR-BOB</a></p></td>
+<td><p><a class="icon adi reference external" href="https://www.analog.com/ADRV1CRR-BOB" target="_blank">ADRV1CRR-BOB</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADRV9361">ADRV9361</a></div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADRV9361" target="_blank">ADRV9361</a></div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynq-adrv9361-z7035-packrf</p></td>
-<td><p><a class="icon adi reference external" href="https://www.analog.com/ADRV-PACKRF">ADRV-PACKRF</a></p></td>
+<td><p><a class="icon adi reference external" href="https://www.analog.com/ADRV-PACKRF" target="_blank">ADRV-PACKRF</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADRV9361">ADRV9361</a></div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADRV9361" target="_blank">ADRV9361</a></div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-adrv9361-z7035-fmc</p></td>
-<td><p><a class="icon adi reference external" href="https://www.analog.com/ADRV1CRR-FMC">ADRV1CRR-FMC</a></p></td>
+<td><p><a class="icon adi reference external" href="https://www.analog.com/ADRV1CRR-FMC" target="_blank">ADRV1CRR-FMC</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADRV9361">ADRV9361</a></div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADRV9361" target="_blank">ADRV9361</a></div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynq-adrv9361-z7035-fmc-rfcard-tdd</p></td>
-<td><p><a class="icon adi reference external" href="https://www.analog.com/ADRV1CRR-FMC">ADRV1CRR-FMC</a></p></td>
+<td><p><a class="icon adi reference external" href="https://www.analog.com/ADRV1CRR-FMC" target="_blank">ADRV1CRR-FMC</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board), the</div>
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADRV9361">ADRV9361</a> and the</div>
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/AD-PZSDR2400TDD-EB">AD-PZSDR2400TDD-EB</a></div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board), the</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADRV9361" target="_blank">ADRV9361</a> and the</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/AD-PZSDR2400TDD-EB" target="_blank">AD-PZSDR2400TDD-EB</a></div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-adrv9364-z7020-bob</p></td>
-<td><p><a class="icon adi reference external" href="https://www.analog.com/ADRV1CRR-BOB">ADRV1CRR-BOB</a></p></td>
+<td><p><a class="icon adi reference external" href="https://www.analog.com/ADRV1CRR-BOB" target="_blank">ADRV1CRR-BOB</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADRV9364">ADRV9364</a></div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADRV9364" target="_blank">ADRV9364</a></div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynq-adrv9364-z7020-bob-cmos</p></td>
-<td><p><a class="icon adi reference external" href="https://www.analog.com/ADRV1CRR-BOB">ADRV1CRR-BOB</a></p></td>
+<td><p><a class="icon adi reference external" href="https://www.analog.com/ADRV1CRR-BOB" target="_blank">ADRV1CRR-BOB</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADRV9364">ADRV9364</a></div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADRV9364" target="_blank">ADRV9364</a></div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-adrv9364-z7020-packrf</p></td>
-<td><p><a class="icon adi reference external" href="https://www.analog.com/ADRV-PACKRF">ADRV-PACKRF</a></p></td>
+<td><p><a class="icon adi reference external" href="https://www.analog.com/ADRV-PACKRF" target="_blank">ADRV-PACKRF</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADRV9364">ADRV9364</a></div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADRV9364" target="_blank">ADRV9364</a></div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynq-coraz7s</p></td>
-<td><p><a class="reference external" href="https://digilent.com/reference/programmable-logic/cora-z7/start">Cora Z7</a></p></td>
+<td><p><a class="icon link reference external" href="https://digilent.com/reference/programmable-logic/cora-z7/start" target="_blank">Cora Z7</a></p></td>
 <td><div class="line-block">
 <div class="line"><br /></div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-mini-itx-adv7511</p></td>
-<td><p><a class="reference external" href="https://www.avnet.com/wps/portal/us/products/avnet-boards/avnet-board-families/mini-itx">Mini-ITX</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.avnet.com/wps/portal/us/products/avnet-boards/avnet-board-families/mini-itx" target="_blank">Mini-ITX</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board)</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board)</div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynq-mini-itx-adv7511-ad9361-fmcomms2-3</p></td>
-<td><p><a class="reference external" href="https://www.avnet.com/wps/portal/us/products/avnet-boards/avnet-board-families/mini-itx">Mini-ITX</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.avnet.com/wps/portal/us/products/avnet-boards/avnet-board-families/mini-itx" target="_blank">Mini-ITX</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board)</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz">AD-FMCOMMS2-EBZ</a></div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz">AD-FMCOMMS3-EBZ</a></div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board)</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz" target="_blank">AD-FMCOMMS2-EBZ</a></div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz" target="_blank">AD-FMCOMMS3-EBZ</a></div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-mini-itx-adv7511-ad9364-fmcomms4</p></td>
-<td><p><a class="reference external" href="https://www.avnet.com/wps/portal/us/products/avnet-boards/avnet-board-families/mini-itx">Mini-ITX</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.avnet.com/wps/portal/us/products/avnet-boards/avnet-board-families/mini-itx" target="_blank">Mini-ITX</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms4-ebz">AD-FMCOMMS4-EBZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms4-ebz" target="_blank">AD-FMCOMMS4-EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynq-zc702-adv7511</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC702">ZC702</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC702" target="_blank">ZC702</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board)</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board)</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-zc702-adv7511-ad9361-fmcomms2-3</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC702">ZC702</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC702" target="_blank">ZC702</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz">AD-FMCOMMS2-EBZ</a> or</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz">AD-FMCOMMS3-EBZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz" target="_blank">AD-FMCOMMS2-EBZ</a> or</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz" target="_blank">AD-FMCOMMS3-EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynq-zc702-adv7511-ad9361-fmcomms5</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC702">ZC702</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC702" target="_blank">ZC702</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms5-ebz">AD-FMCOMMS5-EBZ</a></div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms5-ebz" target="_blank">AD-FMCOMMS5-EBZ</a></div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-zc702-adv7511-ad9364-fmcomms4</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC702">ZC702</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC702" target="_blank">ZC702</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms4-ebz">AD-FMCOMMS4-EBZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms4-ebz" target="_blank">AD-FMCOMMS4-EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynq-zc706-adv7511</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC706">ZC706</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC706" target="_blank">ZC706</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board)</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board)</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-zc706-adv7511-ad6676-fmc</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC706">ZC706</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC706" target="_blank">ZC706</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/ad6676-wideband_rx_subsystem_ad6676ebz">AD6676-FMC-EBZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/ad6676-wideband_rx_subsystem_ad6676ebz" target="_blank">AD6676-FMC-EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynq-zc706-adv7511-ad9265-fmc-125ebz</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC706">ZC706</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC706" target="_blank">ZC706</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/fpga/xilinx/fmc/ad9265">AD9265-FMC-125EBZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/fpga/xilinx/fmc/ad9265" target="_blank">AD9265-FMC-125EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-zc706-adv7511-ad9361-fmcomms2-3</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC706">ZC706</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC706" target="_blank">ZC706</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz">AD-FMCOMMS2-EBZ</a> or</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz">AD-FMCOMMS3-EBZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz" target="_blank">AD-FMCOMMS2-EBZ</a> or</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz" target="_blank">AD-FMCOMMS3-EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynq-zc706-adv7511-ad9361-fmcomms5</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC706">ZC706</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC706" target="_blank">ZC706</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms5-ebz">AD-FMCOMMS5-EBZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms5-ebz" target="_blank">AD-FMCOMMS5-EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-zc706-adv7511-ad9361-fmcomms5-ext-lo-adf5355</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC706">ZC706</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC706" target="_blank">ZC706</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms5-ebz">AD-FMCOMMS5-EBZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms5-ebz" target="_blank">AD-FMCOMMS5-EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynq-zc706-adv7511-ad9364-fmcomms4</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC706">ZC706</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC706" target="_blank">ZC706</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms4-ebz">AD-FMCOMMS4-EBZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms4-ebz" target="_blank">AD-FMCOMMS4-EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-zc706-adv7511-ad9434-fmc-500ebz</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC706">ZC706</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC706" target="_blank">ZC706</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/fpga/xilinx/fmc/ad9434">AD9434-FMC-500EBZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/fpga/xilinx/fmc/ad9434" target="_blank">AD9434-FMC-500EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynq-zc706-adv7511-ad9625-fmcadc2</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC706">ZC706</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC706" target="_blank">ZC706</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcdaq2-ebz">AD-FMCADC2-EBZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcdaq2-ebz" target="_blank">AD-FMCADC2-EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-zc706-adv7511-ad9739a-fmc</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC706">ZC706</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC706" target="_blank">ZC706</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9739A">EVAL-AD9739A</a></div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9739A" target="_blank">EVAL-AD9739A</a></div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynq-zc706-adv7511-adrv9371</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC706">ZC706</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC706" target="_blank">ZC706</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/mykonos">ADRV9371</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/mykonos" target="_blank">ADRV9371</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-zc706-adv7511-adrv9375</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC706">ZC706</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC706" target="_blank">ZC706</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/mykonos">ADRV9375</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/mykonos" target="_blank">ADRV9375</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynq-zc706-adv7511-fmcadc4</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC706">ZC706</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC706" target="_blank">ZC706</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcadc4-ebz">AD-FMCADC4-EBZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcadc4-ebz" target="_blank">AD-FMCADC4-EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-zc706-adv7511-fmcdaq2</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC706">ZC706</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC706" target="_blank">ZC706</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcdaq2-ebz">AD-FMCDAQ2-EBZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcdaq2-ebz" target="_blank">AD-FMCDAQ2-EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynq-zc706-adv7511-fmcdaq3</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC706">ZC706</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC706" target="_blank">ZC706</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcdaq3-ebz">AD-FMCDAQ3-EBZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcdaq3-ebz" target="_blank">AD-FMCDAQ3-EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-zc706-adv7511-fmcjesdadc1</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC706">ZC706</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC706" target="_blank">ZC706</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcjesdadc1-ebz">AD-FMCJESDADC1-EBZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcjesdadc1-ebz" target="_blank">AD-FMCJESDADC1-EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynq-zc706-imageon</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZC706">ZC706</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZC706" target="_blank">ZC706</a></p></td>
 <td><div class="line-block">
 <div class="line">FMC-IMAGEON</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-zed-adv7511</p></td>
-<td><p><a class="reference external" href="http://zedboard.org/product/zedboard">Zed Board</a></p></td>
-<td><p><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board)</p></td>
+<td><p><a class="icon link reference external" href="http://zedboard.org/product/zedboard" target="_blank">Zed Board</a></p></td>
+<td><p><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board)</p></td>
 </tr>
 <tr class="row-even"><td><p>zynq-zed-adv7511-ad9361-fmcomms2-3</p></td>
-<td><p><a class="reference external" href="http://zedboard.org/product/zedboard">Zed Board</a></p></td>
+<td><p><a class="icon link reference external" href="http://zedboard.org/product/zedboard" target="_blank">Zed Board</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz">AD-FMCOMMS2-EBZ</a> or</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz">AD-FMCOMMS3-EBZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz" target="_blank">AD-FMCOMMS2-EBZ</a> or</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz" target="_blank">AD-FMCOMMS3-EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-zed-adv7511-ad9364-fmcomms4</p></td>
-<td><p><a class="reference external" href="https://www.avnet.com/wps/portal/us/products/avnet-boards/avnet-board-families/zedboard">ZedBoard</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.avnet.com/wps/portal/us/products/avnet-boards/avnet-board-families/zedboard" target="_blank">ZedBoard</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms4-ebz">AD-FMCOMMS4-EBZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms4-ebz" target="_blank">AD-FMCOMMS4-EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynq-zed-adv7511-ad9467-fmc-250ebz</p></td>
-<td><p><a class="reference external" href="https://www.avnet.com/wps/portal/us/products/avnet-boards/avnet-board-families/zedboard">ZedBoard</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.avnet.com/wps/portal/us/products/avnet-boards/avnet-board-families/zedboard" target="_blank">ZedBoard</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/ad9467-fmc-250ebz">AD9467-FMC-250EBZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/ad9467-fmc-250ebz" target="_blank">AD9467-FMC-250EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynq-zed-adv7511-cn0363</p></td>
-<td><p><a class="reference external" href="https://www.avnet.com/wps/portal/us/products/avnet-boards/avnet-board-families/zedboard">ZedBoard</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.avnet.com/wps/portal/us/products/avnet-boards/avnet-board-families/zedboard" target="_blank">ZedBoard</a></p></td>
 <td><div class="line-block">
-<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511">ADV7511</a> (on-board) and the</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/eval-cn0363-pmdz">EVAL-CN0363-PMDZ</a> board</div>
+<div class="line"><a class="icon adi reference external" href="https://www.analog.com/ADV7511" target="_blank">ADV7511</a> (on-board) and the</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/eval-cn0363-pmdz" target="_blank">EVAL-CN0363-PMDZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynq-zed-imageon</p></td>
-<td><p><a class="reference external" href="https://www.avnet.com/wps/portal/us/products/avnet-boards/avnet-board-families/zedboard">ZedBoard</a></p></td>
+<td><p><a class="icon link reference external" href="https://www.avnet.com/wps/portal/us/products/avnet-boards/avnet-board-families/zedboard" target="_blank">ZedBoard</a></p></td>
 <td><div class="line-block">
 <div class="line">FMC-IMAGEON</div>
 </div>
@@ -1058,7 +1044,7 @@ this step.</p>
 <section id="id1">
 <h3><a class="toc-backref" href="#id14" role="doc-backlink">Using a script</a><a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
 <p>We provide
-<a class="icon git reference external" href="https://raw.githubusercontent.com/analogdevicesinc/wiki-scripts/main/linux/build_zynqmp_kernel_image.sh">a script</a>
+<a class="icon git reference external" href="https://raw.githubusercontent.com/analogdevicesinc/wiki-scripts/main/linux/build_zynqmp_kernel_image.sh" target="_blank">a script</a>
 that does automates the build for Zynq using the Linaro toolchain.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -1168,7 +1154,7 @@ Same goes for the <strong>$VITIS_VERSION</strong>, where you choose the Vitis ve
 <h5>Using the Linaro toolchain<a class="headerlink" href="#id5" title="Link to this heading"></a></h5>
 <p>Alternatively, the Linaro toolchain/compiler can be used to compile to kernel.
 Linaro compilers (that work with ZYNQMP) can be downloaded from
-<a class="reference external" href="https://releases.linaro.org/components/toolchain/binaries/latest-7/aarch64-linux-gnu">here</a>.
+<a class="icon link reference external" href="https://releases.linaro.org/components/toolchain/binaries/latest-7/aarch64-linux-gnu" target="_blank">here</a>.
 Always use the latest release just in case.</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
@@ -1249,33 +1235,33 @@ kernel tree.</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>zynqmp-zcu102-rev10-ad9361-fmcomms2-3.dts</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZCU102">ZCU102</a> <strong>Rev. 1.0</strong></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZCU102" target="_blank">ZCU102</a> <strong>Rev. 1.0</strong></p></td>
 <td><div class="line-block">
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz">AD-FMCOMMS2-EBZ</a> or</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz">AD-FMCOMMS3-EBZ</a> board</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz" target="_blank">AD-FMCOMMS2-EBZ</a> or</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz" target="_blank">AD-FMCOMMS3-EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynqmp-zcu102-rev10-ad9364-fmcomms4.dts</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZCU102">ZCU102</a> <strong>Rev. 1.0</strong></p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZCU102" target="_blank">ZCU102</a> <strong>Rev. 1.0</strong></p></td>
 <td><div class="line-block">
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms4-ebz">AD-FMCOMMS4-EBZ</a> or</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz">AD-FMCOMMS4-EBZ</a> board</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms4-ebz" target="_blank">AD-FMCOMMS4-EBZ</a> or</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz" target="_blank">AD-FMCOMMS4-EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>zynqmp-zcu102-revB-ad9361-fmcomms2-3.dts</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZCU102">ZCU102</a> Rev.B</p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZCU102" target="_blank">ZCU102</a> Rev.B</p></td>
 <td><div class="line-block">
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz">AD-FMCOMMS2-EBZ</a> or</div>
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz">AD-FMCOMMS3-EBZ</a> board</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz" target="_blank">AD-FMCOMMS2-EBZ</a> or</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz" target="_blank">AD-FMCOMMS3-EBZ</a> board</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>zynqmp-zcu102-revB-ad9364-fmcomms4.dts</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/ZCU102">ZCU102</a> Rev.B</p></td>
+<td><p><a class="icon link reference external" href="https://www.xilinx.com/ZCU102" target="_blank">ZCU102</a> Rev.B</p></td>
 <td><div class="line-block">
-<div class="line"><a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms4-ebz">AD-FMCOMMS4-EBZ</a> board</div>
+<div class="line"><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms4-ebz" target="_blank">AD-FMCOMMS4-EBZ</a> board</div>
 </div>
 </td>
 </tr>
@@ -1335,7 +1321,7 @@ and that is what the configuration is set up for.</p>
 </div>
 <p>After following that, the board should be rebooted.</p>
 <p>You can find a list with tested monitors
-<a class="reference external" href="https://www.xilinx.com/support/answers/68671.html">here</a>.
+<a class="icon link reference external" href="https://www.xilinx.com/support/answers/68671.html" target="_blank">here</a>.
 Resolution or image problems may appear if there is used a monitor that was not
 tested.</p>
 </section>
@@ -1354,8 +1340,6 @@ tested.</p>
         </div>
       </div>
   </div>
-
-  <div id="vertical-border"></div>
 
   <label id="cancel-area-show-toc" for="input-show-toc"></label>
   <label id="cancel-area-show-localtoc" for="input-show-localtoc"></label>

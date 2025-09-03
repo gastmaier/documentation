@@ -4,14 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="When the device is powered from the Auxiliary Power Supply it support various HOST functions, such as USB WIFI, Storage and HID. Using the correct cables is the key to OTG operation." name="description" />
 
     <title>USB OTG – HOST function Support &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/style.min.css?v=a9555194" />
-    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script defer="" src="../../_static/app.umd.js?v=689b8755"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=37266688" />
+    <script async="async" src="../../_static/app.umd.js?v=8f62bab2"></script>
     <link rel="icon" href="../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -19,8 +17,12 @@
     <link rel="prev" title="Rebooting" href="reboot.html" />
    
   
-  <meta name="global_root" content="../../../">
-  <meta name="repo" content="documentation">
+  
+  <meta name="repository" content="documentation">
+  <meta name="version" content="">
+  
+    <meta name="page_source_suffix" content=".rst">
+  
   
 
 
@@ -40,7 +42,6 @@
   }
 </style>
   </head><body>
-  <div class="banner"></div>
   <input type="checkbox" id="input-show-toc">
   <input type="checkbox" id="input-show-localtoc">
   <input type="checkbox" id="input-show-repotoc">
@@ -49,8 +50,7 @@
   <div class="search-area">
     <form action="" method="get">
       <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="search" placeholder="Search"/>
-      <button value="search" class="icon"></button>
-      <span id="search-progress"></span>
+      <button class="icon"></button>
     </form>
   </div>
   
@@ -61,9 +61,11 @@
     </div>
     <div id="right">
       <span>
-        <a id="logo-org" href="https://analog.com"></a>
+        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
+        
         <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs" tabindex="0">Docs</label>
+        
         <a id="logo" href="../../index.html">
           <div>System Level</div>
         </a>
@@ -78,22 +80,12 @@
   <div class="repotoc-tree overlay">
     <root>
   <a href="../../index.html" class="current">System Level</a>
-  <a href="../../../hdl/index.html">HDL</a>
-  <a href="../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../libiio/index.html">libiio</a>
-  <a href="../../../no-OS/index.html">no-OS</a>
-  <a href="../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../scopy/index.html">Scopy</a>
-  <a href="../../../doctools/index.html">Doctools</a>
 </root>
 
   </div>
     <div class="localtoc">
       <div class="tocwrapper">
-        <div>
-          <div class="localtoc-header"></div>
+        <div class="header localtoc-header">
           <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
         </div>
         <nav>
@@ -131,15 +123,6 @@ Content on this topic
 <div class="repotoc-tree">
   <root>
   <a href="../../index.html" class="current">System Level</a>
-  <a href="../../../hdl/index.html">HDL</a>
-  <a href="../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../libiio/index.html">libiio</a>
-  <a href="../../../no-OS/index.html">no-OS</a>
-  <a href="../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../scopy/index.html">Scopy</a>
-  <a href="../../../doctools/index.html">Doctools</a>
 </root>
 
 </div>
@@ -335,13 +318,16 @@ Content on this topic
   <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper" id="top-anchor">
+          <div class="body-header">
+  <nav class="breadcrumb"><ol><li><a href="index.html">Common PLUTO&amp;M2K</a></li></ol></nav>
+</div>
           <div class="body" role="main">
             
   <section id="usb-otg-host-function-support">
 <span id="pluto-m2k-usb-otg-host"></span><h1>USB OTG – HOST function Support<a class="headerlink" href="#usb-otg-host-function-support" title="Link to this heading"></a></h1>
 <p>When the device is powered from the Auxiliary Power Supply it support various
 HOST functions, such as USB WIFI, Storage and HID. Using the correct cables is
-the key to <a class="reference external" href="https://en.wikipedia.org/wiki/USB_On-The-Go">OTG</a> operation.</p>
+the key to <a class="icon link reference external" href="https://en.wikipedia.org/wiki/USB_On-The-Go" target="_blank">OTG</a> operation.</p>
 <section id="usb-wifi-support">
 <h2>USB Wifi Support<a class="headerlink" href="#usb-wifi-support" title="Link to this heading"></a></h2>
 <p>PlutoSDR or M2k allows WIFI connectivity using ESSID and WPA-PSK passphrase. The
@@ -393,15 +379,15 @@ on par of with the IIOD USB back-end.</p>
 <p>Many cheap and widely available modules will work - If you need a
 recommendation. The models listed below have been tested:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&amp;field-keywords=RTL8153">Serach Amazon RTL8153 (USB 3.0 10/100/1000)</a></p></li>
-<li><p><a class="reference external" href="http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&amp;field-keywords=AX88772">Serach Amazon AX88772 (USB 2.0 10/100)</a></p></li>
+<li><p><a class="icon link reference external" href="http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&amp;field-keywords=RTL8153" target="_blank">Serach Amazon RTL8153 (USB 3.0 10/100/1000)</a></p></li>
+<li><p><a class="icon link reference external" href="http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&amp;field-keywords=AX88772" target="_blank">Serach Amazon AX88772 (USB 2.0 10/100)</a></p></li>
 </ul>
 </section>
 <section id="mass-storage-drive-support">
 <h2>Mass Storage Drive Support<a class="headerlink" href="#mass-storage-drive-support" title="Link to this heading"></a></h2>
-<p>PlutoSDR or M2k allows in <a class="reference external" href="https://en.wikipedia.org/wiki/USB_On-The-Go">OTG</a>
+<p>PlutoSDR or M2k allows in <a class="icon link reference external" href="https://en.wikipedia.org/wiki/USB_On-The-Go" target="_blank">OTG</a>
 Host mode the attachment of USB Mass Storage Devices. The supported file system
-is currently <a class="reference external" href="https://en.wikipedia.org/wiki/File_Allocation_Table">FAT/FAT32</a>
+is currently <a class="icon link reference external" href="https://en.wikipedia.org/wiki/File_Allocation_Table" target="_blank">FAT/FAT32</a>
 only. Kernel Hotplug mechanisms are used to automount the available partitions
 under /media. Once the storage is mounted the LED1 will stay constantly ON. Upon
 storage removal the media is un-mounted and the <strong>LED1</strong> will resume its
@@ -432,8 +418,6 @@ sourced for speed. If no <code class="docutils literal notranslate"><span class=
         </div>
       </div>
   </div>
-
-  <div id="vertical-border"></div>
 
   <label id="cancel-area-show-toc" for="input-show-toc"></label>
   <label id="cancel-area-show-localtoc" for="input-show-localtoc"></label>

@@ -4,14 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="The ADALM2000 (M2K) can be controlled programmatically in a number of languages, including MATLAB. Controlling M2K and access the data streams is provided through a set of bindings for libm2k. If you are already familiar with libm2k, moving into MATLAB is minimal work. If you are unfamiliar, there is extensive libm2k API documentation available." name="description" />
 
     <title>Using with MATLAB &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/style.min.css?v=a9555194" />
-    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script defer="" src="../../_static/app.umd.js?v=689b8755"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=37266688" />
+    <script async="async" src="../../_static/app.umd.js?v=8f62bab2"></script>
     <link rel="icon" href="../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -19,8 +17,12 @@
     <link rel="prev" title="Using With LabVIEW" href="labview.html" />
    
   
-  <meta name="global_root" content="../../../">
-  <meta name="repo" content="documentation">
+  
+  <meta name="repository" content="documentation">
+  <meta name="version" content="">
+  
+    <meta name="page_source_suffix" content=".rst">
+  
   
 
 
@@ -40,7 +42,6 @@
   }
 </style>
   </head><body>
-  <div class="banner"></div>
   <input type="checkbox" id="input-show-toc">
   <input type="checkbox" id="input-show-localtoc">
   <input type="checkbox" id="input-show-repotoc">
@@ -49,8 +50,7 @@
   <div class="search-area">
     <form action="" method="get">
       <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="search" placeholder="Search"/>
-      <button value="search" class="icon"></button>
-      <span id="search-progress"></span>
+      <button class="icon"></button>
     </form>
   </div>
   
@@ -61,9 +61,11 @@
     </div>
     <div id="right">
       <span>
-        <a id="logo-org" href="https://analog.com"></a>
+        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
+        
         <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs" tabindex="0">Docs</label>
+        
         <a id="logo" href="../../index.html">
           <div>System Level</div>
         </a>
@@ -78,22 +80,12 @@
   <div class="repotoc-tree overlay">
     <root>
   <a href="../../index.html" class="current">System Level</a>
-  <a href="../../../hdl/index.html">HDL</a>
-  <a href="../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../libiio/index.html">libiio</a>
-  <a href="../../../no-OS/index.html">no-OS</a>
-  <a href="../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../scopy/index.html">Scopy</a>
-  <a href="../../../doctools/index.html">Doctools</a>
 </root>
 
   </div>
     <div class="localtoc">
       <div class="tocwrapper">
-        <div>
-          <div class="localtoc-header"></div>
+        <div class="header localtoc-header">
           <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
         </div>
         <nav>
@@ -126,15 +118,6 @@ Content on this topic
 <div class="repotoc-tree">
   <root>
   <a href="../../index.html" class="current">System Level</a>
-  <a href="../../../hdl/index.html">HDL</a>
-  <a href="../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../libiio/index.html">libiio</a>
-  <a href="../../../no-OS/index.html">no-OS</a>
-  <a href="../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../scopy/index.html">Scopy</a>
-  <a href="../../../doctools/index.html">Doctools</a>
 </root>
 
 </div>
@@ -330,19 +313,22 @@ Content on this topic
   <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper" id="top-anchor">
+          <div class="body-header">
+  <nav class="breadcrumb"><ol><li><a href="index.html">ADALM2000</a></li></ol></nav>
+</div>
           <div class="body" role="main">
             
   <section id="using-with-matlab">
 <span id="m2k-matlab"></span><h1>Using with MATLAB<a class="headerlink" href="#using-with-matlab" title="Link to this heading"></a></h1>
-<p>The <a class="icon adi reference external" href="https://www.analog.com/ADALM2000">ADALM2000</a> (M2K) can be controlled programmatically in a number of
+<p>The <a class="icon adi reference external" href="https://www.analog.com/ADALM2000" target="_blank">ADALM2000</a> (M2K) can be controlled programmatically in a number of
 languages, including MATLAB. Controlling M2K and access the data streams is
 provided through a set of bindings for libm2k. If you are already familiar with
 libm2k, moving into MATLAB is minimal work. If you are unfamiliar, there is
-extensive <a class="reference external" href="https://analogdevicesinc.github.io/libm2k/index.html">libm2k API documentation available</a>.</p>
+extensive <a class="icon link reference external" href="https://analogdevicesinc.github.io/libm2k/index.html" target="_blank">libm2k API documentation available</a>.</p>
 <section id="quick-start">
 <h2>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h2>
 <p>To get started with libm2k+MATLAB there are integrated installers available for
-<a class="reference external" href="https://www.mathworks.com/matlabcentral/fileexchange/74385-libm2k-matlab">Windows and Linux</a>.
+<a class="icon link reference external" href="https://www.mathworks.com/matlabcentral/fileexchange/74385-libm2k-matlab" target="_blank">Windows and Linux</a>.
 Simply download the MLTBX file and open it within MATLAB. This will install the
 necessary libraries and classes to interface with M2K. The installer packages
 the dependent libraries libiio, libm2k, and the MATLAB bindings so they do not
@@ -352,7 +338,7 @@ The only requirement is the
 For manual build see <a class="reference internal" href="#m2k-matlab-build"><span class="std std-ref">Manual Build</span></a>.</p>
 <p>After installation of the driver and the MLTBX file, you will have access to the
 bindings through
-<a class="reference external" href="https://www.mathworks.com/help/matlab/call-cpp-library-functions.html">MATLAB’s clib interface for C++ libraries</a>.
+<a class="icon link reference external" href="https://www.mathworks.com/help/matlab/call-cpp-library-functions.html" target="_blank">MATLAB’s clib interface for C++ libraries</a>.
 For libm2k this
 will be in the form:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clib</span><span class="o">.</span><span class="n">libm2k</span><span class="o">.</span><span class="n">libm2k</span><span class="o">.&lt;</span><span class="n">M2K</span> <span class="n">classes</span><span class="o">&gt;</span>
@@ -388,11 +374,11 @@ that object.</p>
 <span class="n">clear</span><span class="w"> </span><span class="s">m2k</span>
 </pre></div>
 </div>
-<p>More examples are <a class="icon git reference external" href="https://github.com/analogdevicesinc/libm2k-matlab/tree/master/examples">available on GitHub</a>.</p>
+<p>More examples are <a class="icon git reference external" href="https://github.com/analogdevicesinc/libm2k-matlab/tree/master/examples" target="_blank">available on GitHub</a>.</p>
 </section>
 <section id="inspecting-the-api">
 <h2>Inspecting the API<a class="headerlink" href="#inspecting-the-api" title="Link to this heading"></a></h2>
-<p>The MATLAB bindings follow the <a class="reference external" href="https://analogdevicesinc.github.io/libm2k/index.html">C++ API</a>.
+<p>The MATLAB bindings follow the <a class="icon link reference external" href="https://analogdevicesinc.github.io/libm2k/index.html" target="_blank">C++ API</a>.
 Since MATLAB has an interpreter it can be very helpful when exploring the API.
 This can be don  through help or doc commands.
 For example, if you want to understand the M2kAnalogIn method
@@ -451,7 +437,7 @@ sure you are using compatible versions):</p>
 follow these steps:</p>
 <p>Inside libm2k repo go to <em>/bindings/matlab</em></p>
 <p>Next, update the locations of the
-<a class="icon git reference external" href="https://github.com/analogdevicesinc/libm2k/tree/main/bindings/matlab/build_library_linux64.m#L13">libm2k headers</a>
+<a class="icon git reference external" href="https://github.com/analogdevicesinc/libm2k/tree/main/bindings/matlab/build_library_linux64.m#L13" target="_blank">libm2k headers</a>
 to point to where libm2k is build. On Ubuntu these may look similar to:</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">includepath</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="s">&#39;/usr&#39;</span><span class="p">,</span><span class="s">&#39;local&#39;</span><span class="p">,</span><span class="s">&#39;include&#39;</span><span class="p">);</span>
 <span class="n">hppPath</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="s">&#39;/usr&#39;</span><span class="p">,</span><span class="s">&#39;local&#39;</span><span class="p">,</span><span class="s">&#39;include&#39;</span><span class="p">,</span><span class="s">&#39;libm2k&#39;</span><span class="p">);</span>
@@ -550,9 +536,9 @@ adding that folder to path will allow you to use the bindings.</p>
 <section id="support">
 <h2>Support<a class="headerlink" href="#support" title="Link to this heading"></a></h2>
 <p>For support questions please post them on EngineerZone under the
-<a class="icon ez reference external" href="https://ez.analog.com/adieducation/university-program">Virtual Classroom Forum</a>.</p>
+<a class="icon ez reference external" href="https://ez.analog.com/adieducation/university-program" target="_blank">Virtual Classroom Forum</a>.</p>
 <p>If you find any bugs please report them on the
-<a class="icon git reference external" href="https://github.com/analogdevicesinc/libm2k/issues">libm2k issues tracker on GitHub</a>.</p>
+<a class="icon git reference external" href="https://github.com/analogdevicesinc/libm2k/issues" target="_blank">libm2k issues tracker on GitHub</a>.</p>
 </section>
 </section>
 
@@ -567,8 +553,6 @@ adding that folder to path will allow you to use the bindings.</p>
         </div>
       </div>
   </div>
-
-  <div id="vertical-border"></div>
 
   <label id="cancel-area-show-toc" for="input-show-toc"></label>
   <label id="cancel-area-show-localtoc" for="input-show-localtoc"></label>

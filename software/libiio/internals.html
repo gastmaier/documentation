@@ -4,14 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="Why did Analog Devices develop libiio? To answer that question, it is needed to understand the state of things before libiio was introduced." name="description" />
 
     <title>About libiio &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/style.min.css?v=a9555194" />
-    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script defer="" src="../../_static/app.umd.js?v=689b8755"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=37266688" />
+    <script async="async" src="../../_static/app.umd.js?v=8f62bab2"></script>
     <link rel="icon" href="../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -19,8 +17,12 @@
     <link rel="prev" title="Libiio" href="index.html" />
    
   
-  <meta name="global_root" content="../../../">
-  <meta name="repo" content="documentation">
+  
+  <meta name="repository" content="documentation">
+  <meta name="version" content="">
+  
+    <meta name="page_source_suffix" content=".rst">
+  
   
 
 
@@ -40,7 +42,6 @@
   }
 </style>
   </head><body>
-  <div class="banner"></div>
   <input type="checkbox" id="input-show-toc">
   <input type="checkbox" id="input-show-localtoc">
   <input type="checkbox" id="input-show-repotoc">
@@ -49,8 +50,7 @@
   <div class="search-area">
     <form action="" method="get">
       <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="search" placeholder="Search"/>
-      <button value="search" class="icon"></button>
-      <span id="search-progress"></span>
+      <button class="icon"></button>
     </form>
   </div>
   
@@ -61,9 +61,11 @@
     </div>
     <div id="right">
       <span>
-        <a id="logo-org" href="https://analog.com"></a>
+        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
+        
         <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs" tabindex="0">Docs</label>
+        
         <a id="logo" href="../../index.html">
           <div>System Level</div>
         </a>
@@ -78,22 +80,12 @@
   <div class="repotoc-tree overlay">
     <root>
   <a href="../../index.html" class="current">System Level</a>
-  <a href="../../../hdl/index.html">HDL</a>
-  <a href="../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../libiio/index.html">libiio</a>
-  <a href="../../../no-OS/index.html">no-OS</a>
-  <a href="../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../scopy/index.html">Scopy</a>
-  <a href="../../../doctools/index.html">Doctools</a>
 </root>
 
   </div>
     <div class="localtoc">
       <div class="tocwrapper">
-        <div>
-          <div class="localtoc-header"></div>
+        <div class="header localtoc-header">
           <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
         </div>
         <nav>
@@ -199,15 +191,6 @@ Content on this topic
 <div class="repotoc-tree">
   <root>
   <a href="../../index.html" class="current">System Level</a>
-  <a href="../../../hdl/index.html">HDL</a>
-  <a href="../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../libiio/index.html">libiio</a>
-  <a href="../../../no-OS/index.html">no-OS</a>
-  <a href="../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../scopy/index.html">Scopy</a>
-  <a href="../../../doctools/index.html">Doctools</a>
 </root>
 
 </div>
@@ -403,6 +386,9 @@ Content on this topic
   <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper" id="top-anchor">
+          <div class="body-header">
+  <nav class="breadcrumb"><ol><li><a href="index.html">Libiio</a></li></ol></nav>
+</div>
           <div class="body" role="main">
             
   <section id="about-libiio">
@@ -450,8 +436,8 @@ network in an application.</p>
 <p>That network backend was also opening questions about other possible
 improvements: for instance, using IIO devices from applications running on
 different operating systems, like Windows, using those devices in environments
-like <a class="reference external" href="https://wiki.analog.com/gnuradio">GNU Radio</a>, <a class="reference external" href="https://wiki.analog.com/libiio/clients/matlab_simulink">MATLAB</a>
-or <a class="reference external" href="https://wiki.analog.com/libiio/clients/matlab_simulink">Simulink</a>, etc.</p>
+like <a class="icon dokuwiki reference external" href="https://wiki.analog.com/gnuradio" target="_blank">GNU Radio</a>, <a class="icon dokuwiki reference external" href="https://wiki.analog.com/libiio/clients/matlab_simulink" target="_blank">MATLAB</a>
+or <a class="icon dokuwiki reference external" href="https://wiki.analog.com/libiio/clients/matlab_simulink" target="_blank">Simulink</a>, etc.</p>
 </section>
 </section>
 <section id="license-and-code-management">
@@ -463,7 +449,7 @@ applications. This choice was motivated by the fact that Analog Devices is a
 company that principally sells hardware, and this library provides the clients
 with a better and easier way of using this hardware.</p>
 <p>The full terms of the license can be found here:
-<a class="reference external" href="http://opensource.org/licenses/LGPL-2.1">http://opensource.org/licenses/LGPL-2.1</a></p>
+<a class="icon link reference external" href="http://opensource.org/licenses/LGPL-2.1" target="_blank">http://opensource.org/licenses/LGPL-2.1</a></p>
 </section>
 <section id="code-conformance">
 <h2>Code conformance<a class="headerlink" href="#code-conformance" title="Link to this heading"></a></h2>
@@ -1340,7 +1326,7 @@ Python and C#.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Since v0.19 all bindings require explicit flags to be enabled
-during builds. Please reference the <a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/tree/main/README_BUILD.md">build instructions</a>
+during builds. Please reference the <a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/tree/main/README_BUILD.md" target="_blank">build instructions</a>
 to make sure the desired bindings are built and installed.</p>
 </div>
 <section id="python-bindings">
@@ -1378,8 +1364,8 @@ of the known constant values of the IIO objects, like the ID of a device, are
 cached within the Python classes for faster access. Then, printing the ID of a
 device in a Python script is as easy as typing “print my_device.id”. To better
 understand the available calls consult the
-<a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/tree/main/bindings/python/iio.py">bindings source</a> and some available
-<a class="reference external" href="https://github.com/analogdevicesinc/plutosdr_scripts">examples</a>.</p>
+<a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/tree/main/bindings/python/iio.py" target="_blank">bindings source</a> and some available
+<a class="icon link reference external" href="https://github.com/analogdevicesinc/plutosdr_scripts" target="_blank">examples</a>.</p>
 <section id="installation">
 <h5>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h5>
 <p>Since v0.21 the python bindings have been available through pypi, and therefore
@@ -1398,7 +1384,7 @@ the library itself is not installed.</p>
 <p>An additional module was created which leverages the libiio python bindings call
 <a class="reference internal" href="../pyadi-iio/index.html#pyadi-iio"><span class="std std-ref">pyadi-iio</span></a>.
 pyadi-iio is recommended if a device specific class exists for your
-<a class="icon git reference external" href="https://github.com/analogdevicesinc/pyadi-iio/tree/main/supported_parts.md">current hardware</a>.
+<a class="icon git reference external" href="https://github.com/analogdevicesinc/pyadi-iio/tree/main/supported_parts.md" target="_blank">current hardware</a>.
 However, since pyadi-iio uses libiio all the libiio python APIs are available in
 that module if needed.</p>
 </section>
@@ -1446,14 +1432,14 @@ stream samples at speeds of 3MSPS (3 million samples per second) without
 dropping a single one.</p>
 <p>However, 3 MSPS is really far from the maximum capacity of the typical
 converters. The
-<a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz/">AD-FMCOMMS3-EBZ</a> board, for
+<a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz/" target="_blank">AD-FMCOMMS3-EBZ</a> board, for
 instance, can digitize at a speed up to 61.44 MSPS (time 4 channels, for a total
 of 245.76 MSPS) … nearly 100 times faster. And the recent
-<a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcdaq2-ebz/">AD-FMCDAQ2-EBZ</a> is capable of
+<a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcdaq2-ebz/" target="_blank">AD-FMCDAQ2-EBZ</a> is capable of
 1000 MSPS for dual 16-bit channels, which represents a maximum transfer speed of
 2000 MSPS, or 32.0 Gb/s.</p>
 <p>So how to reach those extremely high speeds, with a 400 MHz CPU? That’s where
-<a class="reference external" href="https://en.wikipedia.org/wiki/Zero-copy">Zero copy</a> comes in play. To
+<a class="icon link reference external" href="https://en.wikipedia.org/wiki/Zero-copy" target="_blank">Zero copy</a> comes in play. To
 understand what zerocopy is, and how useful it can be, let’s quickly recall how
 the IIOD uploads the samples from one device to a connected client:</p>
 <ul class="simple">
@@ -1479,7 +1465,7 @@ samples, when the data is written to the socket. So how can this work? How is
 it possible to send data through the network, without writing the socket?
 The answer is to be found deep inside the Linux kernel. A particular system
 call, named
-“<a class="reference external" href="https://en.wikipedia.org/wiki/Splice_(system_call)">vmsplice</a>”,
+“<a class="icon link reference external" href="https://en.wikipedia.org/wiki/Splice_(system_call)" target="_blank">vmsplice</a>”,
 allows to “give” virtual pages of memory to the Linux kernel through a file
 descriptor. This trick, introduced in Linux 2.6.17, works by re-configuring
 the Memory Management Unit of the CPU. Let’s say the buffer to write to the
@@ -1521,8 +1507,6 @@ attempted in the future.</p>
         </div>
       </div>
   </div>
-
-  <div id="vertical-border"></div>
 
   <label id="cancel-area-show-toc" for="input-show-toc"></label>
   <label id="cancel-area-show-localtoc" for="input-show-localtoc"></label>

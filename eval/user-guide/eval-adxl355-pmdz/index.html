@@ -4,14 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="The EVAL-ADXL355-PMDZ is a compact, low-cost, Pmod-compatible evaluation board for the ADXL355 low noise density, low zero-g offset drift, low power, 3-axis MEMS accelerometer with selectable measurement ranges. The ADXL355 supports the ±2g, ±4g, and ±8g ranges, and offers industry leading noise, offset drift over temperature, and long term stability, enabling precision applications with minimal calibration and with very low power consumption. Applications include:" name="description" />
 
     <title>EVAL-ADXL355-PMDZ User Guide &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/style.min.css?v=a9555194" />
-    <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script defer="" src="../../../_static/app.umd.js?v=689b8755"></script>
+    <link rel="stylesheet" type="text/css" href="../../../_static/app.min.css?v=37266688" />
+    <script async="async" src="../../../_static/app.umd.js?v=8f62bab2"></script>
     <link rel="icon" href="../../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -19,8 +17,12 @@
     <link rel="prev" title="User guides" href="../index.html" />
    
   
-  <meta name="global_root" content="../../../../">
-  <meta name="repo" content="documentation">
+  
+  <meta name="repository" content="documentation">
+  <meta name="version" content="">
+  
+    <meta name="page_source_suffix" content=".rst">
+  
   
 
 
@@ -40,7 +42,6 @@
   }
 </style>
   </head><body>
-  <div class="banner"></div>
   <input type="checkbox" id="input-show-toc">
   <input type="checkbox" id="input-show-localtoc">
   <input type="checkbox" id="input-show-repotoc">
@@ -49,8 +50,7 @@
   <div class="search-area">
     <form action="" method="get">
       <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="search" placeholder="Search"/>
-      <button value="search" class="icon"></button>
-      <span id="search-progress"></span>
+      <button class="icon"></button>
     </form>
   </div>
   
@@ -61,9 +61,11 @@
     </div>
     <div id="right">
       <span>
-        <a id="logo-org" href="https://analog.com"></a>
+        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
+        
         <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs" tabindex="0">Docs</label>
+        
         <a id="logo" href="../../../index.html">
           <div>System Level</div>
         </a>
@@ -78,22 +80,12 @@
   <div class="repotoc-tree overlay">
     <root>
   <a href="../../../index.html" class="current">System Level</a>
-  <a href="../../../../hdl/index.html">HDL</a>
-  <a href="../../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../../libiio/index.html">libiio</a>
-  <a href="../../../../no-OS/index.html">no-OS</a>
-  <a href="../../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../../scopy/index.html">Scopy</a>
-  <a href="../../../../doctools/index.html">Doctools</a>
 </root>
 
   </div>
     <div class="localtoc">
       <div class="tocwrapper">
-        <div>
-          <div class="localtoc-header"></div>
+        <div class="header localtoc-header">
           <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
         </div>
         <nav>
@@ -173,15 +165,6 @@ Content on this topic
 <div class="repotoc-tree">
   <root>
   <a href="../../../index.html" class="current">System Level</a>
-  <a href="../../../../hdl/index.html">HDL</a>
-  <a href="../../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../../libiio/index.html">libiio</a>
-  <a href="../../../../no-OS/index.html">no-OS</a>
-  <a href="../../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../../scopy/index.html">Scopy</a>
-  <a href="../../../../doctools/index.html">Doctools</a>
 </root>
 
 </div>
@@ -377,14 +360,17 @@ Content on this topic
   <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper" id="top-anchor">
+          <div class="body-header">
+  <nav class="breadcrumb"><ol><li><a href="../index.html">User guides</a></li></ol></nav>
+</div>
           <div class="body" role="main">
             
   <section id="eval-adxl355-pmdz-user-guide">
 <h1>EVAL-ADXL355-PMDZ User Guide<a class="headerlink" href="#eval-adxl355-pmdz-user-guide" title="Link to this heading"></a></h1>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
-<p>The <a class="icon adi reference external" href="https://www.analog.com/EVAL-ADXL355-PMDZ">EVAL-ADXL355-PMDZ</a> is a compact, low-cost,
-Pmod-compatible evaluation board for the <a class="icon adi reference external" href="https://www.analog.com/ADXL355">ADXL355</a> low noise
+<p>The <a class="icon adi reference external" href="https://www.analog.com/EVAL-ADXL355-PMDZ" target="_blank">EVAL-ADXL355-PMDZ</a> is a compact, low-cost,
+Pmod-compatible evaluation board for the <a class="icon adi reference external" href="https://www.analog.com/ADXL355" target="_blank">ADXL355</a> low noise
 density, low zero-g offset drift, low power, 3-axis MEMS accelerometer with
 selectable measurement ranges. The ADXL355 supports the ±2g, ±4g, and ±8g
 ranges, and offers industry leading noise, offset drift over temperature, and
@@ -423,7 +409,7 @@ by 2.5 cm in length.</p>
 digital communication protocols such as SPI, I2C, and UART. These interface
 types were standardized by Digilent, which is now a division of National
 Instruments. Complete details on the Pmod specification can be found on the
-<a class="reference external" href="https://digilent.com/reference/pmod/start">Digilent Pmod landing page</a>.</p>
+<a class="icon link reference external" href="https://digilent.com/reference/pmod/start" target="_blank">Digilent Pmod landing page</a>.</p>
 <p>The specific interface used for the EVAL-ADXL355-PMDZ boards is the extended
 SPI. In general ADI has adopted the extended SPI connector for all PMOD devices
 which have an SPI interface. It provides flexibility to add interrupts, general
@@ -495,7 +481,7 @@ used as external indicators for the user. The interrupt pins can be programmed
 through software to reflect various status flags within the ADXL355, and those
 pins are accessible through the SPI PMOD header. For complete details on the
 individual status flags, what they mean, and how to program the chip to reflect
-those interrupts, please consult the <a class="icon adi reference external" href="https://www.analog.com/ADXL355">ADXL355</a> data sheet.</p>
+those interrupts, please consult the <a class="icon adi reference external" href="https://www.analog.com/ADXL355" target="_blank">ADXL355</a> data sheet.</p>
 </section>
 <section id="power-supply-considerations-and-configuration">
 <h3>Power Supply Considerations and Configuration<a class="headerlink" href="#power-supply-considerations-and-configuration" title="Link to this heading"></a></h3>
@@ -511,10 +497,10 @@ the EVAL-ADXL355-PMDZ:</p>
 <p><strong>ADXL355 no-OS Driver</strong></p>
 <blockquote>
 <div><ul>
-<li><p>The <a class="icon git reference external" href="https://github.com/analogdevicesinc/no-OS/tree/main/drivers/accel/adxl355">ADXL355 no-OS driver</a> is used
+<li><p>The <a class="icon git reference external" href="https://github.com/analogdevicesinc/no-OS/tree/main/drivers/accel/adxl355" target="_blank">ADXL355 no-OS driver</a> is used
 in bare-metal applications, typically running on low-power, embedded
 microcontrollers.</p></li>
-<li><p>The <a class="icon git reference external" href="https://github.com/analogdevicesinc/no-OS/tree/main/projects/eval-adxl355-pmdz">ADXL355 no-OS example project</a>
+<li><p>The <a class="icon git reference external" href="https://github.com/analogdevicesinc/no-OS/tree/main/projects/eval-adxl355-pmdz" target="_blank">ADXL355 no-OS example project</a>
 uses the ADXL355 no-OS driver and has several configuration options:</p>
 <blockquote>
 <div><ul class="simple">
@@ -535,12 +521,12 @@ can be run on a terminal.</p></li>
 <p class="admonition-title">Download</p>
 <p>A zip file containing prebuilt programming files for the no-OS example project,
 targeting platforms below are available at:
-<a class="icon git reference external" href="https://github.com/analogdevicesinc/no-OS/releases/download/last_commit/eval-adxl355-pmdz.zip">eval-adxl355-pmdz.zip</a>.</p>
+<a class="icon git reference external" href="https://github.com/analogdevicesinc/no-OS/releases/download/last_commit/eval-adxl355-pmdz.zip" target="_blank">eval-adxl355-pmdz.zip</a>.</p>
 <p>More details are provided in the platform-specific sections below.</p>
 </div>
 <p><strong>ADXL355 Linux Driver</strong></p>
 <ul class="simple">
-<li><p>The <a class="reference external" href="https://wiki.analog.com/resources/tools-software/linux-drivers/iio-accelerometer/adxl355">ADXL355 Linux driver</a> is used in
+<li><p>The <a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/tools-software/linux-drivers/iio-accelerometer/adxl355" target="_blank">ADXL355 Linux driver</a> is used in
 applications running the Linux operating system, typically on larger processors
 and SoC devices.</p></li>
 <li><p>The ADXL355 Linux driver uses the Industrial Input/Output (IIO) framework,
@@ -553,15 +539,15 @@ host over the network or USB backends.</p></li>
 </section>
 <section id="system-setup-using-adicup3029">
 <h2>System Setup Using ADICUP3029<a class="headerlink" href="#system-setup-using-adicup3029" title="Link to this heading"></a></h2>
-<p>The EVAL-ADXL355-PMDZ can be used with <a class="icon adi reference external" href="https://www.analog.com/eval-adicup3029">ADICUP3029</a>.</p>
+<p>The EVAL-ADXL355-PMDZ can be used with <a class="icon adi reference external" href="https://www.analog.com/eval-adicup3029" target="_blank">ADICUP3029</a>.</p>
 <section id="demo-requirements">
 <h3>Demo Requirements<a class="headerlink" href="#demo-requirements" title="Link to this heading"></a></h3>
 <p>The following is the list of items needed in order to replicate this demo.</p>
 <ul class="simple">
 <li><p>Hardware</p>
 <ul>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-ADICUP3029">EVAL-ADICUP3029</a></p></li>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-ADXL355-PMDZ">EVAL-ADXL355-PMDZ</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-ADICUP3029" target="_blank">EVAL-ADICUP3029</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-ADXL355-PMDZ" target="_blank">EVAL-ADXL355-PMDZ</a></p></li>
 <li><p>Micro-USB to USB Cable</p></li>
 <li><p>PC or Laptop with USB Port</p></li>
 </ul>
@@ -644,10 +630,10 @@ MAX32650FTHR.</p>
 <ul class="simple">
 <li><p><strong>Hardware</strong></p>
 <ul>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/MAX32655FTHR">MAX32655FTHR</a> or <a class="icon adi reference external" href="https://www.analog.com/MAX32650FTHR">MAX32650FTHR</a>
-with <a class="icon adi reference external" href="https://www.analog.com/MAX32625PICO">MAX32625PICO</a></p></li>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/FTHR-PMD-INTZ">FTHR-PMD-INTZ</a></p></li>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-ADXL355-PMDZ">EVAL-ADXL355-PMDZ</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/MAX32655FTHR" target="_blank">MAX32655FTHR</a> or <a class="icon adi reference external" href="https://www.analog.com/MAX32650FTHR" target="_blank">MAX32650FTHR</a>
+with <a class="icon adi reference external" href="https://www.analog.com/MAX32625PICO" target="_blank">MAX32625PICO</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/FTHR-PMD-INTZ" target="_blank">FTHR-PMD-INTZ</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-ADXL355-PMDZ" target="_blank">EVAL-ADXL355-PMDZ</a></p></li>
 <li><p>Micro-USB to USB Cable</p></li>
 <li><p>10-pin ribbon cable</p></li>
 <li><p>PC or Laptop with USB Port</p></li>
@@ -682,7 +668,7 @@ interposer board will be connected.</p>
 </ol>
 <p>4. Open the file explorer. Drag-and-drop the pre-built hex file to the DAPLINK.
 If the transfer was not completed, update the firmware for the DAPLINK. Follow
-the steps here: <a class="reference external" href="https://github.com/MaximIntegrated/max32625pico-firmware-images/">https://github.com/MaximIntegrated/max32625pico-firmware-images/</a></p>
+the steps here: <a class="icon link reference external" href="https://github.com/MaximIntegrated/max32625pico-firmware-images/" target="_blank">https://github.com/MaximIntegrated/max32625pico-firmware-images/</a></p>
 <p>5. Open PuTTY or other similar software. Check the Device Manager to set
 correct COM for the MAX32655FTHR. Set baud rate according to hex file used:</p>
 <div class="table-wrapper docutils container">
@@ -756,11 +742,11 @@ correct COM for the MAX32655FTHR. Set baud rate according to hex file used:</p>
 micro-USB. Connect <strong>MAX32625PICO</strong> to your laptop as well.</p></li>
 <li><p>Open the file explorer. Drag-and-drop the pre-built hex file to the DAPLINK.
 If the transfer was not completed, update the firmware for the DAPLINK. Follow
-the steps here: <a class="reference external" href="https://github.com/MaximIntegrated/max32625pico-firmware-images/">https://github.com/MaximIntegrated/max32625pico-firmware-images/</a></p></li>
+the steps here: <a class="icon link reference external" href="https://github.com/MaximIntegrated/max32625pico-firmware-images/" target="_blank">https://github.com/MaximIntegrated/max32625pico-firmware-images/</a></p></li>
 <li><p>Open PuTTY or other similar software. Check the Device Manager to set the
 correct COM port for the <strong>MAX32650FTHR</strong>.</p></li>
 <li><p>Set baud rate according to the hex file used available in
-<a class="icon git reference external" href="https://github.com/analogdevicesinc/no-OS/releases/download/last_commit/eval-adxl355-pmdz.zip">MAX32650FTHR_demo_ADXL355.hex</a>:</p></li>
+<a class="icon git reference external" href="https://github.com/analogdevicesinc/no-OS/releases/download/last_commit/eval-adxl355-pmdz.zip" target="_blank">MAX32650FTHR_demo_ADXL355.hex</a>:</p></li>
 </ol>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
@@ -793,8 +779,8 @@ correct COM port for the <strong>MAX32650FTHR</strong>.</p></li>
 <ul class="simple">
 <li><p><strong>Hardware</strong></p>
 <ul>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/ADXL355">EVAL-ADXL355-PMDZ</a></p></li>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/PMD-RPI-INTZ">PMOD to Raspberry Pi Adapter (PMD-RPI-INTZ)</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/ADXL355" target="_blank">EVAL-ADXL355-PMDZ</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/PMD-RPI-INTZ" target="_blank">PMOD to Raspberry Pi Adapter (PMD-RPI-INTZ)</a></p></li>
 <li><p>Raspberry PI Zero, Zero W, 3B+, or 4</p></li>
 <li><p>16GB (or larger) Class 10 (or faster) micro-SD card</p></li>
 <li><p>5Vdc, 2.5A power supply with micro USB connector (USB-C power supply for Raspberry Pi 4)</p></li>
@@ -808,7 +794,7 @@ correct COM port for the <strong>MAX32650FTHR</strong>.</p></li>
 </li>
 <li><p><strong>Software</strong></p>
 <ul>
-<li><p><a class="reference external" href="https://wiki.analog.com/resources/tools-software/linux-software/adi-kuiper_images/release_notes">Kuiper Linux Image</a></p></li>
+<li><p><a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/tools-software/linux-software/adi-kuiper_images/release_notes" target="_blank">Kuiper Linux Image</a></p></li>
 </ul>
 </li>
 </ul>
@@ -838,7 +824,7 @@ male header GPIO pin connector of the <strong>Raspberry Pi</strong> as shown bel
 <a class="reference internal image-reference" href="../../../_images/interposer.png"><img alt="../../../_images/interposer.png" src="../../../_images/interposer.png" style="width: 500px;" />
 </a>
 </li>
-<li><p>Connect the <a class="icon adi reference external" href="https://www.analog.com/EVAL-ADXL355-PMDZ">EVAL-ADXL355-PMDZ</a> on the
+<li><p>Connect the <a class="icon adi reference external" href="https://www.analog.com/EVAL-ADXL355-PMDZ" target="_blank">EVAL-ADXL355-PMDZ</a> on the
 PMOD to Raspberry Pi Interposer board either via Port P1 or P2.</p>
 </li>
 <li><p>Burn the SD card with the proper ADI Kuiper Linux image. Insert the burned
@@ -860,7 +846,7 @@ connector. The final setup should look similar to the picture below.</p>
 platform, and is a simple, terminal-based command line interface. This type of
 example program is being deprecated in favor of tinyiiod-based servers for
 embedded platforms, however this example is still available for reference here:
-<a class="reference external" href="https://wiki.analog.com/resources/eval/user-guides/eval-adicup360/reference_designs/demo_adxl355">ADXL355 Accelerometer PMOD Demo on ADICUP360</a>.</p>
+<a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/eval/user-guides/eval-adicup360/reference_designs/demo_adxl355" target="_blank">ADXL355 Accelerometer PMOD Demo on ADICUP360</a>.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>In order to use the <strong>EVAL-ADXL355-PMDZ</strong> with the <strong>ADICUP360</strong>, the user
@@ -882,7 +868,7 @@ apply to this example.</p>
 to be installed on your computer.</p>
 <div class="admonition-download admonition">
 <p class="admonition-title">Download</p>
-<p>Download and install the latest <a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/releases">Libiio package</a> on
+<p>Download and install the latest <a class="icon git reference external" href="https://github.com/analogdevicesinc/libiio/releases" target="_blank">Libiio package</a> on
 your machine.</p>
 </div>
 <p>To be able to connect your device, the software must be able to create a
@@ -993,7 +979,7 @@ Windows machine, enter the following code on the terminal:</p>
 <section id="iio-oscilloscope">
 <h5>IIO Oscilloscope<a class="headerlink" href="#iio-oscilloscope" title="Link to this heading"></a></h5>
 <p>Download and install the latest version of IIO Oscilloscope from:
-<a class="icon git reference external" href="https://github.com/analogdevicesinc/iio-oscilloscope/releases">IIO Oscilloscope Installers</a>.</p>
+<a class="icon git reference external" href="https://github.com/analogdevicesinc/iio-oscilloscope/releases" target="_blank">IIO Oscilloscope Installers</a>.</p>
 <p>Once done with the installation or an update of the latest IIO Oscilloscope,
 open the application. The user needs to supply a URI which will be used in the
 context creation of the IIO Oscilloscope and the instructions can be seen from
@@ -1036,7 +1022,7 @@ to run python script examples. In our case, run the <strong>adxl355_example.py</
 found in the examples folder.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Github link for the python sample script: <a class="icon git reference external" href="https://github.com/analogdevicesinc/pyadi-iio/tree/main/examples/adxl355_example.py">ADXL355 Python
+<p>Github link for the python sample script: <a class="icon git reference external" href="https://github.com/analogdevicesinc/pyadi-iio/tree/main/examples/adxl355_example.py" target="_blank">ADXL355 Python
 Example</a></p>
 </div>
 </section>
@@ -1077,16 +1063,16 @@ device is in COM8, you have to use:</p>
 <section id="more-information-and-useful-links">
 <h3>More information and useful links<a class="headerlink" href="#more-information-and-useful-links" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-ADXL355-PMDZ">EVAL-ADXL355-PMDZ Product Page</a></p></li>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/ADXL355">ADXL355 Product Page</a></p></li>
-<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/no-OS/tree/main/eval-adxl355-pmdz">EVAL-ADXL355-PMDZ no-OS projects</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-ADXL355-PMDZ" target="_blank">EVAL-ADXL355-PMDZ Product Page</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/ADXL355" target="_blank">ADXL355 Product Page</a></p></li>
+<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/no-OS/tree/main/eval-adxl355-pmdz" target="_blank">EVAL-ADXL355-PMDZ no-OS projects</a></p></li>
 </ul>
 </section>
 <section id="schematic-pcb-layout-bill-of-materials">
 <h3>Schematic, PCB Layout, Bill of Materials<a class="headerlink" href="#schematic-pcb-layout-bill-of-materials" title="Link to this heading"></a></h3>
 <div class="admonition-download admonition">
 <p class="admonition-title">Download</p>
-<p><a class="icon adi reference external" href="https://www.analog.com/media/en/evaluation-documentation/evaluation-design-files/eval-adxl355-pmdz-designsupport.zip">EVAL-ADXL355-PMDZ Design &amp; Integration Files</a></p>
+<p><a class="icon adi reference external" href="https://www.analog.com/media/en/evaluation-documentation/evaluation-design-files/eval-adxl355-pmdz-designsupport.zip" target="_blank">EVAL-ADXL355-PMDZ Design &amp; Integration Files</a></p>
 <ul class="simple">
 <li><p>Schematics</p></li>
 <li><p>Bill of Materials</p></li>
@@ -1110,7 +1096,7 @@ device is in COM8, you have to use:</p>
 <p class="admonition-title">Tip</p>
 <p>Receive software update notifications, documentation updates, view the
 latest videos, and more when you register your hardware.
-<a class="reference external" href="https://my.analog.com/en/app/registration/hardware/EVAL-ADXL355-PMDZ?&amp;v=Rev%20B">Register</a>
+<a class="icon link reference external" href="https://my.analog.com/en/app/registration/hardware/EVAL-ADXL355-PMDZ?&amp;v=Rev%20B" target="_blank">Register</a>
 to receive all these great benefits and more!</p>
 </div>
 </section>
@@ -1128,8 +1114,6 @@ to receive all these great benefits and more!</p>
         </div>
       </div>
   </div>
-
-  <div id="vertical-border"></div>
 
   <label id="cancel-area-show-toc" for="input-show-toc"></label>
   <label id="cancel-area-show-localtoc" for="input-show-localtoc"></label>

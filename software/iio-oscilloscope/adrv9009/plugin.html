@@ -4,14 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="The ADRV9009 plugin works with the IIO Oscilloscope. You always use the latest version if possible. Changing any field will immediately write changes which have been made to the ADRV9009 settings to the hardware, and then read it back to make sure the setting is valid. If you want to set something that the GUI changes to a different number, that either means that GUI is rounding (sorry), or the hardware (either the ADRV9009 or the FPGA fabric) does not support that mode/precision." name="description" />
 
     <title>Standard Plugin &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/style.min.css?v=a9555194" />
-    <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script defer="" src="../../../_static/app.umd.js?v=689b8755"></script>
+    <link rel="stylesheet" type="text/css" href="../../../_static/app.min.css?v=37266688" />
+    <script async="async" src="../../../_static/app.umd.js?v=8f62bab2"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="icon" href="../../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -20,8 +18,12 @@
     <link rel="prev" title="ADRV9009" href="index.html" />
    
   
-  <meta name="global_root" content="../../../../">
-  <meta name="repo" content="documentation">
+  
+  <meta name="repository" content="documentation">
+  <meta name="version" content="">
+  
+    <meta name="page_source_suffix" content=".rst">
+  
   
 
 
@@ -41,7 +43,6 @@
   }
 </style>
   </head><body>
-  <div class="banner"></div>
   <input type="checkbox" id="input-show-toc">
   <input type="checkbox" id="input-show-localtoc">
   <input type="checkbox" id="input-show-repotoc">
@@ -50,8 +51,7 @@
   <div class="search-area">
     <form action="" method="get">
       <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="search" placeholder="Search"/>
-      <button value="search" class="icon"></button>
-      <span id="search-progress"></span>
+      <button class="icon"></button>
     </form>
   </div>
   
@@ -62,9 +62,11 @@
     </div>
     <div id="right">
       <span>
-        <a id="logo-org" href="https://analog.com"></a>
+        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
+        
         <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs" tabindex="0">Docs</label>
+        
         <a id="logo" href="../../../index.html">
           <div>System Level</div>
         </a>
@@ -79,22 +81,12 @@
   <div class="repotoc-tree overlay">
     <root>
   <a href="../../../index.html" class="current">System Level</a>
-  <a href="../../../../hdl/index.html">HDL</a>
-  <a href="../../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../../libiio/index.html">libiio</a>
-  <a href="../../../../no-OS/index.html">no-OS</a>
-  <a href="../../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../../scopy/index.html">Scopy</a>
-  <a href="../../../../doctools/index.html">Doctools</a>
 </root>
 
   </div>
     <div class="localtoc">
       <div class="tocwrapper">
-        <div>
-          <div class="localtoc-header"></div>
+        <div class="header localtoc-header">
           <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
         </div>
         <nav>
@@ -136,15 +128,6 @@ Content on this topic
 <div class="repotoc-tree">
   <root>
   <a href="../../../index.html" class="current">System Level</a>
-  <a href="../../../../hdl/index.html">HDL</a>
-  <a href="../../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../../libiio/index.html">libiio</a>
-  <a href="../../../../no-OS/index.html">no-OS</a>
-  <a href="../../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../../scopy/index.html">Scopy</a>
-  <a href="../../../../doctools/index.html">Doctools</a>
 </root>
 
 </div>
@@ -340,6 +323,9 @@ Content on this topic
   <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper" id="top-anchor">
+          <div class="body-header">
+  <nav class="breadcrumb"><ol><li><a href="../index.html">IIO Oscilloscope</a></li><li><a href="index.html">ADRV9009</a></li></ol></nav>
+</div>
           <div class="body" role="main">
             
   <section id="standard-plugin">
@@ -412,9 +398,9 @@ file.
 <ul>
 <li><p><strong>RF Bandwidth(MHz):</strong> Displays the Primary Signal Bandwidth of the current
 Profile.
-<a class="reference external" href="https://wiki.analog.com/resources/tools-software/linux-drivers/iio-transceiver/adrv9009#rx_signal_path">Read More</a></p></li>
+<a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/tools-software/linux-drivers/iio-transceiver/adrv9009#rx_signal_path" target="_blank">Read More</a></p></li>
 <li><p><strong>Sampling Rate(MSPS):</strong> Displays the RX Sample Rate of the current Profile.
-<a class="reference external" href="https://wiki.analog.com/resources/tools-software/linux-drivers/iio-transceiver/adrv9009#rx_signal_path">Read More</a></p></li>
+<a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/tools-software/linux-drivers/iio-transceiver/adrv9009#rx_signal_path" target="_blank">Read More</a></p></li>
 <li><p><strong>RX</strong></p>
 <ul>
 <li><p><strong>Hardware Gain(dB):</strong> Controls the RX gain only in Manual Gain Control
@@ -565,7 +551,7 @@ finalize the process, a click on the <strong>Load</strong> button is required.</
 <p>Restrictions:</p>
 <ul class="simple">
 <li><p>There are two types of files than can be loaded: <strong>.txt</strong> or <strong>.mat</strong>. The
-IIO-Oscilloscope comes with several <a class="icon git reference external" href="https://github.com/analogdevicesinc/iio-oscilloscope/tree/main/waveforms">data files</a>
+IIO-Oscilloscope comes with several <a class="icon git reference external" href="https://github.com/analogdevicesinc/iio-oscilloscope/tree/main/waveforms" target="_blank">data files</a>
 that can be used. If you want to create your own data files please take a look
 at the <a class="reference internal" href="../../../eval/user-guide/adrv9009/basic-iq-datafiles.html"><span class="doc">Basic IQ Data Files</span></a>
 documentation first.</p></li>
@@ -606,8 +592,6 @@ hardware.</p>
         </div>
       </div>
   </div>
-
-  <div id="vertical-border"></div>
 
   <label id="cancel-area-show-toc" for="input-show-toc"></label>
   <label id="cancel-area-show-localtoc" for="input-show-localtoc"></label>

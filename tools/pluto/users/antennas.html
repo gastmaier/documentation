@@ -4,14 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="The antennas connectors on the ADALM-PLUTO are standard polarity SubMiniature version A (SMA) connectors. There are many ways to characterize an antenna, from gain (or loss), radiation pattern, beamwidth, polarization, and impedance." name="description" />
 
     <title>Antennas &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/style.min.css?v=a9555194" />
-    <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script defer="" src="../../../_static/app.umd.js?v=689b8755"></script>
+    <link rel="stylesheet" type="text/css" href="../../../_static/app.min.css?v=37266688" />
+    <script async="async" src="../../../_static/app.umd.js?v=8f62bab2"></script>
     <link rel="icon" href="../../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -19,8 +17,12 @@
     <link rel="prev" title="For End Users" href="index.html" />
    
   
-  <meta name="global_root" content="../../../../">
-  <meta name="repo" content="documentation">
+  
+  <meta name="repository" content="documentation">
+  <meta name="version" content="">
+  
+    <meta name="page_source_suffix" content=".rst">
+  
   
 
 
@@ -40,7 +42,6 @@
   }
 </style>
   </head><body>
-  <div class="banner"></div>
   <input type="checkbox" id="input-show-toc">
   <input type="checkbox" id="input-show-localtoc">
   <input type="checkbox" id="input-show-repotoc">
@@ -49,8 +50,7 @@
   <div class="search-area">
     <form action="" method="get">
       <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="search" placeholder="Search"/>
-      <button value="search" class="icon"></button>
-      <span id="search-progress"></span>
+      <button class="icon"></button>
     </form>
   </div>
   
@@ -61,9 +61,11 @@
     </div>
     <div id="right">
       <span>
-        <a id="logo-org" href="https://analog.com"></a>
+        <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
+        
         <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs" tabindex="0">Docs</label>
+        
         <a id="logo" href="../../../index.html">
           <div>System Level</div>
         </a>
@@ -78,22 +80,12 @@
   <div class="repotoc-tree overlay">
     <root>
   <a href="../../../index.html" class="current">System Level</a>
-  <a href="../../../../hdl/index.html">HDL</a>
-  <a href="../../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../../libiio/index.html">libiio</a>
-  <a href="../../../../no-OS/index.html">no-OS</a>
-  <a href="../../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../../scopy/index.html">Scopy</a>
-  <a href="../../../../doctools/index.html">Doctools</a>
 </root>
 
   </div>
     <div class="localtoc">
       <div class="tocwrapper">
-        <div>
-          <div class="localtoc-header"></div>
+        <div class="header localtoc-header">
           <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
         </div>
         <nav>
@@ -120,15 +112,6 @@ Content on this topic
 <div class="repotoc-tree">
   <root>
   <a href="../../../index.html" class="current">System Level</a>
-  <a href="../../../../hdl/index.html">HDL</a>
-  <a href="../../../../testbenches/index.html">HDL Testbenches</a>
-  <a href="../../../../pyadi-iio/index.html">Hardware Python Interfaces</a>
-  <a href="../../../../libiio/index.html">libiio</a>
-  <a href="../../../../no-OS/index.html">no-OS</a>
-  <a href="../../../../precision-converters-firmware/index.html">Precision Converters Firmware</a>
-  <a href="../../../../PrecisionToolbox/index.html">Precision Toolbox</a>
-  <a href="../../../../scopy/index.html">Scopy</a>
-  <a href="../../../../doctools/index.html">Doctools</a>
 </root>
 
 </div>
@@ -324,17 +307,20 @@ Content on this topic
   <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper" id="top-anchor">
+          <div class="body-header">
+  <nav class="breadcrumb"><ol><li><a href="../index.html">ADALM-PLUTO</a></li><li><a href="index.html">For End Users</a></li></ol></nav>
+</div>
           <div class="body" role="main">
             
   <section id="antennas">
 <span id="pluto-users-antennas"></span><h1>Antennas<a class="headerlink" href="#antennas" title="Link to this heading"></a></h1>
 <p>The antennas connectors on the ADALM-PLUTO are standard polarity
-<a class="reference external" href="https://en.wikipedia.org/wiki/SMA_connector">SubMiniature version A</a> (SMA) connectors.
+<a class="icon link reference external" href="https://en.wikipedia.org/wiki/SMA_connector" target="_blank">SubMiniature version A</a> (SMA) connectors.
 There are many ways to
-<a class="reference external" href="https://en.wikipedia.org/wiki/Antenna_measurement">characterize</a> an antenna,
+<a class="icon link reference external" href="https://en.wikipedia.org/wiki/Antenna_measurement" target="_blank">characterize</a> an antenna,
 from gain (or loss), radiation pattern, beamwidth, polarization, and impedance.</p>
 <p>The actual antennas included with the ADALM-PLUTO are
-<a class="reference external" href="https://www.jinchanggps.com/JCG401-GSM-Antenna-pd45551675.html">Jinchang Electron</a> JCG401.
+<a class="icon link reference external" href="https://www.jinchanggps.com/JCG401-GSM-Antenna-pd45551675.html" target="_blank">Jinchang Electron</a> JCG401.
 While the JCG401 is specified for 824-894 and 1710-2170MHz, they do
 operate over a much wider range, but it should be understood that all antennas
 are filters. They will have some frequency selectivity (however, they are not
@@ -342,20 +328,20 @@ brick wall filters). Just because something is specified for 824 MHz, does not
 mean that it will not pick up something at 600MHz, or even 87MHz, or it might
 not.</p>
 <p>The
-<a class="reference external" href="https://wiki.analog.com/_media/university/tools/pluto/users/jcg401.pdf">JCG401 datasheet</a>.
+<a class="icon dokuwiki reference external" href="https://wiki.analog.com/_media/university/tools/pluto/users/jcg401.pdf" target="_blank">JCG401 datasheet</a>.
 does spec radiation pattern, beamwidth, polarization, and
 impedance, but leaves out performance (gain or loss) over frequency - since it
 is spec’ed for 824-894 and 1710-2170MHz. We can quickly do that ourselves with
-the help of a <a class="reference external" href="http://www.keysight.com/find/E5071C">E5071C ENA Series Network Analyzer</a>.
+the help of a <a class="icon link reference external" href="http://www.keysight.com/find/E5071C" target="_blank">E5071C ENA Series Network Analyzer</a>.
 We connect the two antennas to the two ports, calibrate with a wire, and then run a S<sub>21</sub> test.</p>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/Scattering_parameters">S-parameters</a> describe
+<p><a class="icon link reference external" href="https://en.wikipedia.org/wiki/Scattering_parameters" target="_blank">S-parameters</a> describe
 the input-output relationship between ports (or terminals) in an electrical
 system. For instance, if we have 2 ports (intelligently called Port 1 and Port
 2), then S<sub>12</sub> represents the power transferred from Port 2 to Port 1.
 S<sub>21</sub> represents the power transferred from Port 1 to Port 2. In general,
 S<sub>NM</sub> represents the power transferred from Port M to Port N in a
 multi-port network. For an excellent side view into antennas check out Peter
-Joseph Bevelacqua’s excellent reference: <a class="reference external" href="http://antenna-theory.com">http://antenna-theory.com</a></p>
+Joseph Bevelacqua’s excellent reference: <a class="icon link reference external" href="http://antenna-theory.com" target="_blank">http://antenna-theory.com</a></p>
 <p>Running an S<sub>21</sub> test on the E5071C will broadcast a tone from one
 antenna (on port 2), and receive it on the other (port 1), and plot the results
 (in dB) compared to a wire that was used during the calibration on the
@@ -370,7 +356,7 @@ close to an FM broadcast station, you will not be able to receive FM with this
 antenna. (it has been done, and it does work - it just limits the distance
 between you and the antenna. Remember that most terrestrial FM broadcast
 stations are 10,000 to 20,000 watts).</p>
-<p>At the popular <a class="reference external" href="https://en.wikipedia.org/wiki/ISM_band">ISM bands</a> of 900
+<p>At the popular <a class="icon link reference external" href="https://en.wikipedia.org/wiki/ISM_band" target="_blank">ISM bands</a> of 900
 MHz, 2400 MHz, and 5725 MHz, performance is quite good. (click on the image to
 make it larger).</p>
 <div class="grid" style="grid-template-columns: 50% 50%;"><figure class="align-default" id="id1">
@@ -407,8 +393,6 @@ make it larger).</p>
         </div>
       </div>
   </div>
-
-  <div id="vertical-border"></div>
 
   <label id="cancel-area-show-toc" for="input-show-toc"></label>
   <label id="cancel-area-show-localtoc" for="input-show-localtoc"></label>
